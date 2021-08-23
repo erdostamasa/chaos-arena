@@ -280,7 +280,7 @@ public class MovingSphere : MonoBehaviour {
 		velocity = body.velocity;
 		if (
 			CheckClimbing() || CheckSwimming() ||
-			OnGround || SnapToGround() || CheckSteepContacts()
+			OnGround || /*SnapToGround() ||*/ CheckSteepContacts()
 		) {
 			stepsSinceLastGrounded = 0;
 			if (stepsSinceLastJump > 1) {
@@ -339,7 +339,7 @@ public class MovingSphere : MonoBehaviour {
 		return false;
 	}
 
-	bool SnapToGround () {
+	/*bool SnapToGround () {
 		if (stepsSinceLastGrounded > 1 || stepsSinceLastJump <= 2 || InWater) {
 			return false;
 		}
@@ -367,7 +367,7 @@ public class MovingSphere : MonoBehaviour {
 		}
 		connectedBody = hit.rigidbody;
 		return true;
-	}
+	}*/
 
 	bool CheckSteepContacts () {
 		if (steepContactCount > 1) {

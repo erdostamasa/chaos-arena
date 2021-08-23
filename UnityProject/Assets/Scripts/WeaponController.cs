@@ -32,7 +32,8 @@ public class WeaponController : MonoBehaviour {
             //Smoothly move to mouse position
             Vector3 directionToMove = ray.GetPoint(distance);
             float distanceToMove = (directionToMove - targeter.position).sqrMagnitude;
-            targeter.position += (directionToMove - targeter.position) * (distance * Time.deltaTime * 0.9f);
+            targeter.position += (directionToMove - targeter.position) * (distance * Time.deltaTime * 1.2f);
+            targeter.position = new Vector3(targeter.position.x, player.position.y, targeter.position.z);
 
             
             transform.LookAt(targeter.position);
@@ -41,6 +42,7 @@ public class WeaponController : MonoBehaviour {
         if (Input.GetMouseButton(0) && canFire) {
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             bullet.LookAt(targeter);
+            bullet.GetComponent<Bullet>().playerBullet = true;
             timer = 0;
             canFire = false;
         }

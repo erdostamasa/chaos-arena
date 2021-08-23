@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     [SerializeField] float speed = 5f;
-
+    public bool playerBullet = false;
+    
     void Start() {
         Invoke(nameof(DestroySelf), 5f);
         GetComponent<Rigidbody>().velocity = transform.forward * speed;
@@ -20,7 +21,11 @@ public class Bullet : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter(Collider other) {
+    void OnCollisionEnter(Collision other) {
+        if (other.gameObject.CompareTag("Enemy") && playerBullet) {
+            Destroy(other.gameObject);
+        }
         DestroySelf();
     }
+
 }

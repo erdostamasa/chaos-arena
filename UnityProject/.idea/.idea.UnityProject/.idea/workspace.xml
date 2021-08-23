@@ -8,10 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/idea1/WeaponController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/idea1/Yeet/Scripts/MovingSphere.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/idea1/Platform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/idea1/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -21,6 +18,11 @@
       <option value="$PROJECT_DIR$/Assets/idea1/Platform.cs" />
       <option value="$PROJECT_DIR$/Assets/idea1/WeaponController.cs" />
       <option value="$PROJECT_DIR$/Assets/idea1/Bullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/MovingSphere.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Platform.cs" />
+      <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1x5N89WnZx67fDoNApq1uV1UvSU" />
@@ -35,6 +37,14 @@
     <property name="settings.editor.selected.configurable" value="RiderUnitTestingPageId" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/build\UnityProject.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\erdos\Desktop\build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -66,6 +76,7 @@
       <updated>1629640830479</updated>
       <workItem from="1629640863840" duration="3032000" />
       <workItem from="1629712667152" duration="11229000" />
+      <workItem from="1629734465261" duration="4784000" />
     </task>
     <servers />
   </component>
