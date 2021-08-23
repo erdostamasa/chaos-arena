@@ -8,8 +8,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/idea1/WeaponController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/idea1/Yeet/Scripts/MovingSphere.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/idea1/Platform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/idea1/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -17,6 +19,8 @@
       <option value="$PROJECT_DIR$/Assets/idea1/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/idea1/Yeet/Scripts/MovingSphere.cs" />
       <option value="$PROJECT_DIR$/Assets/idea1/Platform.cs" />
+      <option value="$PROJECT_DIR$/Assets/idea1/WeaponController.cs" />
+      <option value="$PROJECT_DIR$/Assets/idea1/Bullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1x5N89WnZx67fDoNApq1uV1UvSU" />
@@ -61,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1629640830479</updated>
       <workItem from="1629640863840" duration="3032000" />
-      <workItem from="1629712667152" duration="6692000" />
+      <workItem from="1629712667152" duration="11229000" />
     </task>
     <servers />
   </component>
