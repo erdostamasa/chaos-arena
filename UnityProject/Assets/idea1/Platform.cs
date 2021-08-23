@@ -17,7 +17,7 @@ public class Platform : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        //GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * 10f;
+        GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * 3f;
     }
 
     void Start() {

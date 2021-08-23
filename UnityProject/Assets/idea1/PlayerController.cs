@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     Rigidbody playerRb;
     Rigidbody connectedBody, previousConnectedBody;
     Vector3 connectionVelocity;
+    Vector3 connectionLocalPosition;
 
     //TODO: check for weight limit before sticking to a physics object
 
@@ -32,6 +33,10 @@ public class PlayerController : MonoBehaviour {
             connectionVelocity = connectedBody.velocity;
             Vector3 relativeVelocity = playerRb.velocity - connectionVelocity;
             playerRb.AddForce(-relativeVelocity * (150f * Time.deltaTime));
+
+            connectionLocalPosition = connectedBody.transform.InverseTransformPoint(playerRb.position);
+            Vector3 connectionMovement = connectedBody.transform.TransformPoint(connectionLocalPosition) - playerRb.position;
+            playerRb.AddForce(connectionMovement * (Time.deltaTime * 100f));
         }
 
         
