@@ -22,8 +22,13 @@ public class Bullet : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision other) {
+        //bullet shot by player hit enemy
         if (other.gameObject.CompareTag("Enemy") && playerBullet) {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Health>().TakeDamage(1);
+        }
+        //bullet shot by enemy hit player
+        else if (other.gameObject.CompareTag("Player") && !playerBullet){
+            other.gameObject.GetComponent<Health>().TakeDamage(1);
         }
         DestroySelf();
     }

@@ -45,8 +45,8 @@ GameObject:
   - component: {fileID: 3585540122511450589}
   - component: {fileID: 3585540122511450590}
   - component: {fileID: 7323424908232791832}
+  - component: {fileID: -6265076033582275443}
   - component: {fileID: 1003130122427497914}
-  - component: {fileID: -953791602108651535}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Enemy
@@ -143,9 +143,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9fca0a3ea671f540b59f887983209c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  aggroDistance: 20
   player: {fileID: 0}
   bulletPrefab: {fileID: 2947344220643669389, guid: cca86aecb5201274799a02aabd395cfb, type: 3}
   firePoint: {fileID: 3585540124245781204}
+--- !u!114 &-6265076033582275443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585540122511450591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77893820cb9dd9e43a6ad13a2f1d3af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 2
 --- !u!1818360608 &1003130122427497914
 PositionConstraint:
   m_ObjectHideFlags: 0
@@ -163,18 +178,6 @@ PositionConstraint:
   m_IsContraintActive: 1
   m_IsLocked: 0
   m_Sources: []
---- !u!114 &-953791602108651535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3585540122511450591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 654f1380215c0fb40a114278edbf3b87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3585540123526456055
 GameObject:
   m_ObjectHideFlags: 0

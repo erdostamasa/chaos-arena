@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -19,11 +20,12 @@
       <option value="$PROJECT_DIR$/Assets/idea1/WeaponController.cs" />
       <option value="$PROJECT_DIR$/Assets/idea1/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/MovingSphere.cs" />
-      <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Platform.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1x5N89WnZx67fDoNApq1uV1UvSU" />
@@ -77,7 +79,7 @@
       <updated>1629640830479</updated>
       <workItem from="1629640863840" duration="3032000" />
       <workItem from="1629712667152" duration="11229000" />
-      <workItem from="1629734465261" duration="5499000" />
+      <workItem from="1629734465261" duration="9623000" />
     </task>
     <servers />
   </component>
