@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour {
 
     public void DestroyThisEnemy() {
         Instantiate(energyOrbPrefab, transform.position, Quaternion.identity);
+        Instantiate(energyOrbPrefab, transform.position, Quaternion.identity);
+        Instantiate(energyOrbPrefab, transform.position, Quaternion.identity);
         EventManager.instance.EnemyDied();
         Destroy(gameObject);
     }

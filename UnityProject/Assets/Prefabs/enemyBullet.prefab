@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6968631365017491770}
   - component: {fileID: 3307271511829681992}
   - component: {fileID: -629696042593728550}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: enemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3335648
+  m_Radius: 0.67967296
   m_Center: {x: 0.0026243553, y: 0, z: 0}
 --- !u!54 &6968631365017491770
 Rigidbody:

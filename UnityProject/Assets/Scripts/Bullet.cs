@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-    [SerializeField] float speed = 5f;
-    [SerializeField] float timeOut = 10f;
+    [SerializeField] protected float speed = 5f;
+    [SerializeField] protected float timeOut = 10f;
     
     void Start() {
         Destroy(gameObject, timeOut);

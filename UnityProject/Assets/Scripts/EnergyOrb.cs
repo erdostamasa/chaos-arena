@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnergyOrb : MonoBehaviour {
     Transform target;
@@ -11,14 +12,19 @@ public class EnergyOrb : MonoBehaviour {
     
     void Start() {
         target = GameObject.Find("Player").transform;
+        GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-2f,2f), 0, Random.Range(-2f, 2f)), ForceMode.Impulse);
     }
+
+    float timer = 0f;
+    [SerializeField] float timeToPickup = 1f;
     
     void Update() {
+        timer += Time.deltaTime;
         Vector3 direction = (target.position - transform.position).normalized;
         float distance = (target.position - transform.position).magnitude;
-        if (distance <= pickupDistance) {
+        if (distance <= pickupDistance && timer > timeToPickup) {
             float modifier = pickupSpeedCurve.Evaluate(distance / pickupDistance);
-            transform.position += direction * this.speed * modifier * Time.deltaTime;
+            transform.position += direction * speed * modifier * Time.deltaTime;
         }
         
     }

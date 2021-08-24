@@ -11,7 +11,7 @@ public class Platform : MonoBehaviour {
     [SerializeField] List<GameObject> mountPoints;
 
     [SerializeField] float slowdownMultiplier = 0.25f;
-    [SerializeField] Transform turretPrefab;
+    [SerializeField] List<Transform> enemyPrefabs;
     public List<Enemy> aliveEnemies = new List<Enemy>();
 
     [Range(0f, 1f), SerializeField] float spawnChance = 0.5f;
@@ -53,44 +53,18 @@ public class Platform : MonoBehaviour {
     void Update() {
         if (aliveEnemies.Count == 0 && !destroying) {
             destroying = true;
-
             StartCoroutine(DestroyPlatform());
-
-            /*platformBody.constraints = RigidbodyConstraints.None;
-            platformBody.AddForce(Vector3.down * 300f, ForceMode.Impulse);
-            platformBody.AddTorque(new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)) * 200f, ForceMode.Impulse);
-            platformBody.drag = 0.2f;
-            platformBody.angularDrag = 0.2f;
-            
-            
-            Invoke(nameof(DestroyPlatform), sinkSeconds);*/
         }
     }
 
     IEnumerator DestroyPlatform() {
-        //1. slow down to a halt
-        /*while (platformBody.velocity.magnitude >= 0.1f) {
-            platformBody.velocity += -platformBody.velocity * Time.fixedDeltaTime * slowdownMultiplier;
-            yield return new WaitForFixedUpdate();
-        }*/
-
-        //2.sink into ground
-        //platformBody.constraints = RigidbodyConstraints.None;
-        //transform.DOMoveY(-1.1f, 15f);
         platformBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         while (transform.position.y > -1.3f) {
             //platformBody.position = new Vector3(transform.position.x, transform.position.y - Time.deltaTime * 0.1f, transform.position.z);
             platformBody.velocity = new Vector3(platformBody.velocity.x, -0.1f, platformBody.velocity.z);
             yield return new WaitForFixedUpdate();
         }
-        
-
-        //yield return new WaitForSeconds(20f);
-            
-        //destroy
         Destroy(gameObject);
-
-        //yield return null;
     }
     
 
@@ -103,8 +77,10 @@ public class Platform : MonoBehaviour {
     void FillMountPoints() {
         for (int i = 0; i < mountPoints.Count; i++) {
             if (spawnChance <= Random.Range(0f, 1f)) continue;
-            Transform turret = Instantiate(turretPrefab, mountPoints[i].transform.position, Quaternion.identity);
-            turret.GetComponent<TurretController>().player = GameObject.Find("Player").transform;
+            int chosenEnemyIndex = Random.Range(0, enemyPrefabs.Count);
+            
+            Transform turret = Instantiate(enemyPrefabs[chosenEnemyIndex], mountPoints[i].transform.position, Quaternion.identity);
+            turret.GetComponent<Turret>().player = GameObject.Find("Player").transform;
             ConstraintSource source = new ConstraintSource();
             source.sourceTransform = mountPoints[i].transform;
             source.weight = 1f;
