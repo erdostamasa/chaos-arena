@@ -76,9 +76,16 @@ public class Platform : MonoBehaviour {
 
         //2.sink into ground
         //platformBody.constraints = RigidbodyConstraints.None;
-        transform.DOMoveY(-1.1f, 15f);
+        //transform.DOMoveY(-1.1f, 15f);
+        platformBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        while (transform.position.y > -1.3f) {
+            //platformBody.position = new Vector3(transform.position.x, transform.position.y - Time.deltaTime * 0.1f, transform.position.z);
+            platformBody.velocity = new Vector3(platformBody.velocity.x, -0.1f, platformBody.velocity.z);
+            yield return new WaitForFixedUpdate();
+        }
+        
 
-        yield return new WaitForSeconds(20f);
+        //yield return new WaitForSeconds(20f);
             
         //destroy
         Destroy(gameObject);

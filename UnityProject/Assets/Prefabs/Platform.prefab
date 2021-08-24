@@ -88,7 +88,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8696917099553870000}
-  m_LocalRotation: {x: -0, y: 0.12002137, z: -0, w: 0.9927714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.44, y: 0, z: 7.11}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children:
@@ -101,7 +101,7 @@ Transform:
   - {fileID: 8696917100428109486}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 13.787, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8696917099553870005
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -188,7 +188,6 @@ MonoBehaviour:
   turretPrefab: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
   aliveEnemies: []
   spawnChance: 0.5
-  sinkSeconds: 10
 --- !u!54 &8696917099553869994
 Rigidbody:
   m_ObjectHideFlags: 0

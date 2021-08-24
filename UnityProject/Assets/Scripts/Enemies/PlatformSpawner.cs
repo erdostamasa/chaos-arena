@@ -28,7 +28,8 @@ public class PlatformSpawner : MonoBehaviour {
         foreach (PlatformSpawnPoint point in spawnPoints) {
             if (point.CanSpawn()) {
                 //spawned = true;
-                Instantiate(platformPrefab, point.transform.position, Quaternion.identity).GetComponent<Rigidbody>().AddTorque(Vector3.up * Random.Range(-5f, 5f), ForceMode.Impulse);
+                Transform plat = Instantiate(platformPrefab, point.transform.position, Quaternion.identity);
+                plat.GetComponent<Rigidbody>().AddTorque(Vector3.up * Random.Range(-2000f, 2000f), ForceMode.Impulse);
                 break;
             }
         }
