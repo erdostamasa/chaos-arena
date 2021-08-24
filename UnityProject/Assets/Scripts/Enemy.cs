@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     public Platform owner;
-    [SerializeField] protected float aggroDistance = 10f;
-    
-    
-    
+    public bool active = false;
+
     void OnDestroy() {
         owner.aliveEnemies.Remove(this);
     }

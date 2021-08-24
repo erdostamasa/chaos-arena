@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2d663fbb-4952-4475-8c72-1c3bdbde4ce8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -8,8 +11,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/EnemyHealthDisplay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerEnergy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/Platform.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -26,6 +33,7 @@
       <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerEnergy.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1x5N89WnZx67fDoNApq1uV1UvSU" />
@@ -79,7 +87,10 @@
       <updated>1629640830479</updated>
       <workItem from="1629640863840" duration="3032000" />
       <workItem from="1629712667152" duration="11229000" />
-      <workItem from="1629734465261" duration="9623000" />
+      <workItem from="1629734465261" duration="10220000" />
+      <workItem from="1629804345633" duration="125000" />
+      <workItem from="1629804906877" duration="36000" />
+      <workItem from="1629805087724" duration="2729000" />
     </task>
     <servers />
   </component>

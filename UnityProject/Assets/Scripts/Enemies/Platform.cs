@@ -13,6 +13,8 @@ public class Platform : MonoBehaviour {
     [SerializeField] Transform turretPrefab;
     public List<Enemy> aliveEnemies = new List<Enemy>();
 
+    [Range(0f, 1f), SerializeField] float spawnChance = 0.5f;
+
     [SerializeField] float sinkSeconds = 5f;
 
     Vector3 direction;
@@ -58,9 +60,15 @@ public class Platform : MonoBehaviour {
         Destroy(gameObject);
     }
 
+    public void ToggleEnemies(bool toggle) {
+        foreach (Enemy enemy in aliveEnemies) {
+            enemy.active = toggle;
+        }
+    }
+
     void FillMountPoints() {
         for (int i = 0; i < mountPoints.Count; i++) {
-            if (0.3f <= Random.Range(0f, 1f)) continue;
+            if (spawnChance <= Random.Range(0f, 1f)) continue;
             Transform turret = Instantiate(turretPrefab, mountPoints[i].transform.position, Quaternion.identity);
             turret.GetComponent<TurretController>().player = GameObject.Find("Player").transform;
             ConstraintSource source = new ConstraintSource();

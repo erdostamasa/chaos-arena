@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2947344220643669389}
   - component: {fileID: 8730884588554101453}
   - component: {fileID: 8920450818163111016}
-  - component: {fileID: 1337745123305071851}
   - component: {fileID: 531289333379398585}
   - component: {fileID: 6968631365017491770}
   - component: {fileID: 3307271511829681992}
+  - component: {fileID: -411907145857043623}
   m_Layer: 13
   m_Name: bullet
   m_TagString: Untagged
@@ -85,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1337745123305071851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7214062488698035037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563c61b8f0578294fa382afc01d15bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
-  playerBullet: 0
 --- !u!135 &531289333379398585
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -235,3 +221,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &-411907145857043623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214062488698035037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63b8dfc82001e146ba2dd08ff857d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+  timeOut: 10
+  damage: 1

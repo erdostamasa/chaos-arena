@@ -9,6 +9,7 @@ public class TurretController : Enemy {
 
     [SerializeField] Transform bulletPrefab;
     [SerializeField] Transform firePoint;
+    [SerializeField] Transform gun;
 
 
     void Start() {
@@ -16,13 +17,13 @@ public class TurretController : Enemy {
     }
 
     void Update() {
-        if ((player.position - transform.position).magnitude <= aggroDistance) {
-            transform.LookAt(player);
+        if (active) {
+            gun.LookAt(player);
         }
     }
 
     void Shoot() {
-        if ((player.position - transform.position).magnitude <= aggroDistance) {
+        if (active) {
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             bullet.LookAt(player);
         }

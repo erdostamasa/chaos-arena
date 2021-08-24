@@ -27,11 +27,11 @@ public class MovingSphere : MonoBehaviour {
 	[SerializeField, Range(90, 170)]
 	float maxClimbAngle = 140f;
 
-	[SerializeField, Range(0f, 100f)]
+	/*[SerializeField, Range(0f, 100f)]
 	float maxSnapSpeed = 100f;
 
 	[SerializeField, Min(0f)]
-	float probeDistance = 1f;
+	float probeDistance = 1f;*/
 
 	[SerializeField]
 	float submergenceOffset = 0.5f;

@@ -42,7 +42,6 @@ public class WeaponController : MonoBehaviour {
         if (Input.GetMouseButton(0) && canFire) {
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             bullet.LookAt(targeter);
-            bullet.GetComponent<Bullet>().playerBullet = true;
             timer = 0;
             canFire = false;
         }
