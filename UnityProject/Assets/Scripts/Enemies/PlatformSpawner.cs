@@ -21,6 +21,8 @@ public class PlatformSpawner : MonoBehaviour {
 
 
     void SpawnPlatform() {
+        spawnPoints.Shuffle();
+        
         bool spawned = false;
         foreach (PlatformSpawnPoint point in spawnPoints) {
             if (point.CanSpawn()) {
@@ -30,9 +32,8 @@ public class PlatformSpawner : MonoBehaviour {
             }
         }
 
-        if (!spawned) {
+        /*if (!spawned) {
             Debug.Log("Can't spawn!");
-        }
+        }*/
     }
-
 }

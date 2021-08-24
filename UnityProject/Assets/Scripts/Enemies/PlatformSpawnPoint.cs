@@ -28,7 +28,7 @@ public class PlatformSpawnPoint : MonoBehaviour {
         if (Visible()) return false;
         Collider[] contacts = new Collider[1];
         contacts = Physics.OverlapBox(transform.position, new Vector3(5f, 0.45f, 5f), Quaternion.identity, layers, QueryTriggerInteraction.Ignore);
-        Debug.Log(gameObject.name + " " + contacts.Length);
+        //Debug.Log(gameObject.name + " " + contacts.Length);
         if (contacts.Length == 0) return true;
         return false;
     }
