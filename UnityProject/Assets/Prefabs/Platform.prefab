@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27bf32419fa3f4429ee8f3dc3a1d925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 5
   mountPoints:
   - {fileID: 8696917100191639348}
   - {fileID: 8696917099519377192}
@@ -184,8 +184,10 @@ MonoBehaviour:
   - {fileID: 8696917100078596462}
   - {fileID: 8696917101174389042}
   - {fileID: 8696917101267714454}
+  slowdownMultiplier: 0.3
   turretPrefab: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
   aliveEnemies: []
+  spawnChance: 0.5
   sinkSeconds: 10
 --- !u!54 &8696917099553869994
 Rigidbody:

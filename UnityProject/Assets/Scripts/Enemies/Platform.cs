@@ -10,6 +10,7 @@ public class Platform : MonoBehaviour {
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] List<GameObject> mountPoints;
 
+    [SerializeField] float slowdownMultiplier = 0.25f;
     [SerializeField] Transform turretPrefab;
     public List<Enemy> aliveEnemies = new List<Enemy>();
 
@@ -23,13 +24,20 @@ public class Platform : MonoBehaviour {
     void ChangeDirection() {
         direction = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
         direction.Normalize();
-        GetComponent<Rigidbody>().velocity = direction * moveSpeed * Random.Range(0.5f, 1.5f);
+        GetComponent<Rigidbody>().velocity = direction;
     }
 
     void FixedUpdate() {
-        Vector3 normalizedHorizontalVelocity = new Vector3(platformBody.velocity.x, 0, platformBody.velocity.z).normalized * 2f;
-        platformBody.velocity = new Vector3(normalizedHorizontalVelocity.x, platformBody.velocity.y, normalizedHorizontalVelocity.z);
-        //GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * 2f;
+        if (destroying) {
+            //slowdown
+            platformBody.velocity += -platformBody.velocity * Time.fixedDeltaTime * slowdownMultiplier;
+        }
+        else {
+            Vector3 normalizedHorizontalVelocity = new Vector3(platformBody.velocity.x, 0, platformBody.velocity.z).normalized * moveSpeed;
+            platformBody.velocity = new Vector3(normalizedHorizontalVelocity.x, platformBody.velocity.y, normalizedHorizontalVelocity.z);
+            //GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * 2f;    
+        }
+        
     }
 
     void Start() {
@@ -45,20 +53,39 @@ public class Platform : MonoBehaviour {
     void Update() {
         if (aliveEnemies.Count == 0 && !destroying) {
             destroying = true;
-            platformBody.constraints = RigidbodyConstraints.None;
+
+            StartCoroutine(DestroyPlatform());
+
+            /*platformBody.constraints = RigidbodyConstraints.None;
             platformBody.AddForce(Vector3.down * 300f, ForceMode.Impulse);
             platformBody.AddTorque(new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)) * 200f, ForceMode.Impulse);
             platformBody.drag = 0.2f;
             platformBody.angularDrag = 0.2f;
             
             
-            Invoke(nameof(DestroyPlatform), sinkSeconds);
+            Invoke(nameof(DestroyPlatform), sinkSeconds);*/
         }
     }
 
-    void DestroyPlatform() {
+    IEnumerator DestroyPlatform() {
+        //1. slow down to a halt
+        /*while (platformBody.velocity.magnitude >= 0.1f) {
+            platformBody.velocity += -platformBody.velocity * Time.fixedDeltaTime * slowdownMultiplier;
+            yield return new WaitForFixedUpdate();
+        }*/
+
+        //2.sink into ground
+        //platformBody.constraints = RigidbodyConstraints.None;
+        transform.DOMoveY(-1.1f, 15f);
+
+        yield return new WaitForSeconds(20f);
+            
+        //destroy
         Destroy(gameObject);
+
+        //yield return null;
     }
+    
 
     public void ToggleEnemies(bool toggle) {
         foreach (Enemy enemy in aliveEnemies) {

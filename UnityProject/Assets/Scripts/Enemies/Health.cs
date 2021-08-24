@@ -8,10 +8,10 @@ public class Health : MonoBehaviour {
     
     public void TakeDamage(int dmg) {
         healthPoints -= dmg;
-        display.UpdateDisplay();
         if (healthPoints <= 0) {
             Die();
         }
+        display.UpdateDisplay();
     }
 
     void Die() {
