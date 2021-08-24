@@ -16,7 +16,7 @@ public class PlatformSpawnPoint : MonoBehaviour {
         }
     }
 
-    float margin = 0.05f;
+    float margin = 0.2f;
 
     public bool Visible() {
         Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
