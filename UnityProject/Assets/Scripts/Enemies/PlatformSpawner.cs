@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlatformSpawner : MonoBehaviour {
     [SerializeField] Transform platformPrefab;
@@ -20,14 +21,14 @@ public class PlatformSpawner : MonoBehaviour {
     }
 
 
-    void SpawnPlatform() {
+    public void SpawnPlatform() {
         spawnPoints.Shuffle();
         
-        bool spawned = false;
+        //bool spawned = false;
         foreach (PlatformSpawnPoint point in spawnPoints) {
             if (point.CanSpawn()) {
-                spawned = true;
-                Instantiate(platformPrefab, point.transform.position, Quaternion.identity);
+                //spawned = true;
+                Instantiate(platformPrefab, point.transform.position, Quaternion.identity).GetComponent<Rigidbody>().AddTorque(Vector3.up * Random.Range(-5f, 5f), ForceMode.Impulse);
                 break;
             }
         }

@@ -5,17 +5,13 @@ using UnityEngine;
 public class Health : MonoBehaviour {
     public int healthPoints = 1;
     [SerializeField] EnemyHealthDisplay display;
-    
-    public void TakeDamage(int dmg) {
-        healthPoints -= dmg;
+
+    public void ChangeHealth(int delta) {
+        healthPoints += delta;
         if (healthPoints <= 0) {
-            Die();
+            GetComponent<Enemy>().DestroyThisEnemy();
         }
+
         display.UpdateDisplay();
     }
-
-    void Die() {
-        Destroy(gameObject);
-    }
-    
 }

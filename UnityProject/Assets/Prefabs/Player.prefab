@@ -144,7 +144,7 @@ MonoBehaviour:
   firePoint: {fileID: 3100597340423966680}
   player: {fileID: 8980864831011372381}
   bulletPrefab: {fileID: 2947344220643669389, guid: 2c859f1cd2340ed47a152a1b1f652e11, type: 3}
-  fireFrequency: 0.3
+  fireFrequency: 0.1
 --- !u!1 &3100597340423966679
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,11 +268,11 @@ GameObject:
   - component: {fileID: 8980864831011372376}
   - component: {fileID: 8980864831011372380}
   - component: {fileID: 8980864831011372383}
-  - component: {fileID: -1121734708791773394}
   - component: {fileID: 8980864831011372382}
+  - component: {fileID: 6315726875086754138}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,8 +430,6 @@ MonoBehaviour:
   maxGroundAngle: 10
   maxStairsAngle: 0
   maxClimbAngle: 130.9
-  maxSnapSpeed: 100
-  probeDistance: 1.5
   submergenceOffset: 0.5
   submergenceRange: 1
   buoyancy: 1
@@ -456,19 +454,6 @@ MonoBehaviour:
   ballAlignSpeed: 50
   ballAirRotation: 0.5
   ballSwimRotation: 2
---- !u!114 &-1121734708791773394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8980864831011372377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77893820cb9dd9e43a6ad13a2f1d3af6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints: 5
 --- !u!54 &8980864831011372382
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -485,3 +470,17 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &6315726875086754138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8980864831011372377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16002b3ef676cd459ca07837726179e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 40
+  maxEnergy: 40

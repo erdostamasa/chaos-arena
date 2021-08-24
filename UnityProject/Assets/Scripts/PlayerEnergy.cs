@@ -6,8 +6,9 @@ public class PlayerEnergy : MonoBehaviour {
     public float energy;
     public float maxEnergy;
 
-    public void TakeEnergy(float amount) {
-        energy -= amount;
+    public void ChangeEnergy(float delta) {
+        energy += delta;
+        if (energy > maxEnergy) energy = maxEnergy;
         float percent = energy / maxEnergy * 100f;
         EventManager.instance.PlayerDamaged(percent);
         if (energy <= 0) {
@@ -15,5 +16,4 @@ public class PlayerEnergy : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
 }

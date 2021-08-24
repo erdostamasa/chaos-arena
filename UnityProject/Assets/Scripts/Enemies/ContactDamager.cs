@@ -9,7 +9,7 @@ public class ContactDamager : MonoBehaviour {
     
     void OnCollisionStay(Collision other) {
         if (other.gameObject.CompareTag("Player")) {
-            other.gameObject.GetComponent<PlayerEnergy>().TakeEnergy(damage * Time.fixedDeltaTime);
+            other.gameObject.GetComponent<PlayerEnergy>().ChangeEnergy(-damage * Time.fixedDeltaTime);
         }
     }
 }

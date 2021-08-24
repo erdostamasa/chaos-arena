@@ -8,7 +8,7 @@ public class PlayerBullet : Bullet {
 
     void OnCollisionEnter(Collision other) {
         if (other.gameObject.GetComponent<Health>() != null) {
-            other.gameObject.GetComponent<Health>().TakeDamage(damage);
+            other.gameObject.GetComponent<Health>().ChangeHealth(-damage);
         }
 
         Destroy(gameObject);

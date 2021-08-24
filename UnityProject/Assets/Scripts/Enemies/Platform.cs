@@ -16,7 +16,7 @@ public class Platform : MonoBehaviour {
 
     [Range(0f, 1f), SerializeField] float spawnChance = 0.5f;
 
-    [SerializeField] float sinkSeconds = 5f;
+    //[SerializeField] float sinkSeconds = 5f;
 
     Vector3 direction;
     Rigidbody platformBody;

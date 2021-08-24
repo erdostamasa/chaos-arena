@@ -15,6 +15,16 @@ public class EventManager : MonoBehaviour {
         onPlayerDied?.Invoke();
     }
 
+    public event Action onEnemyDied;
+    public void EnemyDied() {
+        onEnemyDied?.Invoke();
+    }
+
+    public event Action<int> onMoneyChanged;
+    public void MoneyChanged(int newValue) {
+        onMoneyChanged?.Invoke(newValue);
+    }
+
     public event Action<float> onPlayerDamaged;
     public void PlayerDamaged(float percentRemaining) {
         onPlayerDamaged?.Invoke(percentRemaining);
