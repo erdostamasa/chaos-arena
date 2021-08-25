@@ -5,4 +5,6 @@ public class OptionsController
 {
     public static int Volume;
     public static bool FXAAVariable;
+
+    public static string ShopMenuVariable;
 }
