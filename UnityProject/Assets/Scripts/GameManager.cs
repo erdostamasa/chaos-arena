@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
+    private bool gameIsPaused;
+    
     void Awake() {
         instance = this;
     }
@@ -24,8 +26,9 @@ public class GameManager : MonoBehaviour {
         }*/
     }
 
-    void Start() {
-        EventManager.instance.onPlayerDied += RestartGame;
+    void Start()
+    {
+        gameIsPaused = false;
         EventManager.instance.onEnemyDied += IncreaseMoney;
 
         for (int i = 0; i < 10; i++) {
@@ -33,7 +36,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    void RestartGame() {
+    public void RestartGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -41,4 +44,18 @@ public class GameManager : MonoBehaviour {
         money++;
         EventManager.instance.MoneyChanged(money);
     }
+
+    public void StopGame()
+    {
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+    }
+    
+    public void StartGame()
+    {
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+    }
+    
+    public bool GameIsPaused => gameIsPaused;
 }

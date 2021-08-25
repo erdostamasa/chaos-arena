@@ -8,11 +8,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PauseMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MoneyDisplay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemyHealthDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DeathMenu.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
+      <option value="$PROJECT_DIR$/PauseMenu.cs" />
+      <option value="$PROJECT_DIR$/../GameManager.cs" />
+      <option value="$PROJECT_DIR$/DeathMenu.cs" />
       <option value="$PROJECT_DIR$/MoneyDisplay.cs" />
     </changedPaths>
   </component>
