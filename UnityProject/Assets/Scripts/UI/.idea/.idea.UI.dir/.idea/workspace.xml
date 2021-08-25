@@ -18,8 +18,8 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/PauseMenu.cs" />
       <option value="$PROJECT_DIR$/../GameManager.cs" />
-      <option value="$PROJECT_DIR$/DeathMenu.cs" />
       <option value="$PROJECT_DIR$/MoneyDisplay.cs" />
+      <option value="$PROJECT_DIR$/DeathMenu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
