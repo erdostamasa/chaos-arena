@@ -16,7 +16,7 @@ public class WeaponController : MonoBehaviour {
 
     [SerializeField] float angularSpeed = 1f;
     
-    void Update() {
+    void LateUpdate() {
         timer += Time.deltaTime;
         if (timer >= fireFrequency && energy.energy > energyCost) {
             canFire = true;

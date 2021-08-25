@@ -4919,7 +4919,7 @@ MonoBehaviour:
   speed: 5
   timeOut: 10
   explosionPrefab: {fileID: 9205804791646175895, guid: 2bd2aefc34d6d5d40a9383c5093ff5c9, type: 3}
-  energyDamage: 1
+  energyDamage: 2.5
   turnSpeed: 2.5
 --- !u!54 &6968631365017491770
 Rigidbody:

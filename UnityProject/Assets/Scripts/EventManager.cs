@@ -9,7 +9,16 @@ public class EventManager : MonoBehaviour {
     void Awake() {
         instance = this;
     }
-    
+
+    public event Action onPlatformSpawned;
+    public void PlatformSpawned() {
+        onPlatformSpawned?.Invoke();
+    }
+
+    public event Action onPlatformDestroyed;
+    public void PlatformDestroyed() {
+        onPlatformDestroyed?.Invoke();
+    }
     
     public event Action onPlayerDied;
     public void PlayerDied() {

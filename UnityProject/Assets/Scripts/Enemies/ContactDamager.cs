@@ -9,15 +9,10 @@ public class ContactDamager : MonoBehaviour {
 
     void OnTriggerStay(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
-            other.gameObject.GetComponent<PlayerEnergy>().ChangeEnergy(-damage * Time.fixedDeltaTime);
+            other.gameObject.GetComponent<PlayerEnergy>().ChangeEnergy(-damage * Time.fixedDeltaTime * GameManager.instance.currentStage.lavaDamageMultiplier);
         }
     }
 
-    /*void OnCollisionStay(Collision other) {
-        if (other.gameObject.CompareTag("Player")) {
-            other.gameObject.GetComponent<PlayerEnergy>().ChangeEnergy(-damage * Time.fixedDeltaTime);
-        }
-    }*/
 
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {

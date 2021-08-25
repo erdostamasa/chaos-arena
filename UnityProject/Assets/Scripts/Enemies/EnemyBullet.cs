@@ -7,7 +7,7 @@ public class EnemyBullet : Bullet {
 
     void OnCollisionEnter(Collision other) {
         if (other.gameObject.GetComponent<PlayerEnergy>() != null) {
-            other.gameObject.GetComponent<PlayerEnergy>().ChangeEnergy(-energyDamage);
+            other.gameObject.GetComponent<PlayerEnergy>().ChangeEnergy(-energyDamage * GameManager.instance.currentStage.enemyDamageMultiplier);
         }
         
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);

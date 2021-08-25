@@ -21,7 +21,7 @@ public class RocketTurret : Turret {
         foreach (Transform point in firePoints) {
             Transform bullet = Instantiate(bulletPrefab, point.position, Quaternion.identity);
             bullet.forward = point.forward;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
         }
     }
 }

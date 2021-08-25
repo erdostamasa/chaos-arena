@@ -17,6 +17,7 @@ public class EnemyRocket : EnemyBullet {
 
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Bullet")) {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
