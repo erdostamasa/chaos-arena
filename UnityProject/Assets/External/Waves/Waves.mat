@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 4f94d2d520e6b4b71bc4b2dfb03f3426, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -62,9 +62,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.024
     - _GlossyReflections: 1
-    - _Metallic: 0.05
+    - _Metallic: 0.147
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -77,11 +77,11 @@ Material:
     - _Wavelength: 50
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.059297152, b: 0, a: 1}
     - _Direction: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _WaveA: {r: -1.82, g: 6, b: 0.1, a: 5}
-    - _WaveB: {r: 1.33, g: 3, b: 0.1, a: 5}
-    - _WaveC: {r: 1.19, g: 1, b: 0.1, a: 5}
+    - _WaveA: {r: -1.82, g: 6, b: 0.15, a: 5}
+    - _WaveB: {r: 1.33, g: 3, b: 0.15, a: 5}
+    - _WaveC: {r: 1.19, g: 1, b: 0.15, a: 5}
     - _WaveD: {r: 1, g: 0.5, b: 0, a: 15}
   m_BuildTextureStacks: []
