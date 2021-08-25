@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="434c43d8-843a-4f9a-98bc-c58210ff60c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../OptionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../OptionsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OptionsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OptionsController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UI.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UI.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DeathMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DeathMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Options.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Options.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,19 +26,18 @@
     <setting file="file://$PROJECT_DIR$/EnemyHealthDisplay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DeathMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Shop.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../OptionsController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/PauseMenu.cs" />
       <option value="$PROJECT_DIR$/MoneyDisplay.cs" />
       <option value="$PROJECT_DIR$/../EventManager.cs" />
-      <option value="$PROJECT_DIR$/Options.cs" />
       <option value="$PROJECT_DIR$/Shop.cs" />
       <option value="$PROJECT_DIR$/../GameManager.cs" />
-      <option value="$PROJECT_DIR$/DeathMenu.cs" />
       <option value="$PROJECT_DIR$/../OptionsController.cs" />
+      <option value="$PROJECT_DIR$/DeathMenu.cs" />
       <option value="$PROJECT_DIR$/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Options.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xDQcrvfTEeMAO3hqn1r3dkR3eV" />
@@ -60,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629887264079</updated>
-      <workItem from="1629887267510" duration="5669000" />
+      <workItem from="1629887267510" duration="6856000" />
     </task>
     <servers />
   </component>

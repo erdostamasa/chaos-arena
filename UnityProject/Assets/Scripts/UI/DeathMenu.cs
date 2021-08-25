@@ -29,7 +29,7 @@ public class DeathMenu : MonoBehaviour
     {
         deathMenuUi.SetActive(false);
         GameManager.instance.StartGame();
-        OptionsController.ShopMenuVariable = true;
+        PlayerPrefs.SetInt("ShopMenuVariable",1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

@@ -14,8 +14,23 @@ public class Options : MonoBehaviour
 
     void Start()
     {
-        OptionsController.FXAAVariable = toggle.isOn;
-        OptionsController.Volume = (int) slider.value;
+        if (!PlayerPrefs.HasKey("FXAAVariable"))
+        {
+            PlayerPrefs.SetInt("FXAAVariable", toggle.isOn ? 1 : 0);
+        }
+        else
+        {
+            toggle.isOn = (PlayerPrefs.GetInt("FXAAVariable")==1) ? true : false;
+        }
+
+        if (!PlayerPrefs.HasKey("Volume"))
+        {
+            PlayerPrefs.SetInt("Volume", (int) slider.value);
+        }
+        else
+        {
+            slider.value = PlayerPrefs.GetInt("Volume");
+        }
     }
 
     void Update()
@@ -29,19 +44,19 @@ public class Options : MonoBehaviour
     public void OnVolumeSliderValueChanged()
     {
         volumeText.text = slider.value.ToString("0");
-        OptionsController.Volume = (int) slider.value;
+        PlayerPrefs.SetInt("Volume", (int) slider.value);
     }
 
     public void OnFXAACheckBoxValueChanged()
     {
-        OptionsController.FXAAVariable = toggle.isOn;
+        PlayerPrefs.SetInt("FXAAVariable", toggle.isOn ? 1 : 0);
     }
 
     public void Back()
     {
         optionsMenuUi.SetActive(false);
         mainMenuUi.SetActive(true);
-        Debug.Log(OptionsController.FXAAVariable);
-        Debug.Log(OptionsController.Volume);
+        Debug.Log(PlayerPrefs.GetInt("FXAAVariable"));
+        Debug.Log(PlayerPrefs.GetInt("Volume"));
     }
 }

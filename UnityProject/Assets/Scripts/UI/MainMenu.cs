@@ -11,11 +11,11 @@ public class MainMenu : MonoBehaviour
 
     public void Awake()
     {
-        if (OptionsController.ShopMenuVariable)
+        if (PlayerPrefs.GetInt("ShopMenuVariable")==1)
         {
             shopMenuUi.SetActive(true);
             mainMenuUi.SetActive(false);
-            OptionsController.ShopMenuVariable = false;
+            PlayerPrefs.SetInt("ShopMenuVariable",0);
         }
     }
 
