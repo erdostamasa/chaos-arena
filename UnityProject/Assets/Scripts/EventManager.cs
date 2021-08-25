@@ -9,7 +9,8 @@ public class EventManager : MonoBehaviour {
     void Awake() {
         instance = this;
     }
-
+    
+    
     public event Action onPlayerDied;
     public void PlayerDied() {
         onPlayerDied?.Invoke();

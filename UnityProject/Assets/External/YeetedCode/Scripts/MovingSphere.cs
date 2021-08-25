@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class MovingSphere : MonoBehaviour {
     [SerializeField]
@@ -92,6 +93,10 @@ public class MovingSphere : MonoBehaviour {
         meshRenderer = ball.GetComponent<MeshRenderer>();
         OnValidate();
         maxSpeed = normalSpeed;
+    }
+
+    void Start() {
+        maxAirJumps = PlayerPrefs.GetInt("jumpCount") - 1;
     }
 
     void Update() {

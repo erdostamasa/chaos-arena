@@ -26,8 +26,9 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    void Start()
-    {
+    void Start() {
+        //Cursor.visible = false;
+        
         gameIsPaused = false;
         EventManager.instance.onEnemyDied += IncreaseMoney;
 
