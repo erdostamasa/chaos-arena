@@ -16,7 +16,7 @@ public class PlatformSpawnPoint : MonoBehaviour {
         }
     }
 
-    float margin = 0.2f;
+    float margin = -0.2f;
 
     public bool Visible() {
         Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
@@ -27,7 +27,7 @@ public class PlatformSpawnPoint : MonoBehaviour {
     public bool CanSpawn() {
         if (Visible()) return false;
         Collider[] contacts = new Collider[1];
-        contacts = Physics.OverlapBox(transform.position, new Vector3(5f, 0.45f, 5f), Quaternion.identity, layers, QueryTriggerInteraction.Ignore);
+        contacts = Physics.OverlapBox(transform.position, new Vector3(5f, 5f, 5f), Quaternion.identity, layers, QueryTriggerInteraction.Ignore);
         //Debug.Log(gameObject.name + " " + contacts.Length);
         if (contacts.Length == 0) return true;
         return false;
@@ -39,6 +39,6 @@ public class PlatformSpawnPoint : MonoBehaviour {
         //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
         //if (m_Started)
         //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
-        Gizmos.DrawWireCube(transform.position, new Vector3(10f, 0.90f, 10f));
+        Gizmos.DrawWireCube(transform.position, new Vector3(10f, 10f, 10f));
     }
 }

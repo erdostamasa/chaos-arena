@@ -46,6 +46,23 @@ public class Platform : MonoBehaviour {
         ChangeDirection();
 
         FillMountPoints();
+        
+        transform.position -= Vector3.up * 1.3f;
+        //felemelkedés föld alól
+        
+        StartCoroutine(RiseFromBelow());
+
+    }
+
+    IEnumerator RiseFromBelow() {
+        platformBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        while (transform.position.y < 0f) {
+            platformBody.velocity = new Vector3(platformBody.velocity.x, 0.2f, platformBody.velocity.z);
+            yield return new WaitForFixedUpdate();
+        }
+
+        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+        platformBody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     }
 
     bool destroying = false;
