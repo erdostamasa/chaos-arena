@@ -24,6 +24,13 @@ public class DeathMenu : MonoBehaviour
         GameManager.instance.StartGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+    
+    public void LoadShop()
+    {
+        deathMenuUi.SetActive(false);
+        GameManager.instance.StartGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 
     public void RestartGame()
     {

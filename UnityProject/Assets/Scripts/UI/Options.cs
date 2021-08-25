@@ -44,5 +44,4 @@ public class Options : MonoBehaviour
         Debug.Log(OptionsController.FXAAVariable);
         Debug.Log(OptionsController.Volume);
     }
-    
 }

@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject optionsMenuUi;
     [SerializeField] GameObject mainMenuUi;
+    [SerializeField] GameObject shopMenuUi;
+    
     public void QuitGame()
     {
         Application.Quit();
@@ -20,6 +22,12 @@ public class MainMenu : MonoBehaviour
     public void Options()
     {
         optionsMenuUi.SetActive(true);
+        mainMenuUi.SetActive(false);
+    }
+    
+    public void Shop()
+    {
+        shopMenuUi.SetActive(true);
         mainMenuUi.SetActive(false);
     }
 }
