@@ -35,6 +35,6 @@ public class IntUpgrade : MonoBehaviour {
     void UpdateDisplay() {
         currentDisplay.text = PlayerPrefs.GetInt(upgradeName).ToString();
         upgradedDisplay.text = (PlayerPrefs.GetInt(upgradeName) + 1).ToString();
-        priceDisplay.text = (basePrice + PlayerPrefs.GetInt(upgradeName) * multiplier).ToString();
+        priceDisplay.text = "$" + (basePrice + PlayerPrefs.GetInt(upgradeName) * multiplier).ToString();
     }
 }
