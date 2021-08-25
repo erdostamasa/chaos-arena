@@ -8,7 +8,17 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject optionsMenuUi;
     [SerializeField] GameObject mainMenuUi;
     [SerializeField] GameObject shopMenuUi;
-    
+
+    public void Awake()
+    {
+        if (OptionsController.ShopMenuVariable)
+        {
+            shopMenuUi.SetActive(true);
+            mainMenuUi.SetActive(false);
+            OptionsController.ShopMenuVariable = false;
+        }
+    }
+
     public void QuitGame()
     {
         Application.Quit();

@@ -29,12 +29,12 @@ public class DeathMenu : MonoBehaviour
     {
         deathMenuUi.SetActive(false);
         GameManager.instance.StartGame();
+        OptionsController.ShopMenuVariable = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void RestartGame()
     {
         GameManager.instance.RestartGame();
-        
     }
 }
