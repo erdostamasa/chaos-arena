@@ -35,5 +35,6 @@ public class DeathMenu : MonoBehaviour
     public void RestartGame()
     {
         GameManager.instance.RestartGame();
+        
     }
 }
