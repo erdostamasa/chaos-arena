@@ -21,6 +21,9 @@ public class Platform : MonoBehaviour {
     Vector3 direction;
     Rigidbody platformBody;
 
+    bool destroying = false;
+    bool rising = false;
+    
     void ChangeDirection() {
         direction = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
         direction.Normalize();
@@ -32,17 +35,20 @@ public class Platform : MonoBehaviour {
             //slowdown
             platformBody.velocity += -platformBody.velocity * Time.fixedDeltaTime * slowdownMultiplier;
         }
+        else if (rising) {
+            
+        }
         else {
             Vector3 normalizedHorizontalVelocity = new Vector3(platformBody.velocity.x, 0, platformBody.velocity.z).normalized * moveSpeed;
             platformBody.velocity = new Vector3(normalizedHorizontalVelocity.x, platformBody.velocity.y, normalizedHorizontalVelocity.z);
+            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
             //GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * 2f;    
         }
         
+        transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
+        
     }
 
-    void LateUpdate() {
-        transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
-    }
 
     void Start() {
         platformBody = GetComponent<Rigidbody>();
@@ -59,6 +65,7 @@ public class Platform : MonoBehaviour {
     }
 
     IEnumerator RiseFromBelow() {
+        rising = true;
         platformBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         while (transform.position.y < 0f) {
             platformBody.velocity = new Vector3(platformBody.velocity.x, 0.2f, platformBody.velocity.z);
@@ -67,9 +74,10 @@ public class Platform : MonoBehaviour {
 
         transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         platformBody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rising = false;
     }
 
-    bool destroying = false;
+    
 
     void Update() {
         if (aliveEnemies.Count == 0 && !destroying) {
