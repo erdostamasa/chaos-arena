@@ -147,6 +147,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2947344220643669389, guid: 2c859f1cd2340ed47a152a1b1f652e11, type: 3}
   energyCost: 0.05
   fireFrequency: 0.1
+  angularSpeed: 1
 --- !u!1 &3100597340423966679
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +456,8 @@ MonoBehaviour:
   energy: 40
   maxEnergy: 40
   recoverSpeed: 1
+  recoverPercent: 10
+  explosionPrefab: {fileID: 9205804791646175895, guid: 57bbbbfe830abcc458ec15a4b2c0a0ed, type: 3}
 --- !u!54 &8980864831011372382
 Rigidbody:
   m_ObjectHideFlags: 0

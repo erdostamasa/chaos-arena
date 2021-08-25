@@ -8,7 +8,7 @@ public class PlayerEnergy : MonoBehaviour {
     public float maxEnergy;
     [SerializeField] float recoverSpeed = 1f;
     [SerializeField] float recoverPercent = 10f;
-    
+    [SerializeField] Transform explosionPrefab;
     void Update() {
         float percent = energy / maxEnergy * 100f;
         if (percent < recoverPercent) {
@@ -23,6 +23,7 @@ public class PlayerEnergy : MonoBehaviour {
         float percent = energy / maxEnergy * 100f;
         EventManager.instance.PlayerDamaged(percent);
         if (energy <= 0) {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             EventManager.instance.PlayerDied();
             //Destroy(gameObject);
         }
