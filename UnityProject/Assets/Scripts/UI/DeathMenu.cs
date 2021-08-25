@@ -7,7 +7,7 @@ public class DeathMenu : MonoBehaviour
 {
     [SerializeField] GameObject deathMenuUi;
 
-    void Start()
+    void Awake()
     {
         EventManager.instance.onPlayerDied += LoadDeathMenu;
     }
