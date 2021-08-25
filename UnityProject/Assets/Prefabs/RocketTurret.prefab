@@ -450,6 +450,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   active: 0
   energyOrbPrefab: {fileID: 5447842419669247331, guid: 59a8a461e76a7ce4f838c692ef46df3a, type: 3}
+  explosionPrefab: {fileID: 9205804791646175895, guid: 3698a689c7f382144a4b849f729d33d1, type: 3}
   player: {fileID: 0}
   bulletPrefab: {fileID: 2947344220643669389, guid: 353addb01b2568f49bf5c4be5b08bb3e, type: 3}
   firePoint: {fileID: 0}

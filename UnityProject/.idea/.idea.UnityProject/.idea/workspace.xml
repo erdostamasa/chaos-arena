@@ -37,13 +37,15 @@
       <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/MovingSphere.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Platform.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerEnergy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Options.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/IntUpgrade.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerBullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1x5N89WnZx67fDoNApq1uV1UvSU" />

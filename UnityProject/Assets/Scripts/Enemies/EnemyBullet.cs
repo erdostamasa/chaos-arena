@@ -9,7 +9,8 @@ public class EnemyBullet : Bullet {
         if (other.gameObject.GetComponent<PlayerEnergy>() != null) {
             other.gameObject.GetComponent<PlayerEnergy>().ChangeEnergy(-energyDamage);
         }
-
+        
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
