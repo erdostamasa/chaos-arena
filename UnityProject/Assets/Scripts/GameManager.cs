@@ -8,13 +8,19 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
     private bool gameIsPaused;
-    
+
     void Awake() {
         instance = this;
     }
 
     [SerializeField] PlatformSpawner platformSpawner;
     //public int money = 0;
+
+    public float timeSinceStart = 0f;
+
+    void LateUpdate() {
+        timeSinceStart += Time.deltaTime;
+    }
 
     [SerializeField] float spawnFrequency = 5f;
     float timer;

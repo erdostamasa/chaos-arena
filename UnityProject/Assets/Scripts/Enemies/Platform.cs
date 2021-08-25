@@ -10,6 +10,8 @@ public class Platform : MonoBehaviour {
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] List<GameObject> mountPoints;
 
+    
+    
     [SerializeField] float slowdownMultiplier = 0.25f;
     [SerializeField] List<Transform> enemyPrefabs;
     public List<Enemy> aliveEnemies = new List<Enemy>();
@@ -17,6 +19,9 @@ public class Platform : MonoBehaviour {
     [Range(0f, 1f), SerializeField] float spawnChance = 0.5f;
 
     //[SerializeField] float sinkSeconds = 5f;
+
+    [SerializeField] bool hasTimer = false;
+    [SerializeField] float timeToSink = 0f;
 
     Vector3 direction;
     Rigidbody platformBody;
@@ -51,6 +56,9 @@ public class Platform : MonoBehaviour {
 
 
     void Start() {
+        EventManager.instance.onEnemyDied += CheckMountPoints;
+        
+        
         platformBody = GetComponent<Rigidbody>();
         //InvokeRepeating(nameof(ChangeDirection), Random.Range(0f, 2f), Random.Range(3f, 6f));
         ChangeDirection();
@@ -68,7 +76,18 @@ public class Platform : MonoBehaviour {
         rising = true;
         platformBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         while (transform.position.y < 0f) {
+            
+            Vector3 normalizedHorizontalVelocity = new Vector3(platformBody.velocity.x, 0, platformBody.velocity.z).normalized * moveSpeed;
+            platformBody.velocity = new Vector3(normalizedHorizontalVelocity.x, platformBody.velocity.y, normalizedHorizontalVelocity.z);
+            //transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+            
+            
+            
             platformBody.velocity = new Vector3(platformBody.velocity.x, 0.2f, platformBody.velocity.z);
+            
+            
+            
+            
             yield return new WaitForFixedUpdate();
         }
 
@@ -77,9 +96,21 @@ public class Platform : MonoBehaviour {
         rising = false;
     }
 
-    
 
+
+    float timer = 0f;
     void Update() {
+        if (hasTimer) {
+            timer += Time.deltaTime;
+            if (timer >= timeToSink) {
+                destroying = true;
+                StartCoroutine(DestroyPlatform());
+            }
+        }
+    }
+
+    void CheckMountPoints() {
+        if (hasTimer) return;
         if (aliveEnemies.Count == 0 && !destroying) {
             destroying = true;
             StartCoroutine(DestroyPlatform());
