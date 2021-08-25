@@ -1125,7 +1125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1133,15 +1133,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1173,11 +1173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1058
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1241,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -1694,7 +1694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1702,15 +1702,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1742,11 +1742,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1524.6
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1810,7 +1810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -2111,7 +2111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2119,15 +2119,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2159,11 +2159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1524.6
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -406
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2227,7 +2227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -3636,7 +3636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3644,15 +3644,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3684,11 +3684,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1524.6
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1058
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3752,7 +3752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -4761,7 +4761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4769,15 +4769,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4809,11 +4809,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1524.6
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -732
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4877,7 +4877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -5273,7 +5273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -5281,15 +5281,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5321,11 +5321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -406
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5389,7 +5389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -5692,7 +5692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1986067569
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5996,7 +5996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -6004,15 +6004,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6044,11 +6044,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -732
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6112,7 +6112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -6415,7 +6415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2120431474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6837,7 +6837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -6845,15 +6845,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 810
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6885,11 +6885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 5250219616440152088, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6957,7 +6957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5250219617701542033, guid: 08baa66c6a1b3904d87c2b9b5b14cbb6, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
