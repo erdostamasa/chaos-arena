@@ -15,7 +15,7 @@ public class MoneyDisplay : MonoBehaviour {
     }
 
     void UpdateDisplay(int value) {
-        display.text = value + " Coin";
+        display.text = "$" + value;
     }
     
 }
