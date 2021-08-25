@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 8696917099553870004}
   - component: {fileID: 8696917099553870005}
   - component: {fileID: 8696917099553870006}
-  - component: {fileID: 8696917099553870007}
   - component: {fileID: 8696917099553869995}
   - component: {fileID: 8696917099553869994}
   m_Layer: 14
@@ -249,19 +248,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8696917099553870007
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8696917099553870000}
-  m_Material: {fileID: 13400000, guid: 0a9ba18b2e2e03b4da17094a39ea2042, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 6.727582, y: 3.7953253, z: 6.913864}
-  m_Center: {x: -0.03465271, y: -1.7903943, z: -0.20791674}
 --- !u!114 &8696917099553869995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,6 +569,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a797bea746bba59439067b50859ce461, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a797bea746bba59439067b50859ce461, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -593,7 +583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a797bea746bba59439067b50859ce461, type: 3}
       propertyPath: m_LocalScale.y
-      value: 30.15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a797bea746bba59439067b50859ce461, type: 3}
       propertyPath: m_LocalScale.z

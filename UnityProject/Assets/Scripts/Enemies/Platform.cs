@@ -40,6 +40,10 @@ public class Platform : MonoBehaviour {
         
     }
 
+    void LateUpdate() {
+        transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
+    }
+
     void Start() {
         platformBody = GetComponent<Rigidbody>();
         //InvokeRepeating(nameof(ChangeDirection), Random.Range(0f, 2f), Random.Range(3f, 6f));
