@@ -132,11 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406375086164214129, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: layers.m_Bits
-      value: 4294967295
+      value: 16640
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214131, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214132, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Name
@@ -318,11 +318,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406375086164214129, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: layers.m_Bits
-      value: 4294967295
+      value: 16640
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214131, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214132, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Name
@@ -388,11 +388,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406375086164214129, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: layers.m_Bits
-      value: 4294967295
+      value: 16640
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214131, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214132, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Name
@@ -719,11 +719,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406375086164214129, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: layers.m_Bits
-      value: 4294967295
+      value: 16640
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214131, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214132, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Name
@@ -789,11 +789,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406375086164214129, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: layers.m_Bits
-      value: 4294967295
+      value: 16640
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214131, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214132, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Name
@@ -1022,11 +1022,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406375086164214129, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: layers.m_Bits
-      value: 4294967295
+      value: 16640
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214131, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214132, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Name
@@ -1564,11 +1564,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406375086164214129, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: layers.m_Bits
-      value: 4294967295
+      value: 16640
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214131, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214132, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Name
@@ -2545,6 +2545,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3100597340291271767, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: angularSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100597340291271767, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
       propertyPath: targetingMask.m_Bits
       value: 114752
       objectReference: {fileID: 0}
@@ -2611,11 +2615,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406375086164214129, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: layers.m_Bits
-      value: 4294967295
+      value: 16640
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214131, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406375086164214132, guid: 7444df3d3dbc1b54cabc9da36bd5072d, type: 3}
       propertyPath: m_Name
