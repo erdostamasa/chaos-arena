@@ -268,7 +268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformSpawner: {fileID: 641755447}
   money: 0
-  spawnFrequency: 5
 --- !u!1 &145864583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1765,7 @@ GameObject:
   - component: {fileID: 938264675}
   - component: {fileID: 938264674}
   - component: {fileID: 938264677}
+  - component: {fileID: 938264678}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1852,6 +1852,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 6315726875086754141}
   offset: {x: 0, y: 12.69, z: -7.5}
+--- !u!114 &938264678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938264673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301eca71255100647bb9bad1d5641921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 3d417cf48fde7da46b5a79811115e87f, type: 3}
 --- !u!1 &955152068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,6 +2079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069607612}
   - component: {fileID: 1069607610}
+  - component: {fileID: 1069607611}
   m_Layer: 0
   m_Name: CanvasCamera
   m_TagString: Untagged
@@ -2116,6 +2130,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1069607611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069607609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301eca71255100647bb9bad1d5641921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 3d417cf48fde7da46b5a79811115e87f, type: 3}
 --- !u!4 &1069607612
 Transform:
   m_ObjectHideFlags: 0
