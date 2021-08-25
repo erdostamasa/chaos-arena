@@ -11,7 +11,7 @@ public class ShopManager : MonoBehaviour {
         EventManager.instance.onMoneyChanged += UpdateDisplay;
         
         
-        PlayerPrefs.SetInt("money", 0);
+        //PlayerPrefs.SetInt("money", 0);
         EventManager.instance.MoneyChanged(0);
         
     }

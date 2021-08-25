@@ -5,17 +5,15 @@ using TMPro;
 using UnityEngine;
 
 public class MoneyDisplay : MonoBehaviour {
-    TextMeshProUGUI display;
+    [SerializeField] TextMeshProUGUI display;
 
     void Start() {
-        display = GetComponent<TextMeshProUGUI>();
         EventManager.instance.onMoneyChanged += UpdateDisplay;
-        
-        UpdateDisplay(GameManager.instance.money);
+        UpdateDisplay(PlayerPrefs.GetInt("money"));
     }
 
     void UpdateDisplay(int value) {
-        display.text = "$" + value;
+        display.text = "$" + PlayerPrefs.GetInt("money");
     }
     
 }

@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
     }
 
     [SerializeField] PlatformSpawner platformSpawner;
-    public int money = 0;
+    //public int money = 0;
 
     [SerializeField] float spawnFrequency = 5f;
     float timer;
@@ -43,7 +43,9 @@ public class GameManager : MonoBehaviour {
     }
 
     void IncreaseMoney() {
+        int money = PlayerPrefs.GetInt("money");
         money++;
+        PlayerPrefs.SetInt("money", money);
         EventManager.instance.MoneyChanged(money);
     }
 
