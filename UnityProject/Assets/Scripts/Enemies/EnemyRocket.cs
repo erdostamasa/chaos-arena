@@ -14,7 +14,14 @@ public class EnemyRocket : EnemyBullet {
         Destroy(gameObject, timeOut);
         
     }
-    
+
+    void OnTriggerEnter(Collider other) {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bullet")) {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
     void FixedUpdate() {
 //        transform.LookAt(target);
         // Determine which direction to rotate towards

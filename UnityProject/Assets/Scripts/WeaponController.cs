@@ -7,17 +7,14 @@ public class WeaponController : MonoBehaviour {
     [SerializeField] Transform firePoint;
     [SerializeField] Transform player;
     [SerializeField] PlayerEnergy energy;
-    
     [SerializeField] Transform bulletPrefab;
     [SerializeField] float energyCost = 0.05f;
-    
     [SerializeField] float fireFrequency = 0.1f;
 
-    [SerializeField] LayerMask targetingMask;
-    
     float timer;
-
     bool canFire = false;
+
+    [SerializeField] float angularSpeed = 1f;
     
     void Update() {
         timer += Time.deltaTime;
@@ -25,27 +22,25 @@ public class WeaponController : MonoBehaviour {
             canFire = true;
         }
         
-        
         Plane plane = new Plane(Vector3.up, -1);
-
-        float distance;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        plane.Raycast(ray, out distance);
-        RaycastHit hit;
-        //Debug.DrawRay(ray.origin, ray.direction * 50f, Color.blue);
-        //if (Physics.Raycast(ray, out hit, 100f, targetingMask)) {
+        plane.Raycast(ray, out var distance);
         if (plane.Raycast(ray, out distance)) {
             targeter.position = ray.GetPoint(distance);
-
-            //Debug.Log(hit.collider.name);
-            //Smoothly move to mouse position
-            //Vector3 directionToMove = hit.point;
-            //float distanceToMove = (directionToMove - targeter.position).sqrMagnitude;
-            //targeter.position += (directionToMove - targeter.position) * Time.deltaTime * 50f;
-            //targeter.position = new Vector3(targeter.position.x, player.position.y, targeter.position.z);
-
             
-            transform.LookAt(targeter.position);
+            // Determine which direction to rotate towards
+            Vector3 targetDirection = targeter.position - transform.position;
+            
+            // The step size is equal to speed times frame time.
+            float singleStep = angularSpeed * Time.deltaTime;
+            
+            // Rotate the forward vector towards the target direction by one step
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+            
+            // Calculate a rotation a step closer to the target and applies rotation to this object
+            transform.rotation = Quaternion.LookRotation(newDirection);
+            
+            //transform.LookAt(targeter.position);
         }
 
         if (Input.GetMouseButton(0) && canFire) {
