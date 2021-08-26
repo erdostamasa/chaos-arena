@@ -95,36 +95,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1138297940433826657
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8238903626044508903}
-  m_Layer: 16
-  m_Name: FirePoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8238903626044508903
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138297940433826657}
-  m_LocalRotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13333333, y: 0.00329932, z: 0.5462647}
-  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
-  m_Children: []
-  m_Father: {fileID: 8559863978748355954}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350180635851204662
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,14 +423,15 @@ MonoBehaviour:
   explosionPrefab: {fileID: 9205804791646175895, guid: 3698a689c7f382144a4b849f729d33d1, type: 3}
   player: {fileID: 0}
   bulletPrefab: {fileID: 2947344220643669389, guid: 353addb01b2568f49bf5c4be5b08bb3e, type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 3585540124245781204}
   gun: {fileID: 3585540122302563442}
   head: {fileID: 8559863978748355954}
+  spreadAmountMin: {x: -0.05, y: 0, z: -0.05}
+  spreadAmountMax: {x: 0.05, y: 0.2, z: 0.05}
+  targetOffset: {x: 0, y: 6, z: 0}
   speed: 1.5
-  firePoints:
-  - {fileID: 3585540124245781204}
-  - {fileID: 8238903626044508903}
   fireFrequency: {x: 2, y: 5}
+  volleyLength: 3
 --- !u!65 &430493007100125787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -593,7 +564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3585540124245781205}
   m_LocalRotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13333336, y: 0.0032993192, z: 0.5329314}
+  m_LocalPosition: {x: 0, y: 0.0032993192, z: 0.5329314}
   m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
   m_Children: []
   m_Father: {fileID: 8559863978748355954}

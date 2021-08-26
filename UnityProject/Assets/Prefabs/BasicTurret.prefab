@@ -202,6 +202,8 @@ MonoBehaviour:
   firePoint: {fileID: 3585540124245781204}
   gun: {fileID: 3585540122302563442}
   head: {fileID: 1659754679097253740}
+  spreadAmountMin: {x: -0.1, y: -0.1, z: -0.1}
+  spreadAmountMax: {x: 0.1, y: 0.1, z: 0.1}
   speed: 3
 --- !u!114 &-6265076033582275443
 MonoBehaviour:

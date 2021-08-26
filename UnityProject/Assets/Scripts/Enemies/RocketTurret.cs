@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RocketTurret : Turret {
-    [SerializeField] List<Transform> firePoints;
     [SerializeField] Vector2 fireFrequency;
+    [SerializeField] int volleyLength = 3;
     
     void Start() {
         InvokeRepeating(nameof(Shoot), 0f, Random.Range(fireFrequency.x, fireFrequency.y));
@@ -18,10 +18,10 @@ public class RocketTurret : Turret {
     
     
     IEnumerator ShootRockets() {
-        foreach (Transform point in firePoints) {
-            Transform bullet = Instantiate(bulletPrefab, point.position, Quaternion.identity);
-            bullet.forward = point.forward;
-            yield return new WaitForSeconds(Random.Range(0.5f,1.5f));
+        for(int i = 0; i < volleyLength; i++) {
+            Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            bullet.forward = firePoint.forward + GenerateSpread();
+            yield return new WaitForSeconds(Random.Range(0.2f,0.8f));
         }
     }
 }

@@ -10,6 +10,9 @@ public class HealthBar : MonoBehaviour {
 
     void Start() {
         EventManager.instance.onPlayerDamaged += UpdateDisplay;
+
+        /*slider.maxValue = PlayerPrefs.GetFloat("maxHealthLevel") * 100f;
+        slider.value = slider.maxValue;*/
     }
 
     void UpdateDisplay(float percentRemaining) {

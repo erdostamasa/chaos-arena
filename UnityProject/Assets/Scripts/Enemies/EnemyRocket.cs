@@ -9,10 +9,9 @@ public class EnemyRocket : EnemyBullet {
     public float turnSpeed = 1.0f;
 
     
-    void Start() {
+    protected new void Start() {
+        base.Start();
         target = GameObject.Find("Player").transform;
-        Destroy(gameObject, timeOut);
-        
     }
 
     void OnTriggerEnter(Collider other) {

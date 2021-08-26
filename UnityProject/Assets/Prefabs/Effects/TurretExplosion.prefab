@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 9205804791646175895}
   - component: {fileID: 7940247121641346647}
   - component: {fileID: 7622209703468096642}
+  - component: {fileID: 8356309133442923739}
   m_Layer: 0
-  m_Name: BulletExplosion
+  m_Name: TurretExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,7 +170,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 30
-      minScalar: 5
+      minScalar: 25
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -221,8 +222,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.9528302, g: 0.5661217, b: 0.40899786, a: 1}
-      maxColor: {r: 1, g: 0.67432296, b: 0.042452812, a: 1}
+      minColor: {r: 1, g: 0.9454259, b: 0.0047169924, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -284,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.3
+      scalar: 1
       minScalar: 0.25
       maxCurve:
         serializedVersion: 2
@@ -1362,7 +1363,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.8901961, g: 0.87058824, b: 0.33333334, a: 1}
-        key1: {r: 0.5660378, g: 0.16029237, b: 0.018689938, a: 1}
+        key1: {r: 0.8867924, g: 0.30307364, b: 0.09620863, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2627,7 +2628,7 @@ ParticleSystem:
     magnitude:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2681,7 +2682,7 @@ ParticleSystem:
     inWorldSpace: 0
     multiplyDragByParticleSize: 1
     multiplyDragByParticleVelocity: 1
-    dampen: 0.7
+    dampen: 0.5
     drag:
       serializedVersion: 2
       minMaxState: 0
@@ -4862,3 +4863,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8356309133442923739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2888904857468795587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442b0cce490739447bf11ef144a0ae0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeOut: 2

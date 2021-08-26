@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WeaponController : MonoBehaviour {
     [SerializeField] Transform targeter;
@@ -9,13 +11,24 @@ public class WeaponController : MonoBehaviour {
     [SerializeField] PlayerEnergy energy;
     [SerializeField] Transform bulletPrefab;
     [SerializeField] float energyCost = 0.05f;
-    [SerializeField] float fireFrequency = 0.1f;
-
+    float fireFrequency;
+    [SerializeField] float shotPerSecond = 1;
+    [SerializeField] float spreadAmount;
+    
     float timer;
     bool canFire = false;
 
     [SerializeField] float angularSpeed = 1f;
-    
+
+    Vector3 GenerateSpread() {
+        return new Vector3(Random.Range(-spreadAmount, spreadAmount), Random.Range(-spreadAmount, spreadAmount)/5, Random.Range(-spreadAmount, spreadAmount));
+    }
+
+    void Start() {
+        shotPerSecond = PlayerPrefs.GetFloat("shootingSpeedLevel",1f);
+        fireFrequency = 1 / shotPerSecond;
+    }
+
     void LateUpdate() {
         timer += Time.deltaTime;
         if (timer >= fireFrequency && energy.energy > energyCost) {
@@ -47,7 +60,7 @@ public class WeaponController : MonoBehaviour {
             energy.ChangeEnergy(-energyCost);
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             //bullet.LookAt(targeter);
-            bullet.forward = firePoint.forward;
+            bullet.forward = firePoint.forward + GenerateSpread();
             timer = 0;
             canFire = false;
         }

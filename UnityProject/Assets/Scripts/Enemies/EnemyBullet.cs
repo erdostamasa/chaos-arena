@@ -13,4 +13,8 @@ public class EnemyBullet : Bullet {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+
+    protected new void Start() {
+       base.Start();
+    }
 }

@@ -74,8 +74,8 @@ public class Platform : MonoBehaviour {
     }
 
     IEnumerator RiseFromBelow() {
-        yield return new WaitForSeconds(0.01f);
         rising = true;
+        yield return new WaitForSeconds(0.01f);
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         while (transform.position.y < 0f) {
             Vector3 normalizedHorizontalVelocity = new Vector3(platformBody.velocity.x, 0, platformBody.velocity.z).normalized * moveSpeed;
