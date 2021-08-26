@@ -1,0 +1,46 @@
+name: Build Webgl
+
+on: [push]
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
+jobs:
+  buildWEBG:
+    #if: ${{ github.ref == 'refs/heads/main' }}
+    #needs: test
+    name: Deploy WebGL
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Cache
+      - uses: actions/cache@v2.1.4
+        with:
+          path: UnityProject/Library
+          key: Library-UnityProject-WebGL
+          restore-keys: |
+            Library-UnityProject-
+            Library-
+      # Build
+      - name: Build for WebGL
+        uses: game-ci/unity-builder@v2.0-alpha-11
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          projectPath: './UnityProject'
+          unityVersion: 2020.3.16f1
+          targetPlatform: WebGL
+          #allowDirtyBuild: true
+          
+      # Deploy to Github Pages
+      - name : Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build/WebGL/WebGL # The folder the action should deploy.
+
+
+
