@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  activationSecond: 30
+  activationSecond: 20
   maxPlatformsOnMap: 10
   platformSpawnFrequency: 5
   enemySpawnChance: 0.2
@@ -26,4 +26,6 @@ MonoBehaviour:
     accumulatedWeight: 60
   enemies:
   - item: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
-    accumulatedWeight: 100
+    accumulatedWeight: 90
+  - item: {fileID: 3585540122511450587, guid: 86eab7e0b5b05474395f66bde5e7b919, type: 3}
+    accumulatedWeight: 10

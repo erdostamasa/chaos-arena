@@ -16,11 +16,14 @@ MonoBehaviour:
   maxPlatformsOnMap: 10
   platformSpawnFrequency: 5
   enemySpawnChance: 0.15
+  enemyDamageMultiplier: 1
+  lavaDamageMultiplier: 1
+  enemyHealthMultiplier: 1
   platforms:
   - item: {fileID: 8696917099553870004, guid: 21e7c06cecc11054497c0ce9d3dd7eca, type: 3}
-    accumulatedWeight: 50
+    accumulatedWeight: 30
   - item: {fileID: 8696917099553870004, guid: 86a10f48fe7862e4ebf9310ddb0c6fa9, type: 3}
-    accumulatedWeight: 50
+    accumulatedWeight: 70
   enemies:
   - item: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
     accumulatedWeight: 100

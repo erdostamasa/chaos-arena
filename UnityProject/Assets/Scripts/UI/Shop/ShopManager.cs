@@ -22,7 +22,7 @@ public class ShopManager : MonoBehaviour {
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.U)) {
-            PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 100);
+            PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 10000);
             EventManager.instance.MoneyChanged(PlayerPrefs.GetInt("money"));
         }
     }

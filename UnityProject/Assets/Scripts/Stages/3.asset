@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  activationSecond: 60
+  activationSecond: 40
   maxPlatformsOnMap: 12
   platformSpawnFrequency: 4
   enemySpawnChance: 0.25
+  enemyDamageMultiplier: 1.5
+  lavaDamageMultiplier: 1.75
+  enemyHealthMultiplier: 1.4
   platforms:
   - item: {fileID: 8696917099553870004, guid: 21e7c06cecc11054497c0ce9d3dd7eca, type: 3}
     accumulatedWeight: 40
@@ -23,6 +26,6 @@ MonoBehaviour:
     accumulatedWeight: 60
   enemies:
   - item: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
-    accumulatedWeight: 80
+    accumulatedWeight: 70
   - item: {fileID: 3585540122511450587, guid: 86eab7e0b5b05474395f66bde5e7b919, type: 3}
-    accumulatedWeight: 20
+    accumulatedWeight: 30

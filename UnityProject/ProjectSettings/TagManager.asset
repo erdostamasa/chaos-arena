@@ -24,8 +24,8 @@ TagManager:
   - EnemyBullet
   - Enemy
   - OnlyPlatformCollision
-  - 
-  - 
+  - Shield
+  - Obstacle
   - 
   - 
   - 

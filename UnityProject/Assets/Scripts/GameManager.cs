@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
         //Cursor.visible = false;
         currentStage = stages[0];
         gameIsPaused = false;
-        EventManager.instance.onEnemyDied += IncreaseMoney;
+        //EventManager.instance.onEnemyDied += IncreaseMoney;
         EventManager.instance.onPlatformSpawned += IncreasePlatformCount;
         EventManager.instance.onPlatformDestroyed += DecreasePlatformCount;
 
@@ -70,12 +70,12 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void IncreaseMoney() {
+    /*void IncreaseMoney() {
         int money = PlayerPrefs.GetInt("money");
         money++;
         PlayerPrefs.SetInt("money", money);
         EventManager.instance.MoneyChanged(money);
-    }
+    }*/
 
     public void StopGame()
     {

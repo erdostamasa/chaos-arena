@@ -33,8 +33,6 @@ public class EnergyOrb : MonoBehaviour {
         
     }
     
-    
-
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             other.GetComponent<PlayerEnergy>().ChangeEnergy(1);
