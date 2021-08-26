@@ -20,7 +20,8 @@ public class Turret : Enemy {
     public float speed = 1.0f;
 
     void Start() {
-        InvokeRepeating(nameof(Shoot), 0f, Random.Range(1f, 3f));
+        float shootFrequency = 1f / 0.5f;
+        InvokeRepeating(nameof(Shoot), 0f, Random.Range(shootFrequency-0.1f, shootFrequency+0.1f));
     }
 
     protected Vector3 GenerateSpread() {

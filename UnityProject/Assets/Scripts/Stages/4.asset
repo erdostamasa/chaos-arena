@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   activationSecond: 60
-  maxPlatformsOnMap: 15
+  maxPlatformsOnMap: 13
   platformSpawnFrequency: 4
   enemySpawnChance: 0.3
   enemyDamageMultiplier: 1.75

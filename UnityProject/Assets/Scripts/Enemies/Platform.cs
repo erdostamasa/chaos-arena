@@ -51,6 +51,7 @@ public class Platform : MonoBehaviour {
     void Start() {
         //EventManager.instance.onEnemyDied += CheckMountPoints;
         platformBody = GetComponent<Rigidbody>();
+        
     }
 
     public void SetupPlatform(Stage s) {
@@ -134,8 +135,11 @@ public class Platform : MonoBehaviour {
             yield return new WaitForFixedUpdate();
         }
 
-        EventManager.instance.PlatformDestroyed();
         Destroy(gameObject);
+    }
+
+    void OnDestroy() {
+        EventManager.instance.PlatformDestroyed();
     }
 
 

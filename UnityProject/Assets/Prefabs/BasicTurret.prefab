@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3585540122302563442
 Transform:
   m_ObjectHideFlags: 0
@@ -196,6 +196,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   active: 0
   energyOrbPrefab: {fileID: 5447842419669247331, guid: 59a8a461e76a7ce4f838c692ef46df3a, type: 3}
+  moneyOrbPrefab: {fileID: 5447842419669247331, guid: def169fa8ceac42479b6e1b91702b290, type: 3}
   explosionPrefab: {fileID: 9205804791646175895, guid: 3698a689c7f382144a4b849f729d33d1, type: 3}
   player: {fileID: 0}
   bulletPrefab: {fileID: 2947344220643669389, guid: cca86aecb5201274799a02aabd395cfb, type: 3}
@@ -204,6 +205,7 @@ MonoBehaviour:
   head: {fileID: 1659754679097253740}
   spreadAmountMin: {x: -0.1, y: -0.1, z: -0.1}
   spreadAmountMax: {x: 0.1, y: 0.1, z: 0.1}
+  targetOffset: {x: 0, y: 0, z: 0}
   speed: 3
 --- !u!114 &-6265076033582275443
 MonoBehaviour:

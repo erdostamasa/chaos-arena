@@ -26,4 +26,6 @@ MonoBehaviour:
     accumulatedWeight: 60
   enemies:
   - item: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
-    accumulatedWeight: 100
+    accumulatedWeight: 90
+  - item: {fileID: 3585540122511450587, guid: 86eab7e0b5b05474395f66bde5e7b919, type: 3}
+    accumulatedWeight: 10

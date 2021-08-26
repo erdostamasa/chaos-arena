@@ -110,3 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visibleMaterial: {fileID: 2100000, guid: b8c97778b599ff2499d840c8016f28ab, type: 2}
   invisibleMaterial: {fileID: 2100000, guid: 0690ac57fd1f1d64a88f51787ebf6772, type: 2}
+  layers:
+    serializedVersion: 2
+    m_Bits: 540928

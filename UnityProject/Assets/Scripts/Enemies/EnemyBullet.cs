@@ -17,4 +17,12 @@ public class EnemyBullet : Bullet {
     protected new void Start() {
        base.Start();
     }
+    
+    void OnTriggerEnter(Collider other) {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bullet")) {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
