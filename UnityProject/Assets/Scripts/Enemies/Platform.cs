@@ -181,6 +181,7 @@ public class Platform : MonoBehaviour {
         for (int i = 0; i < mountPoints.Count; i++) {
             if (!spawnedOne) {
                 turret = Instantiate(enemyBag.GetRandom(), mountPoints[i].transform.position, Quaternion.identity);
+                turret.rotation = Quaternion.Euler(new Vector3(0, Random.Range(0f, 360f), 0));
                 turret.GetComponent<Turret>().player = GameObject.Find("Player").transform;
                 source = new ConstraintSource();
                 source.sourceTransform = mountPoints[i].transform;
@@ -188,17 +189,22 @@ public class Platform : MonoBehaviour {
                 turret.GetComponent<PositionConstraint>().AddSource(source);
                 turret.GetComponent<Enemy>().owner = this;
                 aliveEnemies.Add(turret.GetComponent<Enemy>());
+                //turret.parent = transform;
+                
                 spawnedOne = true;
             }
             else {
                 if (stage.enemySpawnChance <= Random.Range(0f, 1f)) continue;
 
                 turret = Instantiate(enemyBag.GetRandom(), mountPoints[i].transform.position, Quaternion.identity);
+                turret.rotation = Quaternion.Euler(new Vector3(0, Random.Range(0f, 360f), 0));
                 turret.GetComponent<Turret>().player = GameObject.Find("Player").transform;
                 source = new ConstraintSource();
                 source.sourceTransform = mountPoints[i].transform;
                 source.weight = 1f;
                 turret.GetComponent<PositionConstraint>().AddSource(source);
+                //turret.parent = transform;
+                
                 turret.GetComponent<Enemy>().owner = this;
                 aliveEnemies.Add(turret.GetComponent<Enemy>());
             }

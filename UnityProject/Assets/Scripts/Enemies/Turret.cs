@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using Random = UnityEngine.Random;
 
 public class Turret : Enemy {
@@ -46,7 +47,9 @@ public class Turret : Enemy {
 
             Vector3 rot = transform.rotation.eulerAngles;
             transform.localRotation = Quaternion.Euler(new Vector3(0, rot.y, 0));
-
+            //GetComponent<ParentConstraint>().SetRotationOffset(1,new Vector3(0, rot.y, 0));
+            
+            
             Vector3 headRot = head.transform.eulerAngles;
             head.localRotation = Quaternion.Euler(new Vector3(headRot.x, 0, 0));
         }

@@ -155,8 +155,8 @@ GameObject:
   - component: {fileID: 3585540122511450587}
   - component: {fileID: 7323424908232791832}
   - component: {fileID: -6265076033582275443}
-  - component: {fileID: 1003130122427497914}
   - component: {fileID: 803366530111439991}
+  - component: {fileID: 2871403914963554168}
   m_Layer: 16
   m_Name: BasicTurret
   m_TagString: Enemy
@@ -221,23 +221,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 3
   display: {fileID: 919747353341635226}
---- !u!1818360608 &1003130122427497914
-PositionConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3585540122511450591}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 4.21, z: 0}
-  m_TranslationOffset: {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 0
-  m_Sources: []
 --- !u!65 &803366530111439991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -251,6 +234,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0417801, y: 1.6159358, z: 1.0118887}
   m_Center: {x: 0, y: 0.30796802, z: 0.0067620873}
+--- !u!1818360608 &2871403914963554168
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585540122511450591}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1 &3585540123526456055
 GameObject:
   m_ObjectHideFlags: 0

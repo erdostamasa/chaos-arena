@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 2262637081504503908}
   - component: {fileID: 2262637081504883938}
   m_Layer: 0
-  m_Name: shot_prefab
+  m_Name: LAZER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -402,8 +402,8 @@ GameObject:
   - component: {fileID: 3585540122511450587}
   - component: {fileID: -6265076033582275443}
   - component: {fileID: 2014114389386126428}
-  - component: {fileID: 1003130122427497914}
   - component: {fileID: 803366530111439991}
+  - component: {fileID: -9121388301166900682}
   m_Layer: 16
   m_Name: LaserTurret
   m_TagString: Enemy
@@ -467,29 +467,14 @@ MonoBehaviour:
   spreadAmountMin: {x: 0, y: 0, z: 0}
   spreadAmountMax: {x: 0, y: 0, z: 0}
   targetOffset: {x: 0, y: 0, z: 0}
-  speed: 2
-  laserLine: {fileID: 0}
+  speed: 0.2
+  laserLine: {fileID: 2262637081504503908}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 852224
   targetingBall: {fileID: 1396121570587369343}
---- !u!1818360608 &1003130122427497914
-PositionConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3585540122511450591}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 4.21, z: 0}
-  m_TranslationOffset: {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 0
-  m_Sources: []
+  laserDistance: 10
+  laserObject: {fileID: 2262637081494724174}
 --- !u!65 &803366530111439991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -503,6 +488,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.88920236, y: 1.078099, z: 1.0118887}
   m_Center: {x: 0, y: 0.039049625, z: 0.0067620873}
+--- !u!1818360608 &-9121388301166900682
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585540122511450591}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1 &3585540123526456055
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +760,6 @@ GameObject:
   - component: {fileID: 1396121570587369343}
   - component: {fileID: 8560559012911632241}
   - component: {fileID: 1155133086362639156}
-  - component: {fileID: 2240771181409182545}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -795,7 +796,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8070423706284610362}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -829,19 +830,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2240771181409182545
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8070423706284610362}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &9150681354751235021
 PrefabInstance:
   m_ObjectHideFlags: 0
