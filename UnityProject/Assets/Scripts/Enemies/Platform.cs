@@ -9,14 +9,13 @@ using Random = UnityEngine.Random;
 public class Platform : MonoBehaviour {
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] List<GameObject> mountPoints;
-    [SerializeField] Transform powerupSpawnLocation;
-    [SerializeField] float powerupSpawnChance;
-    [SerializeField] Transform powerupPrefab;
-    
+    [SerializeField] List<Transform> powerupSpawnLocations;
+
     [SerializeField] float slowdownMultiplier = 0.25f;
 
     public List<Enemy> aliveEnemies = new List<Enemy>();
     WeightedRandomBag<Transform> enemyBag;
+    WeightedRandomBag<Transform> powerupBag;
 
     [SerializeField] bool hasTimer = false;
     [SerializeField] float timeToSink = 0f;
@@ -24,6 +23,7 @@ public class Platform : MonoBehaviour {
     Stage stage;
     Vector3 direction;
     Rigidbody platformBody;
+    Transform spawnedPowerup;
 
     bool destroying = false;
     bool rising = false;
@@ -63,6 +63,10 @@ public class Platform : MonoBehaviour {
         enemyBag = new WeightedRandomBag<Transform>();
         foreach (WeightedRandomBag<Transform>.Entry enemy in stage.enemies) {
             enemyBag.AddEntry(enemy.item, enemy.accumulatedWeight);
+        }
+        powerupBag = new WeightedRandomBag<Transform>();
+        foreach (WeightedRandomBag<Transform>.Entry powerup in stage.powerups) {
+            powerupBag.AddEntry(powerup.item, powerup.accumulatedWeight);
         }
 
 
@@ -139,6 +143,9 @@ public class Platform : MonoBehaviour {
             yield return new WaitForFixedUpdate();
         }
 
+        if (spawnedPowerup != null) {
+            Destroy(spawnedPowerup.gameObject);
+        }
         Destroy(gameObject);
     }
 
@@ -159,13 +166,15 @@ public class Platform : MonoBehaviour {
         Transform turret;
         ConstraintSource source;
         
-        
-        if (Random.Range(0f, 1f) <= powerupSpawnChance) {
-            Transform powerup = Instantiate(powerupPrefab, powerupSpawnLocation.position, Quaternion.identity);
+        if (powerupSpawnLocations.Count > 0 && Random.Range(0f, 1f) <= stage.powerupSpawnChance) {
+            //choose a random location from list
+            int randomIndex = Random.Range(0, powerupSpawnLocations.Count);
+            
+            spawnedPowerup = Instantiate(powerupBag.GetRandom(), powerupSpawnLocations[randomIndex].position, Quaternion.identity);
             source = new ConstraintSource();
-            source.sourceTransform = powerupSpawnLocation;
+            source.sourceTransform = powerupSpawnLocations[randomIndex];
             source.weight = 1f;
-            powerup.gameObject.GetComponent<PositionConstraint>().AddSource(source);
+            spawnedPowerup.GetComponent<PositionConstraint>().AddSource(source);
         }
 
         

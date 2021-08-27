@@ -18,9 +18,9 @@ public class Turret : Enemy {
 
     // Angular speed in radians per sec.
     public float speed = 1.0f;
-
-    void Start() {
-        float shootFrequency = 1f / 0.5f;
+    
+    new void Start() {
+        base.Start();
         InvokeRepeating(nameof(Shoot), 0f, Random.Range(shootFrequency-0.1f, shootFrequency+0.1f));
     }
 

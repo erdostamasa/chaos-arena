@@ -60,6 +60,36 @@ Transform:
   m_Father: {fileID: 8696917099553870004}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5043682016542937031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9155111674827707686}
+  m_Layer: 14
+  m_Name: PowerupPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9155111674827707686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5043682016542937031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0.78, z: -1.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8696917099553870004}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6260459078857040861
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +119,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8696917099553870004}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7046551439501769532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6984240287174299344}
+  m_Layer: 14
+  m_Name: PowerupPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6984240287174299344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046551439501769532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.76, y: 0.78, z: -0.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8696917099553870004}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7979711472434224812
 GameObject:
@@ -290,6 +350,8 @@ Transform:
   - {fileID: 8590522834946407703}
   - {fileID: 5995154899465726471}
   - {fileID: 7020814162254902184}
+  - {fileID: 6984240287174299344}
+  - {fileID: 9155111674827707686}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -364,9 +426,10 @@ MonoBehaviour:
   - {fileID: 8696917101267714454}
   - {fileID: 2999378390690866419}
   - {fileID: 6260459078857040861}
-  powerupSpawnLocation: {fileID: 7020814162254902184}
-  powerupSpawnChance: 1
-  powerupPrefab: {fileID: 9005350658691571321, guid: aa49aa736b5eb6a4d897954e3c1664d5, type: 3}
+  powerupSpawnLocations:
+  - {fileID: 7020814162254902184}
+  - {fileID: 6984240287174299344}
+  - {fileID: 9155111674827707686}
   slowdownMultiplier: 0.3
   aliveEnemies: []
   hasTimer: 0
@@ -490,7 +553,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 12
+  m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8696917100428109485
 MonoBehaviour:
