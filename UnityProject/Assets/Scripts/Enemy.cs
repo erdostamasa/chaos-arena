@@ -10,13 +10,14 @@ public class Enemy : MonoBehaviour {
     [SerializeField] Transform energyOrbPrefab;
     [SerializeField] Transform moneyOrbPrefab;
     [SerializeField] Transform explosionPrefab;
+    [SerializeField] float baseShootSpeedMultiplier = 1f;
     protected float shootFrequency;
     int energyDrop;
     int moneyDrop;
 
     protected void Start() {
         Stage currentStage = GameManager.instance.currentStage;
-        shootFrequency = 1f / currentStage.enemyShotsPerSecond;
+        shootFrequency = 1f / (currentStage.enemyShotsPerSecond * baseShootSpeedMultiplier);
 //        Debug.Log(currentStage);
         int r = currentStage.randomDropOffset;
         energyDrop = currentStage.energyDropRate + Random.Range(-r, r);

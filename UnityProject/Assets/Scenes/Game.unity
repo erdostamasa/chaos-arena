@@ -239,7 +239,6 @@ MonoBehaviour:
   platformSpawner: {fileID: 641755447}
   stages:
   - {fileID: 11400000, guid: efa7878b451d4b248a6eb53cc60590b9, type: 2}
-  - {fileID: 11400000, guid: a64ca1d89cffb904ca2ed84f5546549a, type: 2}
   currentStage: {fileID: 0}
   currentStageIndex: 0
   timeSinceStart: 0
@@ -2033,7 +2032,7 @@ Transform:
   m_GameObject: {fileID: 908254748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -4776,6 +4775,10 @@ PrefabInstance:
       propertyPath: targetingMask.m_Bits
       value: 114752
       objectReference: {fileID: 0}
+    - target: {fileID: 6184109160890043057, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd8fde642a9d6487abdc10c57655af29, type: 2}
     - target: {fileID: 6315726875086754138, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
       propertyPath: shield
       value: 
@@ -4864,6 +4867,10 @@ PrefabInstance:
       propertyPath: normalSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: fd8fde642a9d6487abdc10c57655af29, type: 2}
     - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
       propertyPath: maxAcceleration
       value: 80

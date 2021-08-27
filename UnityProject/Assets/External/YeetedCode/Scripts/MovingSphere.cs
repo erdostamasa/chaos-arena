@@ -96,7 +96,7 @@ public class MovingSphere : MonoBehaviour {
     }
 
     void Start() {
-        maxAirJumps = PlayerPrefs.GetInt("airJumps");
+        maxAirJumps = PlayerPrefs.GetInt("airJumps") - 1;
     }
 
     void Update() {

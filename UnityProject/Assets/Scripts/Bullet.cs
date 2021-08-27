@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour {
         GetComponent<Rigidbody>().velocity = transform.forward * speed;
     }
 
-    protected void DestroyBullet() {
+    public void DestroyBullet() {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         AudioManager.instance.PlaySound(clip, transform.position);
         Destroy(gameObject);

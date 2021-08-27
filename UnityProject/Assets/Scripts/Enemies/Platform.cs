@@ -19,6 +19,7 @@ public class Platform : MonoBehaviour {
 
     [SerializeField] bool hasTimer = false;
     [SerializeField] float timeToSink = 0f;
+    [SerializeField] float startingDepth = 1.5f;
 
     Stage stage;
     Vector3 direction;
@@ -75,7 +76,7 @@ public class Platform : MonoBehaviour {
 
         FillMountPoints();
 
-        transform.position -= Vector3.up * 1.3f;
+        transform.position -= Vector3.up * startingDepth;
         //felemelkedés föld alól
 
         EventManager.instance.PlatformSpawned();
@@ -94,7 +95,7 @@ public class Platform : MonoBehaviour {
 
             platformBody.velocity = new Vector3(platformBody.velocity.x, 0.2f, platformBody.velocity.z);
 
-
+            //ToggleEnemies(false);
             yield return new WaitForFixedUpdate();
             //yield return null;
         }
