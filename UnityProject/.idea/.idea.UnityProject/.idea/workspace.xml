@@ -42,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/DefaultValueSetter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MoneyDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/FloatUpgrade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/Scripts/VolumetricLineBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerEnergy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/RocketTurret.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/PlatformSpawner.cs" root0="FORCE_HIGHLIGHTING" />
@@ -137,7 +138,7 @@
       <workItem from="1629895560792" duration="4842000" />
       <workItem from="1629913247465" duration="66000" />
       <workItem from="1629984601519" duration="17605000" />
-      <workItem from="1630072237038" duration="12007000" />
+      <workItem from="1630072237038" duration="13429000" />
     </task>
     <servers />
   </component>

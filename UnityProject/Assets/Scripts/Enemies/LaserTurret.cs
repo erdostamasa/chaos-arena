@@ -1,9 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VolumetricLines;
 
 public class LaserTurret : Turret {
+    [SerializeField] VolumetricLineBehavior laserLine;
+    [SerializeField] LayerMask playerLayer;
+    [SerializeField] Transform targetingBall;
+    
     new void Update() {
+        RaycastHit hit;
+        if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, 50f, playerLayer, QueryTriggerInteraction.Ignore)) {
+            targetingBall.position = hit.point;
+        }
+        
         if (active) {
             Vector3 targetDirection = (player.position - firePoint.position);
             targetDirection = new Vector3(targetDirection.x, 0, targetDirection.z);
