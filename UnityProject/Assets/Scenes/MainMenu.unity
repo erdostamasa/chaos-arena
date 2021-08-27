@@ -3699,7 +3699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1986067569
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4080,7 +4080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2120431474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4385,10 +4385,10 @@ RectTransform:
   m_Father: {fileID: 1284168843909209078}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405, y: -80}
-  m_SizeDelta: {x: 810, y: 160}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1284168842170324631
 GameObject:
@@ -7986,10 +7986,10 @@ RectTransform:
   m_Father: {fileID: 1284168843909209078}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1524.6, y: -80}
-  m_SizeDelta: {x: 810, y: 160}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5250219616823912455
 GameObject:
@@ -11053,10 +11053,10 @@ RectTransform:
   m_Father: {fileID: 1284168843909209078}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1524.6, y: -406}
-  m_SizeDelta: {x: 810, y: 160}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5250219617631587395
 GameObject:
@@ -11074,7 +11074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &5250219617649010392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11852,10 +11852,10 @@ RectTransform:
   m_Father: {fileID: 1284168843909209078}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405, y: -406}
-  m_SizeDelta: {x: 810, y: 160}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &5250219617839797776
 RectTransform:
@@ -12383,7 +12383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc70edf68de7654d950e7f2b09829b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeLevelString: 
+  upgradeLevelString: lavaDamageMult
   upgradeCountString: 
   currentDisplay: {fileID: 5250219617079387369}
   upgradedDisplay: {fileID: 5250219616284945437}
@@ -12430,7 +12430,7 @@ MonoBehaviour:
   currentDisplay: {fileID: 5250219617289196516}
   upgradedDisplay: {fileID: 5250219615940844304}
   priceDisplay: {fileID: 5250219617649010407}
-  baseLevel: 1
+  baseLevel: 1.5
   basePrice: 15
   levelIncrease: 1.05
   priceIncrease: 1.2
