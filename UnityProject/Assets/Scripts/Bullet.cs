@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour {
     [SerializeField] protected float speed = 5f;
     [SerializeField] protected float timeOut = 5f;
     [SerializeField] protected Transform explosionPrefab;
+    [SerializeField] SoundClip clip;
 
     protected void Start() {
         Invoke(nameof(DestroyBullet), timeOut);
@@ -15,6 +16,7 @@ public class Bullet : MonoBehaviour {
 
     protected void DestroyBullet() {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        AudioManager.instance.PlaySound(clip, transform.position);
         Destroy(gameObject);
     }
 }

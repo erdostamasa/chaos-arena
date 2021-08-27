@@ -9,6 +9,10 @@ using Random = UnityEngine.Random;
 public class Platform : MonoBehaviour {
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] List<GameObject> mountPoints;
+    [SerializeField] Transform powerupSpawnLocation;
+    [SerializeField] float powerupSpawnChance;
+    [SerializeField] Transform powerupPrefab;
+    
     [SerializeField] float slowdownMultiplier = 0.25f;
 
     public List<Enemy> aliveEnemies = new List<Enemy>();
@@ -154,6 +158,17 @@ public class Platform : MonoBehaviour {
         bool spawnedOne = false;
         Transform turret;
         ConstraintSource source;
+        
+        
+        if (Random.Range(0f, 1f) <= powerupSpawnChance) {
+            Transform powerup = Instantiate(powerupPrefab, powerupSpawnLocation.position, Quaternion.identity);
+            source = new ConstraintSource();
+            source.sourceTransform = powerupSpawnLocation;
+            source.weight = 1f;
+            powerup.gameObject.GetComponent<PositionConstraint>().AddSource(source);
+        }
+
+        
         for (int i = 0; i < mountPoints.Count; i++) {
             if (!spawnedOne) {
                 turret = Instantiate(enemyBag.GetRandom(), mountPoints[i].transform.position, Quaternion.identity);

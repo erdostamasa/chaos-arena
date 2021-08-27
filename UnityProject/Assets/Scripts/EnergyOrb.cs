@@ -10,6 +10,7 @@ public class EnergyOrb : MonoBehaviour {
     [SerializeField] float pickupDistance = 10f;
     [SerializeField] AnimationCurve pickupSpeedCurve;
     [SerializeField] float spawnForce = 3f;
+    [SerializeField] SoundClip sound;
     
     void Start() {
         target = GameObject.Find("Player").transform;
@@ -36,6 +37,7 @@ public class EnergyOrb : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             other.GetComponent<PlayerEnergy>().ChangeEnergy(1);
+            AudioManager.instance.PlaySound(sound, transform.position);
             Destroy(gameObject);
         }
     }
