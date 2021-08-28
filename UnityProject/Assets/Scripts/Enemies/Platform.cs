@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class Platform : MonoBehaviour {
     [SerializeField] float moveSpeed = 3f;
+    [SerializeField] float maxSpinSpeed = 0.5f;
     [SerializeField] List<GameObject> mountPoints;
     [SerializeField] List<Transform> powerupSpawnLocations;
 
@@ -36,6 +37,13 @@ public class Platform : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        if (platformBody.angularVelocity.y > maxSpinSpeed) {
+            platformBody.angularVelocity = new Vector3(platformBody.angularVelocity.x, maxSpinSpeed, platformBody.angularVelocity.z);
+        }else if (platformBody.angularVelocity.y < -maxSpinSpeed) {
+            platformBody.angularVelocity = new Vector3(platformBody.angularVelocity.x, -maxSpinSpeed, platformBody.angularVelocity.z);
+        }
+        
+        
         if (destroying) {
             //slowdown
             platformBody.velocity += -platformBody.velocity * Time.fixedDeltaTime * slowdownMultiplier;
@@ -93,7 +101,7 @@ public class Platform : MonoBehaviour {
             //transform.position = new Vector3(transform.position.x, 0, transform.position.z);
 
 
-            platformBody.velocity = new Vector3(platformBody.velocity.x, 0.2f, platformBody.velocity.z);
+            platformBody.velocity = new Vector3(platformBody.velocity.x, 0.5f, platformBody.velocity.z);
 
             //ToggleEnemies(false);
             yield return new WaitForFixedUpdate();

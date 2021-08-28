@@ -470,11 +470,11 @@ MonoBehaviour:
   spreadAmountMin: {x: 0, y: 0, z: 0}
   spreadAmountMax: {x: 0, y: 0, z: 0}
   targetOffset: {x: 0, y: 0, z: 0}
-  speed: 1.2
+  speed: 0.4
   laserLine: {fileID: 2262637081504503908}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 860416
+    m_Bits: 868608
   targetingBall: {fileID: 1396121570587369343}
   laserDistance: 50
   laserObject: {fileID: 2262637081494724174}

@@ -417,6 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  maxSpinSpeed: 0.8
   mountPoints:
   - {fileID: 8696917100191639348}
   - {fileID: 8696917099519377192}
@@ -434,7 +435,7 @@ MonoBehaviour:
   aliveEnemies: []
   hasTimer: 0
   timeToSink: 0
-  startingDepth: 1.5
+  startingDepth: 2
 --- !u!54 &8696917099553869994
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -666,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a797bea746bba59439067b50859ce461, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a797bea746bba59439067b50859ce461, type: 3}
       propertyPath: m_LocalPosition.z
