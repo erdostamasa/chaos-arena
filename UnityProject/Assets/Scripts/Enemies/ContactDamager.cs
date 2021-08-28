@@ -18,7 +18,7 @@ public class ContactDamager : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter(Collider other) {
+    /*void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             MovingSphere controller = other.gameObject.GetComponent<MovingSphere>();
             controller.maxSpeed = controller.slowSpeed;
@@ -30,5 +30,5 @@ public class ContactDamager : MonoBehaviour {
             MovingSphere controller = other.gameObject.GetComponent<MovingSphere>();
             controller.maxSpeed = controller.normalSpeed;
         }
-    }
+    }*/
 }
