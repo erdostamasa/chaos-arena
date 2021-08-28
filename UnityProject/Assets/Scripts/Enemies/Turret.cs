@@ -16,7 +16,8 @@ public class Turret : Enemy {
     [SerializeField] Vector3 spreadAmountMin;
     [SerializeField] Vector3 spreadAmountMax;
     [SerializeField] Vector3 targetOffset;
-
+    [SerializeField] SoundClip shootingSound;
+    
     // Angular speed in radians per sec.
     public float speed = 1.0f;
     
@@ -103,6 +104,7 @@ public class Turret : Enemy {
 
     protected void Shoot() {
         if (active) {
+            AudioManager.instance.PlaySound(shootingSound, transform.position);
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             bullet.forward = firePoint.forward + GenerateSpread();
             //bullet.LookAt(player);

@@ -488,7 +488,7 @@ MonoBehaviour:
   energyOrbPrefab: {fileID: 5447842419669247331, guid: 59a8a461e76a7ce4f838c692ef46df3a, type: 3}
   moneyOrbPrefab: {fileID: 5447842419669247331, guid: def169fa8ceac42479b6e1b91702b290, type: 3}
   explosionPrefab: {fileID: 9205804791646175895, guid: 3698a689c7f382144a4b849f729d33d1, type: 3}
-  baseShootSpeedMultiplier: 0.75
+  baseShootSpeedMultiplier: 0.3
   player: {fileID: 0}
   bulletPrefab: {fileID: 2947344220643669389, guid: 353addb01b2568f49bf5c4be5b08bb3e, type: 3}
   firePoint: {fileID: 3585540124245781204}
@@ -498,7 +498,6 @@ MonoBehaviour:
   spreadAmountMax: {x: 0.05, y: 0.2, z: 0.05}
   targetOffset: {x: 0, y: 4, z: 0}
   speed: 1.5
-  volleyLength: 10
   missileLaunch: {fileID: 11400000, guid: 50dfa7beaff372d43a7f2e3d31d20c04, type: 2}
   missileEffect: {fileID: 2457473222415535967, guid: 109efc71f27f4ed4990290c1c842493f, type: 3}
 --- !u!65 &430493007100125787
@@ -699,7 +698,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 22
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2323290640596875233
 MonoBehaviour:
