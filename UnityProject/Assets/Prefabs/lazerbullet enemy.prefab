@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 2472956731263078569}
   - component: {fileID: 6734641622569742827}
   - component: {fileID: 713103149384240066}
-  - component: {fileID: 4395287054668045361}
+  - component: {fileID: -3771734030869609249}
   m_Layer: 0
-  m_Name: lazerbullet
+  m_Name: lazerbullet enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0884dceb0d4308c4eb8bc763c8f8deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_templateMaterial: {fileID: 2100000, guid: c173ffbb1482cc34da7a841c2e5cb8fd, type: 2}
+  m_templateMaterial: {fileID: 2100000, guid: 237b35557feeffd4f86b36534188c439, type: 2}
   m_doNotOverwriteTemplateMaterialProperties: 1
   m_startPos: {x: 0, y: 0, z: 0}
   m_endPos: {x: 0, y: 0, z: 9.41}
@@ -116,7 +116,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.9468937, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.85797274, b: 0, a: 1}
   m_Intensity: 2
   m_Range: 300
   m_SpotAngle: 30
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   timeOut: 0.8
-  explosionPrefab: {fileID: 9205804791646175895, guid: 2ddc37d0200ae6d4e9bef40e207cc708, type: 3}
-  clip: {fileID: 11400000, guid: eda9a35541b056642b6e58ff8f94fd38, type: 2}
+  explosionPrefab: {fileID: 9205804791646175895, guid: 664d1eb3a43878e488efe9f14a2aed3a, type: 3}
+  clip: {fileID: 11400000, guid: a9ea87e8bf3ba7e4f94d0dfeec8e0338, type: 2}
   damage: 1
 --- !u!54 &713103149384240066
 Rigidbody:
@@ -200,7 +200,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!65 &4395287054668045361
+--- !u!65 &-3771734030869609249
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,4 +212,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.74, z: 9.610001}
-  m_Center: {x: 0, y: 0, z: 4.7050004}
+  m_Center: {x: 0, y: 0, z: 4.705}
