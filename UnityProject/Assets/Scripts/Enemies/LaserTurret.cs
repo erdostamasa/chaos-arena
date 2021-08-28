@@ -21,11 +21,17 @@ public class LaserTurret : Turret {
     new void Start() {
         base.Start();
         currentDistance = 0f;
-        laserLine.EndPos = Vector3.zero;
+        if (laserLine) {
+            laserLine.EndPos = Vector3.zero;    
+        }
+        
     }
     
     new void Update() {
-        particles.transform.localPosition = new Vector3(0, 0, currentDistance);
+        if (particles) {
+            particles.transform.localPosition = new Vector3(0, 0, currentDistance);    
+        }
+        
         
         if (!active) {
             if (!retracting && !extending) {
@@ -89,6 +95,7 @@ public class LaserTurret : Turret {
     }
 
     IEnumerator RetractLaser() {
+        if (laserLine == null) yield break;
         retracting = true;
         while (laserLine.EndPos.z > 0) {
             currentDistance = laserLine.EndPos.z;

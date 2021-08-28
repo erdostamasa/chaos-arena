@@ -26,7 +26,9 @@ public class Enemy : MonoBehaviour {
 
 
     void OnDestroy() {
-        owner.aliveEnemies.Remove(this);
+        if (owner) {
+            owner.aliveEnemies.Remove(this);    
+        }
     }
 
     public void DestroyThisEnemy(bool dropLoot) {
