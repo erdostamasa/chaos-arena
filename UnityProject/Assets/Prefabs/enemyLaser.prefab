@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8562667778507389794}
   - component: {fileID: 6944965522746668114}
   - component: {fileID: 3922320641236990989}
+  - component: {fileID: 694871236547513671}
   m_Layer: 15
   m_Name: enemyLaser
   m_TagString: Untagged
@@ -45,7 +46,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.37615132, y: 0.36583784, z: 1.3542454}
+  m_Size: {x: 0.33333045, y: 0.3468908, z: 1.3542454}
   m_Center: {x: 0, y: 0, z: 0.58619153}
 --- !u!54 &6944965522746668114
 Rigidbody:
@@ -75,11 +76,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87491ad7a7de7154c8324395ff813f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 13
   timeOut: 3
   explosionPrefab: {fileID: 9205804791646175895, guid: 664d1eb3a43878e488efe9f14a2aed3a, type: 3}
   clip: {fileID: 11400000, guid: a9ea87e8bf3ba7e4f94d0dfeec8e0338, type: 2}
-  energyDamage: 1
+  energyDamage: 2.5
+--- !u!65 &694871236547513671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295052705755493699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7830181, y: 1.3298779, z: 1.5060644}
+  m_Center: {x: 0, y: -0.1649389, z: 0.5917065}
 --- !u!1 &9080738704076157057
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +192,7 @@ MonoBehaviour:
   m_templateMaterial: {fileID: 2100000, guid: 237b35557feeffd4f86b36534188c439, type: 2}
   m_doNotOverwriteTemplateMaterialProperties: 1
   m_startPos: {x: 0, y: 0, z: 0}
-  m_endPos: {x: 0, y: 0, z: 6}
+  m_endPos: {x: 0, y: 0, z: 4}
   m_lineColor: {r: 1, g: 1, b: 1, a: 0}
   m_lineWidth: 1
   m_lightSaberFactor: 0.473

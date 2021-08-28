@@ -13,32 +13,32 @@ MonoBehaviour:
   m_Name: 0Setup
   m_EditorClassIdentifier: 
   activationSecond: 0
-  maxPlatformsOnMap: 8
-  platformSpawnFrequency: 0.1
-  enemySpawnChance: 0.1
-  powerupSpawnChance: 1
+  maxPlatformsOnMap: 12
+  platformSpawnFrequency: 0.02
+  enemySpawnChance: 0.2
+  powerupSpawnChance: 0.05
   energyDropRate: 5
-  moneyDropRate: 10
-  randomDropOffset: 5
-  enemyDamageMultiplier: 1
+  moneyDropRate: 5
+  randomDropOffset: 3
+  enemyDamageMultiplier: 3
   enemyShotsPerSecond: 0.3
   rocketVolleyAmount: 1
   lavaDamageMultiplier: 3
   enemyHealthMultiplier: 1
   platforms:
   - item: {fileID: 8696917099553870004, guid: 21e7c06cecc11054497c0ce9d3dd7eca, type: 3}
-    accumulatedWeight: 1
-  - item: {fileID: 8696917099553870004, guid: 86a10f48fe7862e4ebf9310ddb0c6fa9, type: 3}
-    accumulatedWeight: 1
+    accumulatedWeight: 30
   - item: {fileID: 8696917099553870004, guid: ca2df5423f08a604e8d0fd7d7ef02f43, type: 3}
-    accumulatedWeight: 1
+    accumulatedWeight: 70
+  - item: {fileID: 8696917099553870004, guid: 86a10f48fe7862e4ebf9310ddb0c6fa9, type: 3}
+    accumulatedWeight: 0
   - item: {fileID: 8696917099553870004, guid: ae080c1f9aefce54ba5b1539578859b5, type: 3}
-    accumulatedWeight: 1
+    accumulatedWeight: 0
   enemies:
   - item: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
-    accumulatedWeight: 0
+    accumulatedWeight: 100
   - item: {fileID: 3585540122511450587, guid: 86eab7e0b5b05474395f66bde5e7b919, type: 3}
-    accumulatedWeight: 30
+    accumulatedWeight: 10000
   - item: {fileID: 3585540122511450587, guid: 9beaf1de0d9a8264ea0f08930bae8526, type: 3}
     accumulatedWeight: 0
   powerups:
