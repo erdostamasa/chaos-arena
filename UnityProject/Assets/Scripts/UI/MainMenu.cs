@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject shopMenuUi;
     [SerializeField] GameObject halfImage;
     [SerializeField] GameObject image;
+    [SerializeField] Animator transition;
     
     public void Awake()
     {
@@ -33,7 +34,9 @@ public class MainMenu : MonoBehaviour
     IEnumerator LoadGame() {
         mainMenuUi.SetActive(false);
         halfImage.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
