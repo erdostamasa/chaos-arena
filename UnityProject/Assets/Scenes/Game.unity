@@ -2310,7 +2310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1004024183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4774,6 +4774,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8980864831011372381, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: waterDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: maxSwimSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: maxClimbAngle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: maxClimbSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: probeDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: swimThreshold
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: maxGroundAngle
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: maxStairsAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: climbMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: probeMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: stairsMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: maxSwimAcceleration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980864831011372383, guid: b8b54ba44744eb94db702c89fbb73232, type: 3}
+      propertyPath: maxClimbAcceleration
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
