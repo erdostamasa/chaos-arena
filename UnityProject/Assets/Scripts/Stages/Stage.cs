@@ -15,6 +15,7 @@ public class Stage : ScriptableObject {
     public int randomDropOffset;
     public float enemyDamageMultiplier = 1f;
     public float enemyShotsPerSecond = 0.5f;
+    public int rocketVolleyAmount = 1;
     public float lavaDamageMultiplier = 1f;
     public float enemyHealthMultiplier = 1f;
     public List<WeightedRandomBag<Transform>.Entry> platforms;

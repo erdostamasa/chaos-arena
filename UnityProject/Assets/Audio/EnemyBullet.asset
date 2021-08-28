@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemyBullet
   m_EditorClassIdentifier: 
   file: {fileID: 8300000, guid: 0ddac300be1335c4e8a1d4f7a94a2866, type: 3}
-  volume: 0.4
+  volume: 0.15
   maxPlaying: 10

@@ -12,7 +12,7 @@ public class Turret : Enemy {
     [SerializeField] protected Transform firePoint;
     [SerializeField] protected Transform gun;
 
-    [SerializeField] Transform head;
+    [SerializeField] protected Transform head;
     [SerializeField] Vector3 spreadAmountMin;
     [SerializeField] Vector3 spreadAmountMax;
     [SerializeField] Vector3 targetOffset;

@@ -8,7 +8,10 @@ public class EnemyRocket : EnemyBullet {
     Transform target;
     public float turnSpeed = 1.0f;
     [SerializeField] Transform model;
-    
+    [SerializeField] float inactiveTimer = 1f;
+    float timer = 0;
+
+
     protected new void Start() {
         target = GameObject.Find("Player").transform;
         Invoke(nameof(DestroyBullet), timeOut);
@@ -23,6 +26,18 @@ public class EnemyRocket : EnemyBullet {
     }
 
     void FixedUpdate() {
+        GetComponent<Rigidbody>().velocity = model.forward * speed;
+        
+        timer += Time.deltaTime;
+        if (timer < inactiveTimer) {
+            return;
+        }
+        
+        if (transform.position.y < 1f) {
+            transform.position = new Vector3(transform.position.x, 1f, transform.position.z);
+        }
+        
+        
 //        transform.LookAt(target);
         // Determine which direction to rotate towards
         Vector3 targetDirection = target.position - transform.position;
@@ -43,6 +58,6 @@ public class EnemyRocket : EnemyBullet {
         transform.rotation = Quaternion.Euler(new Vector3(0, rot.y, 0));*/
         
         
-        GetComponent<Rigidbody>().velocity = model.forward * speed;
+        
     }
 }

@@ -14,6 +14,7 @@ public class WeaponController : MonoBehaviour {
     float fireFrequency;
     [SerializeField] float shotPerSecond = 1;
     [SerializeField] float spreadAmount;
+    [SerializeField] SoundClip shootingSound;
     
     float timer;
     bool canFire = false;
@@ -58,6 +59,7 @@ public class WeaponController : MonoBehaviour {
 
         if (Input.GetMouseButton(0) && canFire) {
             energy.ChangeEnergy(-energyCost);
+            AudioManager.instance.PlaySound(shootingSound, transform.position);
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             //bullet.LookAt(targeter);
             bullet.forward = firePoint.forward + GenerateSpread();
