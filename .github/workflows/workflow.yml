@@ -1,6 +1,8 @@
 name: Build Webgl
 
 on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
   push:
     branches:
       - main
@@ -10,7 +12,7 @@ env:
 
 jobs:
   buildWEBG:
-    #if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     #needs: test
     name: Deploy WebGL
     runs-on: ubuntu-latest
