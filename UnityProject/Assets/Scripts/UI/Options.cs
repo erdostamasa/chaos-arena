@@ -9,7 +9,6 @@ public class Options : MonoBehaviour
     [SerializeField] Slider slider;
     [SerializeField] Toggle toggle;
     [SerializeField] TextMeshProUGUI volumeText;
-    [SerializeField] GameObject optionsMenuUi;
     [SerializeField] Animator transition;
 
     void Start()
@@ -30,14 +29,6 @@ public class Options : MonoBehaviour
         else
         {
             slider.value = PlayerPrefs.GetInt("Volume");
-        }
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && optionsMenuUi.activeSelf)
-        {
-            Back();
         }
     }
 

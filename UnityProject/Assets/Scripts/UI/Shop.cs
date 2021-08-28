@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] GameObject shopMenuUi;
     [SerializeField] Animator transition;
-    
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && shopMenuUi.activeSelf)
-        {
-            Back();
-        }
-    }
-    
+
     public void Back()
     {
         StartCoroutine(BackHelp());
