@@ -20,7 +20,7 @@ public class RocketTurret : Turret {
     IEnumerator ShootRockets() {
         for(int i = 0; i < volleyLength; i++) {
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-            bullet.forward = firePoint.forward + GenerateSpread();
+            bullet.Find("model").forward = firePoint.forward + GenerateSpread();
             yield return new WaitForSeconds(Random.Range(0.2f,0.8f));
         }
     }

@@ -200,7 +200,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 9205804791646175895, guid: 3698a689c7f382144a4b849f729d33d1, type: 3}
   baseShootSpeedMultiplier: 2
   player: {fileID: 0}
-  bulletPrefab: {fileID: 3609739258390895085, guid: 47af98bdaa61886429540f1dab8eb440, type: 3}
+  bulletPrefab: {fileID: 6087967789014987991, guid: d6f168976d6b3fe4c8dc74e7058497a7, type: 3}
   firePoint: {fileID: 3585540124245781204}
   gun: {fileID: 3585540122302563442}
   head: {fileID: 1659754679097253740}
