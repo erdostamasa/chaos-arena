@@ -6,7 +6,8 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] GameObject shopMenuUi;
     [SerializeField] GameObject mainMenuUi;
-
+    [SerializeField] GameObject image;
+    [SerializeField] GameObject halfImage;
     
     void Update()
     {
@@ -18,7 +19,15 @@ public class Shop : MonoBehaviour
     
     public void Back()
     {
+        StartCoroutine(BackHelp());
+    }
+    
+    IEnumerator BackHelp()
+    {
         shopMenuUi.SetActive(false);
+        image.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
         mainMenuUi.SetActive(true);
+        halfImage.SetActive(true);
     }
 }

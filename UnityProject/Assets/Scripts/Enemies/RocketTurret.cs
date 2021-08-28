@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class RocketTurret : Turret {
     //[SerializeField] Vector2 fireFrequency;
-    [SerializeField] int volleyLength = 3;
+    //[SerializeField] int volleyLength = 3;
+    [SerializeField] SoundClip missileLaunch;
+    [SerializeField] Transform missileEffect;
 
-    new void Start() { 
-        base.Start();
-        InvokeRepeating(nameof(Shoot), 0f, shootFrequency);
-    }
+    int volley;
     
+    new void Start() {
+        //base.Start();
+        Stage currentStage = GameManager.instance.currentStage;
+        shootFrequency = 1f / (currentStage.enemyShotsPerSecond * baseShootSpeedMultiplier);
+//        Debug.Log(currentStage);
+        int r = currentStage.randomDropOffset;
+        energyDrop = currentStage.energyDropRate + Random.Range(-r, r);
+        moneyDrop = currentStage.moneyDropRate + Random.Range(-r, r);
+        idleDirection = Vector3.zero;
+        idleWait = Random.Range(2f, 4f);
+        InvokeRepeating(nameof(Shoot), 0f, shootFrequency);
+        volley = GameManager.instance.currentStage.rocketVolleyAmount;
+    }
+
     protected new void Shoot() {
         if (active) {
             StartCoroutine(ShootRockets());
@@ -18,10 +31,13 @@ public class RocketTurret : Turret {
     }
 
     IEnumerator ShootRockets() {
-        for(int i = 0; i < volleyLength; i++) {
-            Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        Instantiate(missileEffect, firePoint.position, firePoint.rotation).parent = transform;
+        yield return new WaitForSeconds(0.6f);
+        for (int v = 0; v < volley; v++) {
+            Transform bullet = Instantiate(bulletPrefab, head.position, Quaternion.identity);
             bullet.Find("model").forward = firePoint.forward + GenerateSpread();
-            yield return new WaitForSeconds(Random.Range(0.2f,0.8f));
+            AudioManager.instance.PlaySound(missileLaunch, transform.position);
+            yield return new WaitForSeconds(Random.Range(0.4f, 0.5f));
         }
     }
 }

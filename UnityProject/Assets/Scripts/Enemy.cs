@@ -10,10 +10,10 @@ public class Enemy : MonoBehaviour {
     [SerializeField] Transform energyOrbPrefab;
     [SerializeField] Transform moneyOrbPrefab;
     [SerializeField] Transform explosionPrefab;
-    [SerializeField] float baseShootSpeedMultiplier = 1f;
+    [SerializeField] protected float baseShootSpeedMultiplier = 1f;
     protected float shootFrequency;
-    int energyDrop;
-    int moneyDrop;
+    protected int energyDrop;
+    protected int moneyDrop;
 
     protected void Start() {
         Stage currentStage = GameManager.instance.currentStage;
@@ -26,7 +26,9 @@ public class Enemy : MonoBehaviour {
 
 
     void OnDestroy() {
-        owner.aliveEnemies.Remove(this);
+        if (owner) {
+            owner.aliveEnemies.Remove(this);    
+        }
     }
 
     public void DestroyThisEnemy(bool dropLoot) {
