@@ -15,7 +15,6 @@ public class WeaponController : MonoBehaviour {
     [SerializeField] float shotPerSecond = 1;
     [SerializeField] float spreadAmount;
     [SerializeField] SoundClip shootingSound;
-    [SerializeField] float fireSpeedMultiplier = 1f;
     
     float timer;
     bool canFire = false;
@@ -28,7 +27,7 @@ public class WeaponController : MonoBehaviour {
 
     void Start() {
         shotPerSecond = PlayerPrefs.GetFloat("shootingSpeedLevel",1f);
-        fireFrequency = 1 / (shotPerSecond * fireSpeedMultiplier);
+        fireFrequency = 1 / shotPerSecond;
     }
 
     void LateUpdate() {

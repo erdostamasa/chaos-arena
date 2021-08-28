@@ -478,8 +478,8 @@ MonoBehaviour:
   targetingBall: {fileID: 1396121570587369343}
   laserDistance: 50
   laserObject: {fileID: 2262637081494724174}
-  laserGrowSpeed: 40
-  damagePerSecond: 6
+  laserGrowSpeed: 50
+  damagePerSecond: 5
   particles: {fileID: 4289155916433262367}
 --- !u!65 &803366530111439991
 BoxCollider:

@@ -38,10 +38,6 @@ public class AudioManager : MonoBehaviour {
         }
         else {
             playingCount.Add(clip, 0);
-            PlayClipAtPointCustom(clip, position);
-            playingCount[clip] = playingCount[clip] + 1;
-            //Debug.Log(clip.ToString() + playingCount[clip]);
-            StartCoroutine(DecreaseCount(clip, clip.file.length));
         }
     }
 
