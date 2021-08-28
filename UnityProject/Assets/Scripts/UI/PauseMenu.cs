@@ -41,12 +41,12 @@ public class PauseMenu : MonoBehaviour
         StartCoroutine(LoadHelp());
     }
 
-    IEnumerator LoadHelp()
-    {
+    IEnumerator LoadHelp() {
+        GameManager.instance.StartGame();
+        SceneInfoPasser.exitedGame = true;
         transition.SetTrigger("Start");
         pauseMenuUi.SetActive(false);
         yield return new WaitForSeconds(1f);
-        GameManager.instance.StartGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

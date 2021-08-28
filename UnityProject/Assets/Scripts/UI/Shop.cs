@@ -26,7 +26,7 @@ public class Shop : MonoBehaviour
     {
         shopMenuUi.SetActive(false);
         image.SetActive(false);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         mainMenuUi.SetActive(true);
         halfImage.SetActive(true);
     }

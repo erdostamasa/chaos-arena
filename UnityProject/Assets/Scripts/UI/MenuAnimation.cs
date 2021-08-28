@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuAnimation : MonoBehaviour {
-    Animator animator;
 
     void Start() {
-        animator = GetComponent<Animator>();
+        if (SceneInfoPasser.exitedGame) {
+            GetComponent<Animator>().Play("gameOut");
+            SceneInfoPasser.exitedGame = false;
+        }
     }
     
     public void ZoomShop() {

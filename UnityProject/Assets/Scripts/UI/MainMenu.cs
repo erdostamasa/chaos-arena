@@ -49,7 +49,7 @@ public class MainMenu : MonoBehaviour
     {
         mainMenuUi.SetActive(false);
         halfImage.SetActive(false);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         image.SetActive(true);
         optionsMenuUi.SetActive(true);
     }
@@ -63,7 +63,7 @@ public class MainMenu : MonoBehaviour
     {
         mainMenuUi.SetActive(false);
         halfImage.SetActive(false);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         image.SetActive(true);
         shopMenuUi.SetActive(true);
     }
