@@ -791,82 +791,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2931539601671620253, guid: 2c2da8d5e211d0a48a7be5f394016ecd, type: 3}
   m_PrefabInstance: {fileID: 1234478752}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &193410332
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: shot_mat(Clone)
-  m_Shader: {fileID: 4800000, guid: 2d9a4ca4b2730b64e8aade7030f8caeb, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _Glossiness: 0.5
-    - _LightSaberFactor: 0.9
-    - _LineScale: 0.13333318
-    - _LineWidth: 70
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _UvBasedLightSaberFactor: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &194102337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3596,6 +3520,82 @@ Transform:
   m_Father: {fileID: 1330191625}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &986033867
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: shot_mat(Clone)
+  m_Shader: {fileID: 4800000, guid: 2d9a4ca4b2730b64e8aade7030f8caeb, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Glossiness: 0.5
+    - _LightSaberFactor: 0.9
+    - _LineScale: 0.13333318
+    - _LineWidth: 70
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _UvBasedLightSaberFactor: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &991184350
 GameObject:
   m_ObjectHideFlags: 0
@@ -9049,7 +9049,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120431473}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -9806,6 +9806,7 @@ MonoBehaviour:
   spreadAmountMin: {x: -0.1, y: -0.1, z: -0.1}
   spreadAmountMax: {x: 0.1, y: 0.1, z: 0.1}
   targetOffset: {x: 0, y: 0, z: 0}
+  shootingSound: {fileID: 0}
   speed: 2
 --- !u!4 &1151474557935775966
 Transform:
@@ -11087,11 +11088,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6320754, g: 0.58139014, b: 0.5938058, a: 1}
-    m_HighlightedColor: {r: 0.6313726, g: 0.5803922, b: 0.5921569, a: 1}
-    m_PressedColor: {r: 0.5188679, g: 0.48215556, b: 0.49062765, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.5882353}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.9019608}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.39215687}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5882353}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
   m_SpriteState:
@@ -11623,6 +11624,7 @@ MonoBehaviour:
   spreadAmountMin: {x: -0.05, y: 0, z: -0.05}
   spreadAmountMax: {x: 0.05, y: 0.2, z: 0.05}
   targetOffset: {x: 0, y: 4, z: 0}
+  shootingSound: {fileID: 0}
   speed: 1.5
   missileLaunch: {fileID: 11400000, guid: 50dfa7beaff372d43a7f2e3d31d20c04, type: 2}
   missileEffect: {fileID: 2457473222415535967, guid: 109efc71f27f4ed4990290c1c842493f, type: 3}
@@ -17669,9 +17671,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6313726, g: 0.5803922, b: 0.5921569, a: 1}
-    m_HighlightedColor: {r: 0.6313726, g: 0.5803922, b: 0.5921569, a: 1}
-    m_PressedColor: {r: 0.5176471, g: 0.48235294, b: 0.49019608, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.5882353}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.9019608}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.39215687}
     m_ColorMultiplier: 1
@@ -19697,7 +19699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5250219616737255855
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19713,10 +19715,10 @@ RectTransform:
   m_Father: {fileID: 1284168843909209078}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1524.6, y: -406}
+  m_SizeDelta: {x: 810, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5250219616791568977
 CanvasRenderer:
@@ -19851,7 +19853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Power-Ups Length
+  m_text: Shield time
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c92b03f3747d714da89dfc1fdaca2b3, type: 2}
   m_sharedMaterial: {fileID: -2830966841733185611, guid: 7c92b03f3747d714da89dfc1fdaca2b3, type: 2}
@@ -20319,7 +20321,7 @@ GameObject:
   - component: {fileID: 5250219616970091611}
   - component: {fileID: 5838702777651954109}
   m_Layer: 5
-  m_Name: Power-UpsLength
+  m_Name: Shield time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21197,11 +21199,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6313726, g: 0.5803922, b: 0.5921569, a: 1}
-    m_HighlightedColor: {r: 0.6313726, g: 0.5803922, b: 0.5921569, a: 1}
-    m_PressedColor: {r: 0.5176471, g: 0.48235294, b: 0.49019608, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.5882353}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.9019608}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.39215687}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5882353}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
   m_SpriteState:
@@ -21679,11 +21681,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6313726, g: 0.5803922, b: 0.5921569, a: 1}
-    m_HighlightedColor: {r: 0.6313726, g: 0.5803922, b: 0.5921569, a: 1}
-    m_PressedColor: {r: 0.5176471, g: 0.48235294, b: 0.49019608, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.5882353}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.9019608}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.39215687}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5882353}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.2
   m_SpriteState:
@@ -23010,10 +23012,10 @@ RectTransform:
   m_Father: {fileID: 1284168843909209078}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1524.6, y: -406}
+  m_SizeDelta: {x: 810, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5250219617631587395
 GameObject:
@@ -23031,7 +23033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &5250219617649010392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24097,10 +24099,10 @@ RectTransform:
   m_Father: {fileID: 1284168843909209078}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1524.6, y: -406}
+  m_SizeDelta: {x: 810, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5250219617961176435
 GameObject:
@@ -24118,7 +24120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5250219617963040098
 GameObject:
   m_ObjectHideFlags: 0
@@ -24696,6 +24698,7 @@ MonoBehaviour:
   spreadAmountMin: {x: 0, y: 0, z: 0}
   spreadAmountMax: {x: 0, y: 0, z: 0}
   targetOffset: {x: 0, y: 0, z: 0}
+  shootingSound: {fileID: 0}
   speed: 1
   laserLine: {fileID: 0}
   playerLayer:
@@ -24807,7 +24810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeLevelString: shootingSpeedLevel
-  upgradeCountString: shootingSpeedUpgradeCount
+  upgradeCountString: shootingSpeedCount
   currentDisplay: {fileID: 5250219617289196516}
   upgradedDisplay: {fileID: 5250219615940844304}
   priceDisplay: {fileID: 5250219617649010407}
@@ -24848,12 +24851,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc70edf68de7654d950e7f2b09829b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeLevelString: 
-  upgradeCountString: 
+  upgradeLevelString: shieldLevel
+  upgradeCountString: shieldCount
   currentDisplay: {fileID: 5250219616448283888}
   upgradedDisplay: {fileID: 5250219617242991620}
   priceDisplay: {fileID: 5250219616608645619}
-  baseLevel: 1
+  baseLevel: 5
   basePrice: 10
   levelIncrease: 0
   priceIncrease: 0
@@ -24870,7 +24873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeLevelString: maxHealthLevel
-  upgradeCountString: maxHealthUpgradeCount
+  upgradeCountString: maxHealthCount
   currentDisplay: {fileID: 5250219616275890349}
   upgradedDisplay: {fileID: 5250219617088424025}
   priceDisplay: {fileID: 5250219616519026094}
@@ -25146,6 +25149,7 @@ MonoBehaviour:
   spreadAmountMin: {x: -0.05, y: 0, z: -0.05}
   spreadAmountMax: {x: 0.05, y: 0.2, z: 0.05}
   targetOffset: {x: 0, y: 4, z: 0}
+  shootingSound: {fileID: 0}
   speed: 2
   missileLaunch: {fileID: 11400000, guid: 50dfa7beaff372d43a7f2e3d31d20c04, type: 2}
   missileEffect: {fileID: 2457473222415535967, guid: 109efc71f27f4ed4990290c1c842493f, type: 3}
@@ -25496,7 +25500,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 193410332}
+  - {fileID: 986033867}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
