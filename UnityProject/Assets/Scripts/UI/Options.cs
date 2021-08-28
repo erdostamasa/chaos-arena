@@ -10,9 +10,7 @@ public class Options : MonoBehaviour
     [SerializeField] Toggle toggle;
     [SerializeField] TextMeshProUGUI volumeText;
     [SerializeField] GameObject optionsMenuUi;
-    [SerializeField] GameObject mainMenuUi;
-    [SerializeField] GameObject halfImage;
-    [SerializeField] GameObject image;
+    [SerializeField] Animator transition;
 
     void Start()
     {
@@ -61,10 +59,8 @@ public class Options : MonoBehaviour
     
     IEnumerator BackHelp()
     {
-        optionsMenuUi.SetActive(false);
-        image.SetActive(false);
+        transition.SetTrigger("OptionsOut");
         yield return new WaitForSeconds(0.5f);
-        mainMenuUi.SetActive(true);
-        halfImage.SetActive(true);
+        transition.SetTrigger("MainIn");
     }
 }

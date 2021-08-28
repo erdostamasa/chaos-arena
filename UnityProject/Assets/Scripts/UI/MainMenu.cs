@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] GameObject optionsMenuUi;
     [SerializeField] GameObject mainMenuUi;
     [SerializeField] GameObject shopMenuUi;
-    [SerializeField] GameObject halfImage;
-    [SerializeField] GameObject image;
     [SerializeField] Animator transition;
     
     public void Awake()
@@ -32,8 +29,7 @@ public class MainMenu : MonoBehaviour
     }
 
     IEnumerator LoadGame() {
-        mainMenuUi.SetActive(false);
-        halfImage.SetActive(false);
+        transition.SetTrigger("MainOut");
         yield return new WaitForSeconds(0.5f);
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
@@ -47,11 +43,9 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator OptionsHelp()
     {
-        mainMenuUi.SetActive(false);
-        halfImage.SetActive(false);
+        transition.SetTrigger("MainOut");
         yield return new WaitForSeconds(0.5f);
-        image.SetActive(true);
-        optionsMenuUi.SetActive(true);
+        transition.SetTrigger("OptionsIn");
     }
     
     public void Shop()
@@ -61,10 +55,8 @@ public class MainMenu : MonoBehaviour
     
     IEnumerator ShopHelp()
     {
-        mainMenuUi.SetActive(false);
-        halfImage.SetActive(false);
+        transition.SetTrigger("MainOut");
         yield return new WaitForSeconds(0.5f);
-        image.SetActive(true);
-        shopMenuUi.SetActive(true);
+        transition.SetTrigger("ShopIn");
     }
 }
