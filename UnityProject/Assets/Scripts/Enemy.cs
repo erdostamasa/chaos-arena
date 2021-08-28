@@ -29,16 +29,19 @@ public class Enemy : MonoBehaviour {
         owner.aliveEnemies.Remove(this);
     }
 
-    public void DestroyThisEnemy() {
-        for (int i = 0; i < moneyDrop; i++) {
-            Instantiate(moneyOrbPrefab, transform.position, Quaternion.identity);
+    public void DestroyThisEnemy(bool dropLoot) {
+        if (dropLoot) {
+            for (int i = 0; i < moneyDrop; i++) {
+                Instantiate(moneyOrbPrefab, transform.position, Quaternion.identity);
+            }
+
+            for (int i = 0; i < energyDrop; i++) {
+                Instantiate(energyOrbPrefab, transform.position, Quaternion.identity);
+            }
         }
-        for (int i = 0; i < energyDrop; i++) {
-            Instantiate(energyOrbPrefab, transform.position, Quaternion.identity);
-        }
-        
-        
-        EventManager.instance.EnemyDied();
+
+
+        //EventManager.instance.EnemyDied();
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

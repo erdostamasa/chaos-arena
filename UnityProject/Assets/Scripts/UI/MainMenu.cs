@@ -24,8 +24,12 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void PlayGame()
-    {
+    public void PlayGame() {
+        StartCoroutine(LoadGame());
+    }
+
+    IEnumerator LoadGame() {
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

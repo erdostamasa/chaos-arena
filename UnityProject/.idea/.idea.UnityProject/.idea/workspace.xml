@@ -27,6 +27,7 @@
     <setting file="file://$USER_HOME$/Desktop/catlikecodingunitytutorials-movement-11-rolling-772100f25d50/Assets/Scripts/MovingSphere.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/ContactDamager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnergyOrb.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/Platform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuSounds.cs" root0="FORCE_HIGHLIGHTING" />
@@ -138,7 +139,7 @@
       <workItem from="1629984601519" duration="17605000" />
       <workItem from="1630072237038" duration="23272000" />
       <workItem from="1630143826641" duration="192000" />
-      <workItem from="1630149367159" duration="4739000" />
+      <workItem from="1630149367159" duration="11411000" />
     </task>
     <servers />
   </component>

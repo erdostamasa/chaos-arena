@@ -69,6 +69,9 @@ public class LaserTurret : Turret {
             Vector3 rot = transform.rotation.eulerAngles;
             transform.localRotation = Quaternion.Euler(new Vector3(0, rot.y, 0));
         }
+        else {
+            IdleRotation();
+        }
     }
 
 

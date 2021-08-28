@@ -6,9 +6,9 @@ public class RocketTurret : Turret {
     //[SerializeField] Vector2 fireFrequency;
     [SerializeField] int volleyLength = 3;
 
-    new void Start() {
+    new void Start() { 
         base.Start();
-       InvokeRepeating(nameof(Shoot), 0f, shootFrequency);
+        InvokeRepeating(nameof(Shoot), 0f, shootFrequency);
     }
     
     protected new void Shoot() {

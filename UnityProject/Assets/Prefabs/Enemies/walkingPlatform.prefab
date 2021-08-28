@@ -104,8 +104,8 @@ MonoBehaviour:
   slowdownMultiplier: 0.3
   aliveEnemies: []
   hasTimer: 1
-  timeToSink: 20
-  startingDepth: 2
+  timeToSink: 60
+  startingDepth: 2.5
 --- !u!54 &8696917099553869994
 Rigidbody:
   m_ObjectHideFlags: 0

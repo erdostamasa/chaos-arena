@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7746774947085682227}
   - component: {fileID: 7217864388063394755}
   - component: {fileID: 9057411507508989711}
-  m_Layer: 16
+  m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 5816932177067992084}
   - component: {fileID: 1463187696419205985}
   - component: {fileID: 919747353341635226}
-  m_Layer: 16
+  m_Layer: 12
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
