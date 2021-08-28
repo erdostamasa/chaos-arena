@@ -7,7 +7,8 @@ public class PauseMenu : MonoBehaviour
 {
 	[SerializeField] GameObject pauseMenuUi;
     [SerializeField] GameObject deathMenuUi;
-
+    [SerializeField] Animator transition;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !deathMenuUi.activeSelf)
@@ -37,7 +38,14 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        StartCoroutine(LoadHelp());
+    }
+
+    IEnumerator LoadHelp()
+    {
+        transition.SetTrigger("Start");
         pauseMenuUi.SetActive(false);
+        yield return new WaitForSeconds(1f);
         GameManager.instance.StartGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }

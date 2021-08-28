@@ -76,6 +76,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Options.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1x5N89WnZx67fDoNApq1uV1UvSU" />
@@ -142,7 +143,7 @@
       <workItem from="1630072237038" duration="23272000" />
       <workItem from="1630143826641" duration="192000" />
       <workItem from="1630149367159" duration="11411000" />
-      <workItem from="1630166004177" duration="5159000" />
+      <workItem from="1630166004177" duration="6233000" />
     </task>
     <servers />
   </component>
