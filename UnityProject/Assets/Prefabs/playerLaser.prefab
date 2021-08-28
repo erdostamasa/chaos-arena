@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3120051262495189134}
   - component: {fileID: 2099711010748377812}
   - component: {fileID: 2752414420372412953}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: playerLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8349266952035559175}
   - component: {fileID: 366813589687835771}
   - component: {fileID: 2213364099416466171}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: lazerbullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

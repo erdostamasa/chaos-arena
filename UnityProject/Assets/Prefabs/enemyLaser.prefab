@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8562667778507389794}
   - component: {fileID: 6944965522746668114}
   - component: {fileID: 3922320641236990989}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: enemyLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &3922320641236990989
@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87491ad7a7de7154c8324395ff813f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  timeOut: 5
+  speed: 10
+  timeOut: 3
   explosionPrefab: {fileID: 9205804791646175895, guid: 664d1eb3a43878e488efe9f14a2aed3a, type: 3}
   clip: {fileID: 11400000, guid: a9ea87e8bf3ba7e4f94d0dfeec8e0338, type: 2}
   energyDamage: 1
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3073124498223252240}
   - component: {fileID: 6659785328908843116}
   - component: {fileID: 5173530513327720172}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: lazerbullet enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

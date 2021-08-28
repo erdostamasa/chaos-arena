@@ -4940,9 +4940,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 2.8248525
-  m_Height: 12.584983
+  m_Height: 17.434113
   m_Direction: 1
-  m_Center: {x: 0, y: 1.0784543, z: 0}
+  m_Center: {x: 0, y: -0.26161194, z: 0}
 --- !u!1001 &7642284710478128036
 PrefabInstance:
   m_ObjectHideFlags: 0
