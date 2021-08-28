@@ -11,6 +11,8 @@ public class Options : MonoBehaviour
     [SerializeField] TextMeshProUGUI volumeText;
     [SerializeField] GameObject optionsMenuUi;
     [SerializeField] GameObject mainMenuUi;
+    [SerializeField] GameObject halfImage;
+    [SerializeField] GameObject image;
 
     void Start()
     {
@@ -54,9 +56,15 @@ public class Options : MonoBehaviour
 
     public void Back()
     {
+        StartCoroutine(BackHelp());
+    }
+    
+    IEnumerator BackHelp()
+    {
         optionsMenuUi.SetActive(false);
+        image.SetActive(false);
+        yield return new WaitForSeconds(1.0f);
         mainMenuUi.SetActive(true);
-        Debug.Log(PlayerPrefs.GetInt("FXAAVariable"));
-        Debug.Log(PlayerPrefs.GetInt("Volume"));
+        halfImage.SetActive(true);
     }
 }

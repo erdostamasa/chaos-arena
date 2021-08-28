@@ -8,7 +8,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject optionsMenuUi;
     [SerializeField] GameObject mainMenuUi;
     [SerializeField] GameObject shopMenuUi;
-
+    [SerializeField] GameObject halfImage;
+    [SerializeField] GameObject image;
+    
     public void Awake()
     {
         if (PlayerPrefs.GetInt("ShopMenuVariable")==1)
@@ -29,19 +31,37 @@ public class MainMenu : MonoBehaviour
     }
 
     IEnumerator LoadGame() {
+        mainMenuUi.SetActive(false);
+        halfImage.SetActive(false);
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Options()
     {
-        optionsMenuUi.SetActive(true);
+        StartCoroutine(OptionsHelp());
+    }
+
+    IEnumerator OptionsHelp()
+    {
         mainMenuUi.SetActive(false);
+        halfImage.SetActive(false);
+        yield return new WaitForSeconds(1.0f);
+        image.SetActive(true);
+        optionsMenuUi.SetActive(true);
     }
     
     public void Shop()
     {
-        shopMenuUi.SetActive(true);
+        StartCoroutine(ShopHelp());
+    }
+    
+    IEnumerator ShopHelp()
+    {
         mainMenuUi.SetActive(false);
+        halfImage.SetActive(false);
+        yield return new WaitForSeconds(1.0f);
+        image.SetActive(true);
+        shopMenuUi.SetActive(true);
     }
 }

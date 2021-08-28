@@ -65,7 +65,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Platform.cs" />
       <option value="$PROJECT_DIR$/Assets/YeetedCode/Scripts/TurretController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Options.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/IntUpgrade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBullet.cs" />
@@ -74,6 +73,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerEnergy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuSounds.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuAnimation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Options.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1x5N89WnZx67fDoNApq1uV1UvSU" />
@@ -140,7 +142,7 @@
       <workItem from="1630072237038" duration="23272000" />
       <workItem from="1630143826641" duration="192000" />
       <workItem from="1630149367159" duration="11411000" />
-      <workItem from="1630166004177" duration="284000" />
+      <workItem from="1630166004177" duration="4049000" />
     </task>
     <servers />
   </component>

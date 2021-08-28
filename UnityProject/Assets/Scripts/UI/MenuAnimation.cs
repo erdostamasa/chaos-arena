@@ -9,7 +9,7 @@ public class MenuAnimation : MonoBehaviour {
     void Start() {
         animator = GetComponent<Animator>();
     }
-
+    
     public void ZoomShop() {
         GetComponent<Animator>().Play("shopIn");
     }
