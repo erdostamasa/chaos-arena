@@ -5,7 +5,9 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     [SerializeField] Animator transition;
-
+    [SerializeField] GameObject mainMenuUi;
+    [SerializeField] GameObject image;
+    
     public void Back()
     {
         StartCoroutine(BackHelp());
@@ -15,6 +17,8 @@ public class Shop : MonoBehaviour
     {
         transition.SetTrigger("ShopOut");
         yield return new WaitForSeconds(0.5f);
+        mainMenuUi.SetActive(true);
+        image.SetActive(true);
         transition.SetTrigger("MainIn");
     }
 }

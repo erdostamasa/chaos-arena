@@ -6,17 +6,29 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject mainMenuUi;
-    [SerializeField] GameObject shopMenuUi;
+    [SerializeField] GameObject image;
     [SerializeField] Animator transition;
+    [SerializeField] Animator camera;
     
     public void Awake()
     {
         if (PlayerPrefs.GetInt("ShopMenuVariable")==1)
         {
-            shopMenuUi.SetActive(true);
             mainMenuUi.SetActive(false);
+            image.SetActive(false);
+            StartCoroutine(AwakeHelp());
             PlayerPrefs.SetInt("ShopMenuVariable",0);
         }
+    }
+
+    IEnumerator AwakeHelp()
+    {
+        camera.Play("gameOut");
+        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
+        camera.Play("shopIn");
+        yield return new WaitForSeconds(0.5f);
+        transition.SetTrigger("ShopIn");
     }
 
     public void QuitGame()
