@@ -18,10 +18,11 @@ public class ContactDamager : MonoBehaviour {
         }
     }
 
-    /*void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             MovingSphere controller = other.gameObject.GetComponent<MovingSphere>();
             controller.maxSpeed = controller.slowSpeed;
+            controller.jumpHeight = controller.slowJump;
         }
     }
 
@@ -29,6 +30,7 @@ public class ContactDamager : MonoBehaviour {
         if (other.gameObject.CompareTag("Player")) {
             MovingSphere controller = other.gameObject.GetComponent<MovingSphere>();
             controller.maxSpeed = controller.normalSpeed;
+            controller.jumpHeight = controller.normalJump;
         }
-    }*/
+    }
 }

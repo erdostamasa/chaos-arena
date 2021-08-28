@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class MovingSphere : MonoBehaviour {
 
@@ -6,7 +7,7 @@ public class MovingSphere : MonoBehaviour {
 	Transform playerInputSpace = default, ball = default;
 
 	[SerializeField, Range(0f, 100f)]
-	float maxSpeed = 10f, maxClimbSpeed = 4f, maxSwimSpeed = 5f;
+	public float maxSpeed = 10f, maxClimbSpeed = 4f, maxSwimSpeed = 5f;
 
 	[SerializeField, Range(0f, 100f)]
 	float
@@ -16,7 +17,7 @@ public class MovingSphere : MonoBehaviour {
 		maxSwimAcceleration = 5f;
 
 	[SerializeField, Range(0f, 10f)]
-	float jumpHeight = 2f;
+	public float jumpHeight = 2f;
 
 	[SerializeField, Range(0, 5)]
 	int maxAirJumps = 0;
@@ -105,6 +106,15 @@ public class MovingSphere : MonoBehaviour {
 	int stepsSinceLastGrounded, stepsSinceLastJump;
 
 	MeshRenderer meshRenderer;
+
+	[SerializeField] public float normalSpeed = 10f;
+	[SerializeField] public float slowSpeed = 5f;
+	[SerializeField] public float normalJump;
+	[SerializeField] public float slowJump;
+
+	void Start() {
+		maxAirJumps = PlayerPrefs.GetInt("airJumps") - 1;
+	}
 
 	public void PreventSnapToGround () {
 		stepsSinceLastJump = -1;
