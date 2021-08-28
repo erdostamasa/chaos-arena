@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour {
     public int currentStageIndex = 0;
 
     public float timeSinceStart = 0f;
-    [SerializeField] float spawnFrequency = 5f;
     float timer;
 
     public int platformsAlive = 0;

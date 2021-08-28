@@ -19,7 +19,7 @@ public class Health : MonoBehaviour {
     public void ChangeHealth(int delta) {
         healthPoints += delta;
         if (healthPoints <= 0) {
-            GetComponent<Enemy>().DestroyThisEnemy();
+            GetComponent<Enemy>().DestroyThisEnemy(true);
         }
 
         display.UpdateDisplay();

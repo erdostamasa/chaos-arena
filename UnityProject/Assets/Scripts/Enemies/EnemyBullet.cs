@@ -10,8 +10,7 @@ public class EnemyBullet : Bullet {
             other.gameObject.GetComponent<PlayerEnergy>().ChangeEnergy(-energyDamage * GameManager.instance.currentStage.enemyDamageMultiplier);
         }
         
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        DestroyBullet();
     }
 
     protected new void Start() {
@@ -20,9 +19,8 @@ public class EnemyBullet : Bullet {
     
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Bullet")) {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            DestroyBullet();
         }
     }
 }

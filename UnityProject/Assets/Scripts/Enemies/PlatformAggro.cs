@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformAggro : MonoBehaviour {
-    [SerializeField] Platform owner;
+    [SerializeField] Enemy owner;
 
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
-            owner.ToggleEnemies(true);
+            owner.active = true;
         }
     }
 
     void OnTriggerExit(Collider other) {
         if (other.CompareTag("Player")) {
-            owner.ToggleEnemies(false);
+            owner.active = false;
         }
     }
 }

@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class IntUpgrade : MonoBehaviour {
     [SerializeField] string upgradeName;
-    [SerializeField] int basePrice = 10;
-    [SerializeField] float multiplier = 10f;
+    //[SerializeField] int basePrice = 10;
+    //[SerializeField] float multiplier = 10f;
     [SerializeField] TextMeshProUGUI currentDisplay;
     [SerializeField] TextMeshProUGUI upgradedDisplay;
     [SerializeField] TextMeshProUGUI priceDisplay;

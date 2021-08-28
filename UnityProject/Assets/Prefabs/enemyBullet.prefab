@@ -235,8 +235,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  timeOut: 10
+  timeOut: 5
   explosionPrefab: {fileID: 9205804791646175895, guid: 664d1eb3a43878e488efe9f14a2aed3a, type: 3}
+  clip: {fileID: 11400000, guid: a9ea87e8bf3ba7e4f94d0dfeec8e0338, type: 2}
   energyDamage: 1
 --- !u!135 &8076518190540399066
 SphereCollider:
@@ -249,5 +250,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.2
   m_Center: {x: 0, y: 0, z: 0}

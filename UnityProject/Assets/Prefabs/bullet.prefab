@@ -113,7 +113,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &3307271511829681992
 TrailRenderer:
   serializedVersion: 2
@@ -233,7 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63b8dfc82001e146ba2dd08ff857d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  timeOut: 10
+  speed: 30
+  timeOut: 0.8
   explosionPrefab: {fileID: 9205804791646175895, guid: 2ddc37d0200ae6d4e9bef40e207cc708, type: 3}
+  clip: {fileID: 11400000, guid: eda9a35541b056642b6e58ff8f94fd38, type: 2}
   damage: 1

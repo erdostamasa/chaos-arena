@@ -8,6 +8,7 @@ public class MoneyOrb : MonoBehaviour {
     [SerializeField] float pickupDistance = 10f;
     [SerializeField] AnimationCurve pickupSpeedCurve;
     [SerializeField] float spawnForce = 3f;
+    [SerializeField] SoundClip sound;
 
     void Start() {
         target = GameObject.Find("Player").transform;
@@ -34,6 +35,7 @@ public class MoneyOrb : MonoBehaviour {
         if (other.CompareTag("Player")) {
             EventManager.instance.MoneyChanged(PlayerPrefs.GetInt("money") + 1);
             PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 1);
+            AudioManager.instance.PlaySound(sound, transform.position);
             Destroy(gameObject);
         }
     }

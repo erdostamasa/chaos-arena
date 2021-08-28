@@ -10,7 +10,6 @@ public class PlayerBullet : Bullet {
         if (other.gameObject.GetComponent<Health>() != null) {
             other.gameObject.GetComponent<Health>().ChangeHealth(-damage);
         }
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        DestroyBullet();
     }
 }
