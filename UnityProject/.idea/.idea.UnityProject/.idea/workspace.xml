@@ -76,8 +76,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Options.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1x5N89WnZx67fDoNApq1uV1UvSU" />
