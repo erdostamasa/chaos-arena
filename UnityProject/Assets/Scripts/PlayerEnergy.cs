@@ -14,7 +14,7 @@ public class PlayerEnergy : MonoBehaviour {
     float shieldTimeout;
     float shieldTimer;
     [SerializeField] ShakePreset shakePreset;
-
+    [SerializeField] bool invincible = false;
     [SerializeField] SoundClip damageSound;
 
     float damageTimer;
@@ -69,6 +69,8 @@ public class PlayerEnergy : MonoBehaviour {
     }
 
     public void ChangeEnergy(float delta) {
+        if (invincible) return;
+        
         if (delta < 0 && shielded) return;
 
         if (delta < 0 && canDamage) {

@@ -6,7 +6,8 @@ public class PlatformSpawnPoint : MonoBehaviour {
     [SerializeField] Material visibleMaterial;
     [SerializeField] Material invisibleMaterial;
     [SerializeField] LayerMask layers;
-
+    [SerializeField] bool losBlocks = true;
+    
     void Update() {
         if (Visible()) {
             GetComponent<Renderer>().material = visibleMaterial;
@@ -19,6 +20,7 @@ public class PlatformSpawnPoint : MonoBehaviour {
     float margin = -0.1f;
 
     public bool Visible() {
+        if (!losBlocks) return false;
         Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
         //Debug.Log(screenPoint);
         return screenPoint.z > 0 && screenPoint.x > 0 - margin && screenPoint.x < 1 + margin && screenPoint.y > 0 - margin && screenPoint.y < 1 + margin;

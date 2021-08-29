@@ -258,17 +258,17 @@ MonoBehaviour:
   energyOrbPrefab: {fileID: 5447842419669247331, guid: 59a8a461e76a7ce4f838c692ef46df3a, type: 3}
   moneyOrbPrefab: {fileID: 5447842419669247331, guid: def169fa8ceac42479b6e1b91702b290, type: 3}
   explosionPrefab: {fileID: 9205804791646175895, guid: 3698a689c7f382144a4b849f729d33d1, type: 3}
-  baseShootSpeedMultiplier: 1
+  baseShootSpeedMultiplier: 1.5
   player: {fileID: 0}
   bulletPrefab: {fileID: 6087967789014987991, guid: d6f168976d6b3fe4c8dc74e7058497a7, type: 3}
   firePoint: {fileID: 3585540124245781204}
   gun: {fileID: 3585540122302563442}
   head: {fileID: 1659754679097253740}
-  spreadAmountMin: {x: -0.1, y: -0.1, z: -0.1}
-  spreadAmountMax: {x: 0.1, y: 0.1, z: 0.1}
+  spreadAmountMin: {x: -0.2, y: -0.1, z: -0.2}
+  spreadAmountMax: {x: 0.2, y: 0.1, z: 0.2}
   targetOffset: {x: 0, y: 0, z: 0}
   shootingSound: {fileID: 11400000, guid: 2c2afa754a6f366408cbfb7219ad1726, type: 2}
-  speed: 3
+  speed: 2.5
 --- !u!114 &-6265076033582275443
 MonoBehaviour:
   m_ObjectHideFlags: 0
