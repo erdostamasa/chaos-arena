@@ -8774,6 +8774,82 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!21 &1574150772
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: shot_mat(Clone)
+  m_Shader: {fileID: 4800000, guid: 2d9a4ca4b2730b64e8aade7030f8caeb, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Glossiness: 0.5
+    - _LightSaberFactor: 0.9
+    - _LineScale: 0.13333318
+    - _LineWidth: 70
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _UvBasedLightSaberFactor: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1575236819
 GameObject:
   m_ObjectHideFlags: 0
@@ -9943,8 +10019,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: 0.00000095367}
-  m_SizeDelta: {x: 1662.4218, y: 630}
+  m_AnchoredPosition: {x: -9, y: -28.5352}
+  m_SizeDelta: {x: 1662.4218, y: 711.0704}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1793295016
 MonoBehaviour:
@@ -9966,31 +10042,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move with WASD
-
-    Aim with the mouse
-
-    Press ''Q'' to auto-fire
-
-    The
-    bottom bar shows your energy level. If you run out, you lose
-
-    Each shot costs
-    energy, so be careful!
-
-    Destroy enemies to collect energy and money
-
-    The
-    game gets harder and the enemies drop more loot the longer you survive
-
-    Use
-    money in the shop to buy upgrades in order to survive further stages
-
-    Have
-    fun!
-
-
-'
+  m_text: "Move with 'WASD'\nJump with 'SPACE'\nAim with the mouse\n'ESC' or 'P'
+    to pause\nPress 'Q' to auto-fire\nThe bottom bar shows your energy level. If
+    you run out, you lose\nEnergy automatically replenishes below 15% \nEach shot
+    consumes energy, so be careful!\nDestroy enemies to collect energy and money\nThe
+    game gets harder and the enemies drop more loot the longer you survive\nUse money
+    in the shop to buy upgrades in order to survive further stages\nHave fun!\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a88cc47f7e01664c9a7ef52d94be7c3, type: 2}
   m_sharedMaterial: {fileID: -5861025226240612567, guid: 2a88cc47f7e01664c9a7ef52d94be7c3, type: 2}
@@ -10029,7 +10086,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 10.61
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -10314,7 +10371,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -789, y: -350}
+  m_AnchoredPosition: {x: -796, y: -471}
   m_SizeDelta: {x: 140, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886920906
@@ -10792,82 +10849,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2931539601671620253, guid: 2c2da8d5e211d0a48a7be5f394016ecd, type: 3}
   m_PrefabInstance: {fileID: 387632987}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1950764158
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: shot_mat(Clone)
-  m_Shader: {fileID: 4800000, guid: 2d9a4ca4b2730b64e8aade7030f8caeb, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _Glossiness: 0.5
-    - _LightSaberFactor: 0.9
-    - _LineScale: 0.13333318
-    - _LineWidth: 70
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _UvBasedLightSaberFactor: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &1956819921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27913,6 +27894,7 @@ MonoBehaviour:
   basePrice: 10
   levelIncrease: 0
   priceIncrease: 0
+  durationDisplay: 0
 --- !u!114 &5838702776596480148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27934,6 +27916,7 @@ MonoBehaviour:
   basePrice: 10
   levelIncrease: 0
   priceIncrease: 0
+  durationDisplay: 0
 --- !u!114 &5838702776753280681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27951,10 +27934,11 @@ MonoBehaviour:
   currentDisplay: {fileID: 5250219617289196516}
   upgradedDisplay: {fileID: 5250219615940844304}
   priceDisplay: {fileID: 5250219617649010407}
-  baseLevel: 1.5
+  baseLevel: 1
   basePrice: 15
-  levelIncrease: 1.05
-  priceIncrease: 1.18
+  levelIncrease: 1.04
+  priceIncrease: 1.23
+  durationDisplay: 0
 --- !u!114 &5838702776870665892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27976,6 +27960,7 @@ MonoBehaviour:
   basePrice: 10
   levelIncrease: 1.09
   priceIncrease: 1.18
+  durationDisplay: 0
 --- !u!114 &5838702777651954109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27997,6 +27982,7 @@ MonoBehaviour:
   basePrice: 10
   levelIncrease: 1.1
   priceIncrease: 1.17
+  durationDisplay: 0
 --- !u!114 &5838702777749046752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28016,8 +28002,9 @@ MonoBehaviour:
   priceDisplay: {fileID: 5250219616519026094}
   baseLevel: 1
   basePrice: 10
-  levelIncrease: 1.09
+  levelIncrease: 1.07
   priceIncrease: 1.22
+  durationDisplay: 0
 --- !u!114 &5838702777822039113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28039,6 +28026,7 @@ MonoBehaviour:
   basePrice: 10
   levelIncrease: 0
   priceIncrease: 0
+  durationDisplay: 0
 --- !u!4 &5962227486000366030
 Transform:
   m_ObjectHideFlags: 0
@@ -28637,7 +28625,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1950764158}
+  - {fileID: 1574150772}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

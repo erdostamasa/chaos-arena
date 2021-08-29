@@ -19,6 +19,7 @@ public class Platform : MonoBehaviour {
     WeightedRandomBag<Transform> powerupBag;
 
     [SerializeField] bool hasTimer = false;
+    [SerializeField] bool transportPlatform = false;
     [SerializeField] float timeToSink = 0f;
     [SerializeField] float startingDepth = 2f;
 
@@ -137,7 +138,7 @@ public class Platform : MonoBehaviour {
     }
 
     void CheckMountPoints() {
-        if (hasTimer) return;
+        if (transportPlatform) return;
         if (aliveEnemies.Count == 0 && !destroying) {
             destroying = true;
             StartCoroutine(DestroyPlatform());

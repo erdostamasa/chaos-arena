@@ -434,7 +434,7 @@ MonoBehaviour:
   slowdownMultiplier: 0.3
   aliveEnemies: []
   hasTimer: 1
-  timeToSink: 40
+  timeToSink: 45
   startingDepth: 2.5
 --- !u!54 &8696917099553869994
 Rigidbody:

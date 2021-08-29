@@ -9,7 +9,7 @@ public class PlatformSpawnPoint : MonoBehaviour {
     [SerializeField] bool losBlocks = true;
     
     void Update() {
-        if (Visible()) {
+        if (!CanSpawn()) {
             GetComponent<Renderer>().material = visibleMaterial;
         }
         else {

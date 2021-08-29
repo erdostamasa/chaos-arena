@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  activationSecond: 50
-  maxPlatformsOnMap: 13
+  activationSecond: 60
+  maxPlatformsOnMap: 15
   platformSpawnFrequency: 3
   enemySpawnChance: 0.25
   powerupSpawnChance: 0.06

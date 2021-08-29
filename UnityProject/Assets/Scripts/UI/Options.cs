@@ -23,7 +23,7 @@ public class Options : MonoBehaviour {
         }
 
         if (!PlayerPrefs.HasKey("Volume")) {
-            PlayerPrefs.SetInt("Volume", (int)slider.value);
+            PlayerPrefs.SetFloat("Volume", slider.value);
         }
         else {
             slider.value = PlayerPrefs.GetFloat("Volume");
@@ -58,7 +58,7 @@ public class Options : MonoBehaviour {
 
     public void OnVolumeSliderValueChanged() {
         volumeText.text = slider.value.ToString("0");
-        PlayerPrefs.SetFloat("Volume", (int)slider.value);
+        PlayerPrefs.SetFloat("Volume", slider.value);
         EventManager.instance.VolumeChanged();
     }
 

@@ -15,6 +15,7 @@ public class FloatUpgrade : MonoBehaviour {
     [SerializeField] float basePrice = 10f;
     [SerializeField] float levelIncrease;
     [SerializeField] float priceIncrease;
+    [SerializeField] bool durationDisplay = false;
 
 
     int Price {
@@ -51,8 +52,15 @@ public class FloatUpgrade : MonoBehaviour {
     }
 
     void UpdateDisplay() {
-        currentDisplay.text = "x" + Math.Round(PlayerPrefs.GetFloat(upgradeLevelString, baseLevel), 2);
-        upgradedDisplay.text = "x" + Math.Round(PlayerPrefs.GetFloat(upgradeLevelString, baseLevel) * levelIncrease, 2);
-        priceDisplay.text = "$" + Price;
+        if (durationDisplay) {
+            currentDisplay.text = Math.Round(PlayerPrefs.GetFloat(upgradeLevelString, baseLevel), 2) + "s";
+            upgradedDisplay.text = Math.Round(PlayerPrefs.GetFloat(upgradeLevelString, baseLevel) * levelIncrease, 2) + "s";
+            priceDisplay.text = "$" + Price;
+        }
+        else {
+            currentDisplay.text = "x" + Math.Round(PlayerPrefs.GetFloat(upgradeLevelString, baseLevel), 2);
+            upgradedDisplay.text = "x" + Math.Round(PlayerPrefs.GetFloat(upgradeLevelString, baseLevel) * levelIncrease, 2);
+            priceDisplay.text = "$" + Price;    
+        }
     }
 }

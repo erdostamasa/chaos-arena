@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 11(infinite)
   m_EditorClassIdentifier: 
-  activationSecond: 500
-  maxPlatformsOnMap: 20
+  activationSecond: 600
+  maxPlatformsOnMap: 22
   platformSpawnFrequency: 4
   enemySpawnChance: 0.5
   powerupSpawnChance: 0.1
@@ -27,13 +27,13 @@ MonoBehaviour:
   enemyHealthMultiplier: 2.2
   platforms:
   - item: {fileID: 8696917099553870004, guid: 21e7c06cecc11054497c0ce9d3dd7eca, type: 3}
-    accumulatedWeight: 25
+    accumulatedWeight: 20
   - item: {fileID: 8696917099553870004, guid: ca2df5423f08a604e8d0fd7d7ef02f43, type: 3}
     accumulatedWeight: 30
   - item: {fileID: 8696917099553870004, guid: 86a10f48fe7862e4ebf9310ddb0c6fa9, type: 3}
     accumulatedWeight: 30
   - item: {fileID: 8696917099553870004, guid: ae080c1f9aefce54ba5b1539578859b5, type: 3}
-    accumulatedWeight: 15
+    accumulatedWeight: 20
   enemies:
   - item: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
     accumulatedWeight: 60

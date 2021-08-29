@@ -256,6 +256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar greek prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a0ecf6d325eb2f24abfb13e70179236e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0ecf6d325eb2f24abfb13e70179236e, type: 3}
       propertyPath: m_RootOrder
       value: 2

@@ -13,25 +13,25 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   activationSecond: 2
-  maxPlatformsOnMap: 12
+  maxPlatformsOnMap: 16
   platformSpawnFrequency: 3
   enemySpawnChance: 0.2
   powerupSpawnChance: 0.05
   energyDropRate: 5
   moneyDropRate: 5
   randomDropOffset: 3
-  enemyDamageMultiplier: 3
+  enemyDamageMultiplier: 2.8
   enemyShotsPerSecond: 0.3
   rocketVolleyAmount: 1
   lavaDamageMultiplier: 5
-  enemyHealthMultiplier: 1
+  enemyHealthMultiplier: 0.9
   platforms:
   - item: {fileID: 8696917099553870004, guid: 21e7c06cecc11054497c0ce9d3dd7eca, type: 3}
     accumulatedWeight: 30
   - item: {fileID: 8696917099553870004, guid: ca2df5423f08a604e8d0fd7d7ef02f43, type: 3}
-    accumulatedWeight: 70
+    accumulatedWeight: 65
   - item: {fileID: 8696917099553870004, guid: 86a10f48fe7862e4ebf9310ddb0c6fa9, type: 3}
-    accumulatedWeight: 0
+    accumulatedWeight: 5
   - item: {fileID: 8696917099553870004, guid: ae080c1f9aefce54ba5b1539578859b5, type: 3}
     accumulatedWeight: 0
   enemies:

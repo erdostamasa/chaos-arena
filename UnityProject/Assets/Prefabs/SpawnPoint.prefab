@@ -113,3 +113,4 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 540928
+  losBlocks: 1

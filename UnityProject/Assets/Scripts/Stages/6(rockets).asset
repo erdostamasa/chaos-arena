@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 6(rockets)
   m_EditorClassIdentifier: 
-  activationSecond: 250
-  maxPlatformsOnMap: 15
+  activationSecond: 300
+  maxPlatformsOnMap: 17
   platformSpawnFrequency: 4
   enemySpawnChance: 0.8
   powerupSpawnChance: 0.15
