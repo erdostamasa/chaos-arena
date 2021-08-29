@@ -45,9 +45,15 @@ public class WeaponController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q)) {
             autoShoot = !autoShoot;
         }
+
+        if (Input.GetKeyDown(KeyCode.E)) {
+            Debug.Break();
+        }
     }
 
     void LateUpdate() {
+
+
         if (boosted) {
             boostTimer += Time.deltaTime;
             if (boostTimer >= boostedTime) {

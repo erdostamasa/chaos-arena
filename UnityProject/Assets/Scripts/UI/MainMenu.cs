@@ -67,6 +67,16 @@ public class MainMenu : MonoBehaviour {
         transition.SetTrigger("OptionsIn");
     }
 
+    public void Help() {
+        StartCoroutine(HelpRoutine());
+    }
+
+    IEnumerator HelpRoutine() {
+        transition.SetTrigger("MainOut");
+        yield return new WaitForSeconds(0.5f);
+        transition.SetTrigger("HelpIn");
+    }
+
     public void Shop() {
         StartCoroutine(ShopHelp());
     }
