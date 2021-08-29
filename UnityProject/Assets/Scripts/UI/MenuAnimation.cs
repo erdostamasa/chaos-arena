@@ -32,4 +32,12 @@ public class MenuAnimation : MonoBehaviour {
         GetComponent<Animator>().Play("optionsOut");
     }
 
+    public void HelpIn() {
+        GetComponent<Animator>().Play("helpIn");
+    }
+
+    public void HelpOut() {
+        GetComponent<Animator>().Play("helpOut");
+    }
+
 }

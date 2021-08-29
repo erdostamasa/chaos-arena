@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
 
 public class Options : MonoBehaviour {
     [SerializeField] Slider slider;
@@ -72,6 +73,16 @@ public class Options : MonoBehaviour {
 
     IEnumerator BackHelp() {
         transition.SetTrigger("OptionsOut");
+        yield return new WaitForSeconds(0.5f);
+        transition.SetTrigger("MainIn");
+    }
+
+    public void HelpBack() {
+        StartCoroutine(HelpMenuBack());
+    }
+
+    IEnumerator HelpMenuBack() {
+        transition.SetTrigger("HelpOut");
         yield return new WaitForSeconds(0.5f);
         transition.SetTrigger("MainIn");
     }
