@@ -36,7 +36,7 @@ public class RocketTurret : Turret {
         for (int v = 0; v < volley; v++) {
             Transform bullet = Instantiate(bulletPrefab, head.position, Quaternion.identity);
             bullet.Find("model").forward = firePoint.forward + GenerateSpread();
-            AudioManager.instance.PlaySound(missileLaunch, transform.position);
+            AudioManager.instance.PlaySound(missileLaunch, transform.position, 0.2f);
             yield return new WaitForSeconds(Random.Range(0.4f, 0.5f));
         }
     }

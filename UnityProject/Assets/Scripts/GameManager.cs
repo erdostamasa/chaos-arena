@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-
     public static GameManager instance;
 
     void Awake() {
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
     float timer;
 
     public int platformsAlive = 0;
+    [SerializeField] bool lockCursor = false;
 
     void LateUpdate() {
         timeSinceStart += Time.deltaTime;
@@ -36,12 +37,12 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
-        if (currentStageIndex < stages.Count-1 && timeSinceStart >= stages[currentStageIndex+1].activationSecond) {
-            currentStage = stages[currentStageIndex+1];
+        if (currentStageIndex < stages.Count - 1 && timeSinceStart >= stages[currentStageIndex + 1].activationSecond) {
+            currentStage = stages[currentStageIndex + 1];
             currentStageIndex++;
             platformSpawner.ReadStageData(currentStage);
         }
-        
+
         timer += Time.deltaTime;
         if (timer >= currentStage.platformSpawnFrequency && platformsAlive < currentStage.maxPlatformsOnMap) {
             platformSpawner.SpawnPlatform();
@@ -50,7 +51,14 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
-        //Cursor.visible = false;
+        if (lockCursor) {
+            if (PlayerPrefs.GetInt("showCursor") == 0) {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Confined;    
+            }
+            
+        }
+
         currentStage = stages[0];
         gameIsPaused = false;
         //EventManager.instance.onEnemyDied += IncreaseMoney;
@@ -62,7 +70,7 @@ public class GameManager : MonoBehaviour {
         }*/
         platformSpawner.ReadStageData(currentStage);
     }
-    
+
 
     public void RestartGame() {
         Time.timeScale = 1f;
@@ -76,17 +84,15 @@ public class GameManager : MonoBehaviour {
         EventManager.instance.MoneyChanged(money);
     }*/
 
-    public void StopGame()
-    {
+    public void StopGame() {
         Time.timeScale = 0f;
         gameIsPaused = true;
     }
-    
-    public void StartGame()
-    {
+
+    public void StartGame() {
         Time.timeScale = 1f;
         gameIsPaused = false;
     }
-    
+
     public bool GameIsPaused => gameIsPaused;
 }

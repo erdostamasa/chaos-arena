@@ -10,6 +10,16 @@ public class EventManager : MonoBehaviour {
         instance = this;
     }
 
+    public event Action onFXAAchanged;
+    public void FXAAchanged() {
+        onFXAAchanged?.Invoke();
+    }
+    
+    public event Action onVolumeChanged;
+    public void VolumeChanged() {
+        onVolumeChanged?.Invoke();
+    }
+    
     public event Action onPlatformSpawned;
     public void PlatformSpawned() {
         onPlatformSpawned?.Invoke();

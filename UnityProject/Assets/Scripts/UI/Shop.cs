@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] GameObject shopMenuUi;
+    [SerializeField] Animator transition;
     [SerializeField] GameObject mainMenuUi;
     [SerializeField] GameObject image;
-    [SerializeField] GameObject halfImage;
-    
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && shopMenuUi.activeSelf)
-        {
-            Back();
-        }
-    }
     
     public void Back()
     {
@@ -24,10 +15,10 @@ public class Shop : MonoBehaviour
     
     IEnumerator BackHelp()
     {
-        shopMenuUi.SetActive(false);
-        image.SetActive(false);
+        transition.SetTrigger("ShopOut");
         yield return new WaitForSeconds(0.5f);
         mainMenuUi.SetActive(true);
-        halfImage.SetActive(true);
+        image.SetActive(true);
+        transition.SetTrigger("MainIn");
     }
 }

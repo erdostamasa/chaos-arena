@@ -236,9 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44614fd59f07b594bb6f8454e37cd5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extendedHeight: 0.5
+  extendedHeight: 0.95
   retractedHeight: -1
-  moveSpeed: 15
+  moveSpeed: 8
   layers:
     serializedVersion: 2
     m_Bits: 16384

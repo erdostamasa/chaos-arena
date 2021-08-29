@@ -37,7 +37,7 @@ public class EnergyOrb : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             other.GetComponent<PlayerEnergy>().ChangeEnergy(1);
-            AudioManager.instance.PlaySound(sound, transform.position);
+            AudioManager.instance.PlaySound(sound, transform.position, 0.05f);
             Destroy(gameObject);
         }
     }

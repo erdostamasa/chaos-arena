@@ -1,29 +1,47 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
-{
-    [SerializeField] GameObject optionsMenuUi;
+public class MainMenu : MonoBehaviour {
     [SerializeField] GameObject mainMenuUi;
-    [SerializeField] GameObject shopMenuUi;
-    [SerializeField] GameObject halfImage;
     [SerializeField] GameObject image;
     [SerializeField] Animator transition;
+    [SerializeField] new Animator camera;
+    [SerializeField] SoundClip click;
+    [SerializeField] SoundClip mouseHover;
     
-    public void Awake()
-    {
-        if (PlayerPrefs.GetInt("ShopMenuVariable")==1)
-        {
-            shopMenuUi.SetActive(true);
+
+    public void ClickSound() {
+        AudioManager.instance.PlayStatic(click, 0.1f);
+    }
+
+
+    public void HoverSound() {
+        AudioManager.instance.PlayStatic(mouseHover, 0.1f);
+    }
+    
+
+    public void Awake() {
+        if (PlayerPrefs.GetInt("ShopMenuVariable") == 1) {
             mainMenuUi.SetActive(false);
-            PlayerPrefs.SetInt("ShopMenuVariable",0);
+            image.SetActive(false);
+            StartCoroutine(AwakeHelp());
+            PlayerPrefs.SetInt("ShopMenuVariable", 0);
         }
     }
 
-    public void QuitGame()
-    {
+    IEnumerator AwakeHelp() {
+        camera.Play("gameOut");
+        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
+        camera.Play("shopIn");
+        yield return new WaitForSeconds(0.5f);
+        transition.SetTrigger("ShopIn");
+    }
+
+    public void QuitGame() {
         Application.Quit();
     }
 
@@ -32,39 +50,30 @@ public class MainMenu : MonoBehaviour
     }
 
     IEnumerator LoadGame() {
-        mainMenuUi.SetActive(false);
-        halfImage.SetActive(false);
+        transition.SetTrigger("MainOut");
         yield return new WaitForSeconds(0.5f);
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void Options()
-    {
+    public void Options() {
         StartCoroutine(OptionsHelp());
     }
 
-    IEnumerator OptionsHelp()
-    {
-        mainMenuUi.SetActive(false);
-        halfImage.SetActive(false);
+    IEnumerator OptionsHelp() {
+        transition.SetTrigger("MainOut");
         yield return new WaitForSeconds(0.5f);
-        image.SetActive(true);
-        optionsMenuUi.SetActive(true);
+        transition.SetTrigger("OptionsIn");
     }
-    
-    public void Shop()
-    {
+
+    public void Shop() {
         StartCoroutine(ShopHelp());
     }
-    
-    IEnumerator ShopHelp()
-    {
-        mainMenuUi.SetActive(false);
-        halfImage.SetActive(false);
+
+    IEnumerator ShopHelp() {
+        transition.SetTrigger("MainOut");
         yield return new WaitForSeconds(0.5f);
-        image.SetActive(true);
-        shopMenuUi.SetActive(true);
+        transition.SetTrigger("ShopIn");
     }
 }
