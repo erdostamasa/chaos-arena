@@ -14,12 +14,12 @@ public class MainMenu : MonoBehaviour {
     
 
     public void ClickSound() {
-        AudioManager.instance.PlayStatic(click);
+        AudioManager.instance.PlayStatic(click, 0.1f);
     }
 
 
     public void HoverSound() {
-        AudioManager.instance.PlayStatic(mouseHover);
+        AudioManager.instance.PlayStatic(mouseHover, 0.1f);
     }
     
 

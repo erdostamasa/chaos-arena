@@ -74,7 +74,7 @@ public class PlayerEnergy : MonoBehaviour {
         if (delta < 0 && canDamage) {
             canDamage = false;
             damageTimer = 0;
-            AudioManager.instance.PlayStatic(damageSound);
+            AudioManager.instance.PlayStatic(damageSound, 0.4f);
             Camera.main.transform.parent.GetComponent<Shaker>().Shake(shakePreset);
         }
 

@@ -8,7 +8,7 @@ public class BoostPowerup : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             other.gameObject.GetComponent<MovingSphere>().ActivateBoost();
-            AudioManager.instance.PlaySound(sound, transform.position);
+            AudioManager.instance.PlaySound(sound, transform.position, 0.2f);
             Destroy(gameObject);
         }
     }

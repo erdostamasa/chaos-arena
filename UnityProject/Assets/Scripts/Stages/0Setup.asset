@@ -19,8 +19,8 @@ MonoBehaviour:
   powerupSpawnChance: 0.05
   energyDropRate: 5
   moneyDropRate: 5
-  randomDropOffset: 3
-  enemyDamageMultiplier: 3
+  randomDropOffset: 2
+  enemyDamageMultiplier: 2.8
   enemyShotsPerSecond: 0.3
   rocketVolleyAmount: 1
   lavaDamageMultiplier: 3

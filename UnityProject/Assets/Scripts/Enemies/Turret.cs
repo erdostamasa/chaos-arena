@@ -104,7 +104,7 @@ public class Turret : Enemy {
 
     protected void Shoot() {
         if (active) {
-            AudioManager.instance.PlaySound(shootingSound, transform.position);
+            AudioManager.instance.PlaySound(shootingSound, transform.position, 0.2f);
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             bullet.forward = firePoint.forward + GenerateSpread();
             //bullet.LookAt(player);

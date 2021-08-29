@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour {
 
     public void DestroyBullet() {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        AudioManager.instance.PlaySound(clip, transform.position);
+        AudioManager.instance.PlaySound(clip, transform.position, 0.4f);
         Destroy(gameObject);
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationSecond: 2
   maxPlatformsOnMap: 12
-  platformSpawnFrequency: 4
+  platformSpawnFrequency: 3
   enemySpawnChance: 0.2
   powerupSpawnChance: 0.05
   energyDropRate: 5
@@ -23,7 +23,7 @@ MonoBehaviour:
   enemyDamageMultiplier: 3
   enemyShotsPerSecond: 0.3
   rocketVolleyAmount: 1
-  lavaDamageMultiplier: 3
+  lavaDamageMultiplier: 5
   enemyHealthMultiplier: 1
   platforms:
   - item: {fileID: 8696917099553870004, guid: 21e7c06cecc11054497c0ce9d3dd7eca, type: 3}

@@ -10,37 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
-  m_Name: 2
+  m_Name: 9
   m_EditorClassIdentifier: 
-  activationSecond: 50
-  maxPlatformsOnMap: 13
+  activationSecond: 400
+  maxPlatformsOnMap: 17
   platformSpawnFrequency: 3
-  enemySpawnChance: 0.25
-  powerupSpawnChance: 0.06
-  energyDropRate: 8
-  moneyDropRate: 10
-  randomDropOffset: 4
-  enemyDamageMultiplier: 4
-  enemyShotsPerSecond: 0.4
-  rocketVolleyAmount: 1
-  lavaDamageMultiplier: 6
-  enemyHealthMultiplier: 1.1
+  enemySpawnChance: 0.45
+  powerupSpawnChance: 0.05
+  energyDropRate: 20
+  moneyDropRate: 50
+  randomDropOffset: 15
+  enemyDamageMultiplier: 7
+  enemyShotsPerSecond: 0.7
+  rocketVolleyAmount: 2
+  lavaDamageMultiplier: 16
+  enemyHealthMultiplier: 2
   platforms:
   - item: {fileID: 8696917099553870004, guid: 21e7c06cecc11054497c0ce9d3dd7eca, type: 3}
-    accumulatedWeight: 30
+    accumulatedWeight: 20
   - item: {fileID: 8696917099553870004, guid: ca2df5423f08a604e8d0fd7d7ef02f43, type: 3}
-    accumulatedWeight: 50
+    accumulatedWeight: 30
   - item: {fileID: 8696917099553870004, guid: 86a10f48fe7862e4ebf9310ddb0c6fa9, type: 3}
-    accumulatedWeight: 15
+    accumulatedWeight: 20
   - item: {fileID: 8696917099553870004, guid: ae080c1f9aefce54ba5b1539578859b5, type: 3}
-    accumulatedWeight: 5
+    accumulatedWeight: 40
   enemies:
   - item: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
-    accumulatedWeight: 85
+    accumulatedWeight: 80
   - item: {fileID: 3585540122511450587, guid: 86eab7e0b5b05474395f66bde5e7b919, type: 3}
     accumulatedWeight: 15
   - item: {fileID: 3585540122511450587, guid: 9beaf1de0d9a8264ea0f08930bae8526, type: 3}
-    accumulatedWeight: 0
+    accumulatedWeight: 5
   powerups:
   - item: {fileID: 9005350658691571321, guid: aa49aa736b5eb6a4d897954e3c1664d5, type: 3}
     accumulatedWeight: 1

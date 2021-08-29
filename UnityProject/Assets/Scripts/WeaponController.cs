@@ -16,6 +16,8 @@ public class WeaponController : MonoBehaviour {
     [SerializeField] float spreadAmount;
     [SerializeField] SoundClip shootingSound;
     [SerializeField] float fireSpeedMultiplier = 1f;
+
+    bool autoShoot = false;
     
     float timer;
     bool canFire = false;
@@ -37,6 +39,12 @@ public class WeaponController : MonoBehaviour {
         shotPerSecond = PlayerPrefs.GetFloat("shootingSpeedLevel",1f);
         fireFrequency = 1 / (shotPerSecond * fireSpeedMultiplier);
         normalSpeed = fireFrequency;
+    }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            autoShoot = !autoShoot;
+        }
     }
 
     void LateUpdate() {
@@ -75,10 +83,10 @@ public class WeaponController : MonoBehaviour {
             //transform.LookAt(targeter.position);
         }
 
-        if (Input.GetMouseButton(0) && canFire && Math.Abs(Time.timeScale - 1f) < 0.01f) {
+        if ((Input.GetMouseButton(0) || autoShoot) && canFire && Math.Abs(Time.timeScale - 1f) < 0.01f) {
             //energy.ChangeEnergy(-energyCost);
             energy.ShootEnergy(energyCost);
-            AudioManager.instance.PlaySound(shootingSound, transform.position);
+            AudioManager.instance.PlaySound(shootingSound, transform.position, 0.2f);
             Transform bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             //bullet.LookAt(targeter);
             bullet.forward = firePoint.forward + GenerateSpread();

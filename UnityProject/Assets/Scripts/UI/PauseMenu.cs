@@ -16,10 +16,16 @@ public class PauseMenu : MonoBehaviour
             if (GameManager.instance.GameIsPaused)
             {
                 Resume();
+                if (PlayerPrefs.GetInt("showCursor") == 0) {
+                    Cursor.visible = false;
+                    Cursor.lockState = CursorLockMode.Confined;
+                }
             }
             else
             {
                 Pause();
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
         }
     }
@@ -28,6 +34,10 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUi.SetActive(false);
         GameManager.instance.StartGame();
+        if (PlayerPrefs.GetInt("showCursor") == 0) {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
     }
 
     void Pause()

@@ -9,7 +9,7 @@ public class ShieldPowerup : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             other.gameObject.GetComponent<PlayerEnergy>().ActivateShield();
-            AudioManager.instance.PlaySound(sound, transform.position);
+            AudioManager.instance.PlaySound(sound, transform.position, 0.2f);
             Destroy(gameObject);
         }
     }

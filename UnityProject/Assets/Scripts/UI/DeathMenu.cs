@@ -12,14 +12,16 @@ public class DeathMenu : MonoBehaviour
         EventManager.instance.onPlayerDied += LoadDeathMenu;
     }
 
-    void LoadDeathMenu()
-    {
+    void LoadDeathMenu() {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         deathMenuUi.SetActive(true);
         GameManager.instance.StopGame();
     }
 
-    public void LoadMenu()
-    {
+    public void LoadMenu() {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         deathMenuUi.SetActive(false);
         GameManager.instance.StartGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);

@@ -35,7 +35,7 @@ public class MoneyOrb : MonoBehaviour {
         if (other.CompareTag("Player")) {
             EventManager.instance.MoneyChanged(PlayerPrefs.GetInt("money") + 1);
             PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 1);
-            AudioManager.instance.PlaySound(sound, transform.position);
+            AudioManager.instance.PlaySound(sound, transform.position, 0.05f);
             Destroy(gameObject);
         }
     }
