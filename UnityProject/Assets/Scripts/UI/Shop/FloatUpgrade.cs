@@ -41,6 +41,10 @@ public class FloatUpgrade : MonoBehaviour {
 
             PlayerPrefs.SetInt("money", money);
             EventManager.instance.MoneyChanged(money);
+            AudioManager.instance.ShopBuy();
+        }
+        else {
+            AudioManager.instance.ShopFail();
         }
 
         UpdateDisplay();

@@ -1,28 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
-{
+public class MainMenu : MonoBehaviour {
     [SerializeField] GameObject mainMenuUi;
     [SerializeField] GameObject image;
     [SerializeField] Animator transition;
-    [SerializeField] Animator camera;
+    [SerializeField] new Animator camera;
+    [SerializeField] SoundClip click;
+    [SerializeField] SoundClip mouseHover;
     
-    public void Awake()
-    {
-        if (PlayerPrefs.GetInt("ShopMenuVariable")==1)
-        {
+
+    public void ClickSound() {
+        AudioManager.instance.PlayStatic(click);
+    }
+
+
+    public void HoverSound() {
+        AudioManager.instance.PlayStatic(mouseHover);
+    }
+    
+
+    public void Awake() {
+        if (PlayerPrefs.GetInt("ShopMenuVariable") == 1) {
             mainMenuUi.SetActive(false);
             image.SetActive(false);
             StartCoroutine(AwakeHelp());
-            PlayerPrefs.SetInt("ShopMenuVariable",0);
+            PlayerPrefs.SetInt("ShopMenuVariable", 0);
         }
     }
 
-    IEnumerator AwakeHelp()
-    {
+    IEnumerator AwakeHelp() {
         camera.Play("gameOut");
         yield return new WaitForSeconds(0.5f);
         yield return new WaitForSeconds(0.5f);
@@ -31,8 +41,7 @@ public class MainMenu : MonoBehaviour
         transition.SetTrigger("ShopIn");
     }
 
-    public void QuitGame()
-    {
+    public void QuitGame() {
         Application.Quit();
     }
 
@@ -48,25 +57,21 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void Options()
-    {
+    public void Options() {
         StartCoroutine(OptionsHelp());
     }
 
-    IEnumerator OptionsHelp()
-    {
+    IEnumerator OptionsHelp() {
         transition.SetTrigger("MainOut");
         yield return new WaitForSeconds(0.5f);
         transition.SetTrigger("OptionsIn");
     }
-    
-    public void Shop()
-    {
+
+    public void Shop() {
         StartCoroutine(ShopHelp());
     }
-    
-    IEnumerator ShopHelp()
-    {
+
+    IEnumerator ShopHelp() {
         transition.SetTrigger("MainOut");
         yield return new WaitForSeconds(0.5f);
         transition.SetTrigger("ShopIn");

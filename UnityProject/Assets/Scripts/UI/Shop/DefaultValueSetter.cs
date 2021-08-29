@@ -11,5 +11,11 @@ public class DefaultValueSetter : MonoBehaviour {
         if (!PlayerPrefs.HasKey("shootingSpeedUpgradeCount")) PlayerPrefs.SetInt("shootingSpeedUpgradeCount", 0);
         if (!PlayerPrefs.HasKey("shootingSpeedLevel")) PlayerPrefs.SetFloat("shootingSpeedLevel", 1);
         if (!PlayerPrefs.HasKey("money")) PlayerPrefs.SetInt("money", 0);
+        if (!PlayerPrefs.HasKey("shieldLevel")) PlayerPrefs.SetFloat("shieldLevel", 5f);
+        if (!PlayerPrefs.HasKey("shieldCount")) PlayerPrefs.SetInt("shieldCount", 1);
+        if (!PlayerPrefs.HasKey("boostLevel")) PlayerPrefs.SetFloat("boostLevel", 5f);
+        if (!PlayerPrefs.HasKey("boostCount")) PlayerPrefs.SetInt("boostCount", 1);
+        if (!PlayerPrefs.HasKey("Volume")) PlayerPrefs.SetFloat("Volume", 20f);
+        if (!PlayerPrefs.HasKey("Music")) PlayerPrefs.SetInt("Music", 1);
     }
 }

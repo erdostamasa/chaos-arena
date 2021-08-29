@@ -43,7 +43,11 @@ public class IntUpgrade : MonoBehaviour {
             PlayerPrefs.SetInt(upgradeName, PlayerPrefs.GetInt(upgradeName, 1) + 1);
             PlayerPrefs.SetInt("money", money);
             EventManager.instance.MoneyChanged(money);
+            AudioManager.instance.ShopBuy();
             if (PlayerPrefs.GetInt(upgradeName) > 4) available = false;
+        }
+        else {
+            AudioManager.instance.ShopFail();
         }
 
         UpdateDisplay();

@@ -6,12 +6,17 @@ using UnityEngine;
 public class MusicPlayer : MonoBehaviour {
     [SerializeField] AudioSource source;
     [SerializeField] List<AudioClip> musicClips;
-    
+
     float timer = 0;
     float trackLength;
     int currentTrack = 0;
-    
+
+    bool turnedOn;
+
     void Start() {
+        turnedOn = PlayerPrefs.GetInt("Music") == 1;
+
+        if (!turnedOn) return;
         source = GetComponent<AudioSource>();
 
         if (musicClips.Count == 0) return;
@@ -19,12 +24,13 @@ public class MusicPlayer : MonoBehaviour {
         source.clip = musicClips[0];
         currentTrack = 0;
         trackLength = musicClips[0].length;
-        
+
         source.Play();
     }
 
-    
+
     void Update() {
+        if (!turnedOn) return;
         if (musicClips.Count == 0) return;
         timer += Time.deltaTime;
         if (timer >= trackLength) {
@@ -39,8 +45,5 @@ public class MusicPlayer : MonoBehaviour {
             trackLength = musicClips[currentTrack].length;
             source.Play();
         }
-        
     }
-    
-    
 }

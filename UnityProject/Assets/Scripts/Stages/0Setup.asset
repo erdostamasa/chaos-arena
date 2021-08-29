@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationSecond: 0
   maxPlatformsOnMap: 12
-  platformSpawnFrequency: 0.02
+  platformSpawnFrequency: 0.01
   enemySpawnChance: 0.2
   powerupSpawnChance: 0.05
   energyDropRate: 5
@@ -38,9 +38,11 @@ MonoBehaviour:
   - item: {fileID: 3585540122511450587, guid: ba0c5598079c4c746a053ddb806d09ea, type: 3}
     accumulatedWeight: 100
   - item: {fileID: 3585540122511450587, guid: 86eab7e0b5b05474395f66bde5e7b919, type: 3}
-    accumulatedWeight: 10000
+    accumulatedWeight: 0
   - item: {fileID: 3585540122511450587, guid: 9beaf1de0d9a8264ea0f08930bae8526, type: 3}
     accumulatedWeight: 0
   powerups:
   - item: {fileID: 9005350658691571321, guid: aa49aa736b5eb6a4d897954e3c1664d5, type: 3}
+    accumulatedWeight: 1
+  - item: {fileID: 1314295722564758699, guid: d3ddbc34096bf3149b61477d9564df45, type: 3}
     accumulatedWeight: 1

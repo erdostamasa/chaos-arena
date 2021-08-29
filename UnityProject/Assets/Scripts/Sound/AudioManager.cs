@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
     public static AudioManager instance;
+    AudioSource source;
 
     void Awake() {
         instance = this;
@@ -12,11 +13,29 @@ public class AudioManager : MonoBehaviour {
 
     Dictionary<SoundClip, int> playingCount;
     [SerializeField] Transform customOneShotPrefab;
+    [SerializeField] SoundClip shopBuy;
+    [SerializeField] SoundClip shopFail;
+    
+    
+    public void ShopBuy() {
+        PlayStatic(shopBuy);
+    }
 
+    public void ShopFail() {
+        PlayStatic(shopFail);
+    }
+    
     void Start() {
+        source = GetComponent<AudioSource>();
         playingCount = new Dictionary<SoundClip, int>();
     }
 
+    public void PlayStatic(SoundClip clip) {
+        source.clip = clip.file;
+        source.volume = clip.volume;
+        source.Play();
+    }
+    
     void PlayClipAtPointCustom(SoundClip clip, Vector3 position) {
         Transform tmp = Instantiate(customOneShotPrefab, position, Quaternion.identity);
         AudioSource source = tmp.GetComponent<AudioSource>();

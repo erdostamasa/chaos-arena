@@ -7,6 +7,7 @@ using TMPro;
 public class Options : MonoBehaviour
 {
     [SerializeField] Slider slider;
+    [SerializeField] Toggle musicToggle;
     [SerializeField] Toggle toggle;
     [SerializeField] TextMeshProUGUI volumeText;
     [SerializeField] Animator transition;
@@ -28,19 +29,25 @@ public class Options : MonoBehaviour
         }
         else
         {
-            slider.value = PlayerPrefs.GetInt("Volume");
+            slider.value = PlayerPrefs.GetFloat("Volume");
         }
+    }
+
+    public void MusicToggled() {
+        PlayerPrefs.SetInt("Music", musicToggle.isOn ? 1 : 0);
     }
 
     public void OnVolumeSliderValueChanged()
     {
         volumeText.text = slider.value.ToString("0");
-        PlayerPrefs.SetInt("Volume", (int) slider.value);
+        PlayerPrefs.SetFloat("Volume", (int) slider.value);
+        EventManager.instance.VolumeChanged();
     }
 
     public void OnFXAACheckBoxValueChanged()
     {
         PlayerPrefs.SetInt("FXAAVariable", toggle.isOn ? 1 : 0);
+        EventManager.instance.FXAAchanged();
     }
 
     public void Back()
