@@ -17,8 +17,8 @@ MonoBehaviour:
   platformSpawnFrequency: 4
   enemySpawnChance: 0.8
   powerupSpawnChance: 0.15
-  energyDropRate: 16
-  moneyDropRate: 70
+  energyDropRate: 18
+  moneyDropRate: 120
   randomDropOffset: 8
   enemyDamageMultiplier: 4
   enemyShotsPerSecond: 0.4

@@ -16,9 +16,9 @@ MonoBehaviour:
   maxPlatformsOnMap: 14
   platformSpawnFrequency: 4
   enemySpawnChance: 0.3
-  powerupSpawnChance: 0.06
-  energyDropRate: 10
-  moneyDropRate: 15
+  powerupSpawnChance: 0.1
+  energyDropRate: 12
+  moneyDropRate: 30
   randomDropOffset: 5
   enemyDamageMultiplier: 4.5
   enemyShotsPerSecond: 0.42

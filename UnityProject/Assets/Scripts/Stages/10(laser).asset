@@ -18,7 +18,7 @@ MonoBehaviour:
   enemySpawnChance: 0.9
   powerupSpawnChance: 0.2
   energyDropRate: 20
-  moneyDropRate: 90
+  moneyDropRate: 170
   randomDropOffset: 15
   enemyDamageMultiplier: 6
   enemyShotsPerSecond: 0.7

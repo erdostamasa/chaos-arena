@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class DefaultValueSetter : MonoBehaviour {
     void Start() {
+        SetValues();
+    }
+
+    public void SetValues() {
         if (!PlayerPrefs.HasKey("airJumps")) PlayerPrefs.SetInt("airJumps", 1);
         if (!PlayerPrefs.HasKey("maxHealthUpgradeCount")) PlayerPrefs.SetInt("maxHealthUpgradeCount", 0);
         if (!PlayerPrefs.HasKey("maxHealthLevel")) PlayerPrefs.SetFloat("maxHealthLevel", 1);
