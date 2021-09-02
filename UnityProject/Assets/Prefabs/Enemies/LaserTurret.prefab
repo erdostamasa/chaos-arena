@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55858516adf53fa4c927bcc0013f18f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
   owner: {fileID: 0}
   active: 0
   energyOrbPrefab: {fileID: 5447842419669247331, guid: 59a8a461e76a7ce4f838c692ef46df3a, type: 3}

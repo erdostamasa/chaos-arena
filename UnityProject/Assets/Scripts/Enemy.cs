@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Match;
 using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour {
+    public EnemyType type;
     public Platform owner;
     public bool active = false;
     [SerializeField] Transform energyOrbPrefab;
@@ -15,6 +17,12 @@ public class Enemy : MonoBehaviour {
     protected int energyDrop;
     protected int moneyDrop;
 
+    public enum EnemyType {
+        BASIC,
+        ROCKET,
+        LASER
+    }
+    
     protected void Start() {
         Stage currentStage = GameManager.instance.currentStage;
         shootFrequency = 1f / (currentStage.enemyShotsPerSecond * baseShootSpeedMultiplier);
@@ -41,10 +49,9 @@ public class Enemy : MonoBehaviour {
                 Instantiate(energyOrbPrefab, transform.position, Quaternion.identity);
             }
         }
-
-
-        //EventManager.instance.EnemyDied();
+        
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        EventManager.instance.EnemyDied(type);
         Destroy(gameObject);
     }
 }

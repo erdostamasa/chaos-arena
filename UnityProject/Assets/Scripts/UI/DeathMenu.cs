@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using PlayFab.ClientModels;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathMenu : MonoBehaviour
-{
+public class DeathMenu : MonoBehaviour {
     [SerializeField] GameObject deathMenuUi;
-
-    void Awake()
-    {
+    
+    void Awake() {
         EventManager.instance.onPlayerDied += LoadDeathMenu;
     }
 
@@ -26,17 +25,15 @@ public class DeathMenu : MonoBehaviour
         GameManager.instance.StartGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
-    
-    public void LoadShop()
-    {
+
+    public void LoadShop() {
         deathMenuUi.SetActive(false);
         GameManager.instance.StartGame();
-        PlayerPrefs.SetInt("ShopMenuVariable",1);
+        PlayerPrefs.SetInt("ShopMenuVariable", 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
-    public void RestartGame()
-    {
+    public void RestartGame() {
         GameManager.instance.RestartGame();
     }
 }

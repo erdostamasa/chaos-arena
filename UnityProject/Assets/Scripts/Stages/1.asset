@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationSecond: 2
   maxPlatformsOnMap: 16
-  platformSpawnFrequency: 3
-  enemySpawnChance: 0.25
-  powerupSpawnChance: 0.1
+  platformSpawnFrequency: 2
+  enemySpawnChance: 0.3
+  powerupSpawnChance: 0.15
   energyDropRate: 6
   moneyDropRate: 15
   randomDropOffset: 3
@@ -27,7 +27,7 @@ MonoBehaviour:
   enemyHealthMultiplier: 0.9
   platforms:
   - item: {fileID: 8696917099553870004, guid: 21e7c06cecc11054497c0ce9d3dd7eca, type: 3}
-    accumulatedWeight: 30
+    accumulatedWeight: 20
   - item: {fileID: 8696917099553870004, guid: ca2df5423f08a604e8d0fd7d7ef02f43, type: 3}
     accumulatedWeight: 65
   - item: {fileID: 8696917099553870004, guid: 86a10f48fe7862e4ebf9310ddb0c6fa9, type: 3}

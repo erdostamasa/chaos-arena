@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour {
     public int platformsAlive = 0;
     [SerializeField] bool lockCursor = false;
 
+    public int basicTurretScore;
+    public int rocketTurretScore;
+    public int laserTurretScore;
+    public int score = 0;
+
     void LateUpdate() {
         timeSinceStart += Time.deltaTime;
     }
@@ -51,12 +56,12 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
+        score = 0;
         if (lockCursor) {
             if (PlayerPrefs.GetInt("showCursor") == 0) {
                 Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Confined;    
+                Cursor.lockState = CursorLockMode.Confined;
             }
-            
         }
 
         currentStage = stages[0];
@@ -64,6 +69,7 @@ public class GameManager : MonoBehaviour {
         //EventManager.instance.onEnemyDied += IncreaseMoney;
         EventManager.instance.onPlatformSpawned += IncreasePlatformCount;
         EventManager.instance.onPlatformDestroyed += DecreasePlatformCount;
+        EventManager.instance.onEnemyDied += IncreaseScore;
 
         /*for (int i = 0; i < 10; i++) {
             platformSpawner.SpawnPlatform();
@@ -71,6 +77,20 @@ public class GameManager : MonoBehaviour {
         platformSpawner.ReadStageData(currentStage);
     }
 
+    void IncreaseScore(Enemy.EnemyType type) {
+        switch (type) {
+            case Enemy.EnemyType.BASIC:
+                score += basicTurretScore;
+                break;
+            case Enemy.EnemyType.ROCKET:
+                score += rocketTurretScore;
+                break;
+            case Enemy.EnemyType.LASER:
+                score += laserTurretScore;
+                break;
+        }
+        EventManager.instance.ScoreChanged(score);
+    }
 
     public void RestartGame() {
         Time.timeScale = 1f;

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  activationSecond: 120
+  activationSecond: 100
   maxPlatformsOnMap: 14
   platformSpawnFrequency: 4
-  enemySpawnChance: 0.3
-  powerupSpawnChance: 0.1
+  enemySpawnChance: 0.4
+  powerupSpawnChance: 0.15
   energyDropRate: 12
   moneyDropRate: 30
   randomDropOffset: 5
-  enemyDamageMultiplier: 4.5
+  enemyDamageMultiplier: 4
   enemyShotsPerSecond: 0.42
   rocketVolleyAmount: 1
   lavaDamageMultiplier: 7

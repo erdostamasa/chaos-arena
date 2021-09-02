@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 6(rockets)
   m_EditorClassIdentifier: 
-  activationSecond: 300
+  activationSecond: 250
   maxPlatformsOnMap: 17
   platformSpawnFrequency: 4
   enemySpawnChance: 0.8
-  powerupSpawnChance: 0.15
+  powerupSpawnChance: 0.2
   energyDropRate: 18
   moneyDropRate: 120
   randomDropOffset: 8
@@ -43,6 +43,6 @@ MonoBehaviour:
     accumulatedWeight: 5
   powerups:
   - item: {fileID: 9005350658691571321, guid: aa49aa736b5eb6a4d897954e3c1664d5, type: 3}
-    accumulatedWeight: 2
-  - item: {fileID: 1314295722564758699, guid: d3ddbc34096bf3149b61477d9564df45, type: 3}
     accumulatedWeight: 1
+  - item: {fileID: 1314295722564758699, guid: d3ddbc34096bf3149b61477d9564df45, type: 3}
+    accumulatedWeight: 2

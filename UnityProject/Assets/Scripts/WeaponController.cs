@@ -51,15 +51,16 @@ public class WeaponController : MonoBehaviour {
         }
     }
 
+    [SerializeField] GameObject boostPreafab;
+
     void LateUpdate() {
-
-
         if (boosted) {
             boostTimer += Time.deltaTime;
             if (boostTimer >= boostedTime) {
                 boostTimer = 0;
                 fireFrequency = normalSpeed;
                 boosted = false;
+                boostPreafab.SetActive(false);
             }
         }
         

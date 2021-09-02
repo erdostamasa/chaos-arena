@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 
 public class MovingSphere : MonoBehaviour {
@@ -99,7 +100,8 @@ public class MovingSphere : MonoBehaviour {
     float submergence;
 
     int jumpPhase;
-
+    [SerializeField] TextMeshProUGUI jumpDisplay;
+    
     float minGroundDotProduct, minStairsDotProduct, minClimbDotProduct;
 
     int stepsSinceLastGrounded, stepsSinceLastJump;
@@ -116,11 +118,15 @@ public class MovingSphere : MonoBehaviour {
         maxAirJumps = PlayerPrefs.GetInt("airJumps") - 1;
     }
 
+
+    [SerializeField] GameObject boostPrefab;
+    
     public void ActivateBoost() {
         if (weapon.boostFrequency < weapon.normalSpeed) {
             weapon.fireFrequency = weapon.boostFrequency;
             weapon.boosted = true;
             weapon.boostTimer = 0;
+            boostPrefab.SetActive(true);
         }
     }
 
@@ -142,7 +148,12 @@ public class MovingSphere : MonoBehaviour {
         OnValidate();
     }
 
+    //public bool canJump = false;
+    
     void Update() {
+
+        //jumpDisplay.text = "Jumps: " + (maxAirJumps+1 - jumpPhase);
+        
         playerInput.x = Input.GetAxis("Horizontal");
         playerInput.z = Input.GetAxis("Vertical");
         playerInput.y = Swimming ? Input.GetAxis("UpDown") : 0f;
@@ -496,7 +507,8 @@ public class MovingSphere : MonoBehaviour {
             jumpSpeed = Mathf.Max(jumpSpeed - alignedSpeed, 0f);
         }
 
-        velocity += jumpDirection * jumpSpeed;
+        //velocity = jumpDirection * jumpSpeed;
+        velocity = new Vector3(velocity.x, jumpDirection.y * jumpSpeed, velocity.z);
     }
 
     void OnCollisionEnter(Collision collision) {

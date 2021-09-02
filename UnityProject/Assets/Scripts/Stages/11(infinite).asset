@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 11(infinite)
   m_EditorClassIdentifier: 
-  activationSecond: 600
+  activationSecond: 500
   maxPlatformsOnMap: 22
   platformSpawnFrequency: 4
   enemySpawnChance: 0.7
-  powerupSpawnChance: 0.1
+  powerupSpawnChance: 0.15
   energyDropRate: 30
   moneyDropRate: 200
   randomDropOffset: 20

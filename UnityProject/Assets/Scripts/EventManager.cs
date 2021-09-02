@@ -35,9 +35,19 @@ public class EventManager : MonoBehaviour {
         onPlayerDied?.Invoke();
     }
 
-    public event Action onEnemyDied;
-    public void EnemyDied() {
-        onEnemyDied?.Invoke();
+    public event Action<Enemy.EnemyType> onEnemyDied;
+    public void EnemyDied(Enemy.EnemyType type) {
+        onEnemyDied?.Invoke(type);
+    }
+
+    public event Action<int> onScoreChanged;
+    public void ScoreChanged(int newScore) {
+        onScoreChanged?.Invoke(newScore);
+    }
+
+    public event Action onRocketDestroyed;
+    public void RocketDestroyed() {
+        onRocketDestroyed?.Invoke();
     }
 
     public event Action<int> onMoneyChanged;

@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c27dcf542446349ace7b106a23d458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   owner: {fileID: 0}
   active: 0
   energyOrbPrefab: {fileID: 5447842419669247331, guid: 59a8a461e76a7ce4f838c692ef46df3a, type: 3}
@@ -497,6 +498,7 @@ MonoBehaviour:
   spreadAmountMin: {x: -0.05, y: 0, z: -0.05}
   spreadAmountMax: {x: 0.05, y: 0.2, z: 0.05}
   targetOffset: {x: 0, y: 4, z: 0}
+  shootingSound: {fileID: 0}
   speed: 1.5
   missileLaunch: {fileID: 11400000, guid: 50dfa7beaff372d43a7f2e3d31d20c04, type: 2}
   missileEffect: {fileID: 2457473222415535967, guid: 109efc71f27f4ed4990290c1c842493f, type: 3}

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104fa37715d5bf4592edecf7f925ca8, type: 3}
   m_Name: 10(laser)
   m_EditorClassIdentifier: 
-  activationSecond: 540
+  activationSecond: 450
   maxPlatformsOnMap: 20
   platformSpawnFrequency: 1
   enemySpawnChance: 0.9
-  powerupSpawnChance: 0.2
+  powerupSpawnChance: 0.3
   energyDropRate: 20
   moneyDropRate: 170
   randomDropOffset: 15
