@@ -15,5 +15,7 @@
 - Use money in the shop to buy upgrades in order to survive further stages
 
 ![images/lasers.png](images/lasers.png)
+
 ![images/lasers.png](images/lasers.png)
+
 ![images/lasers.png](images/lasers.png)
