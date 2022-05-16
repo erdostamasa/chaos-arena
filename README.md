@@ -1,6 +1,6 @@
 # Chaos Arena
 
-## Made for the [Brackeys Game Jam 2021.2](https://itch.io/jam/brackeys-6/rate/1177161) in 7 days
+**Made for the [Brackeys Game Jam 2021.2](https://itch.io/jam/brackeys-6/rate/1177161) in 7 days**
 - Move with 'WASD'
 - Jump with 'SPACE'
 - Aim with the mouse
