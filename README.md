@@ -1,6 +1,7 @@
 # Chaos Arena
 
 **Made for the [Brackeys Game Jam 2021.2](https://itch.io/jam/brackeys-6/rate/1177161) in 7 days**
+
 - Move with 'WASD'
 - Jump with 'SPACE'
 - Aim with the mouse
@@ -12,3 +13,7 @@
 - Destroy enemies to collect energy and money
 - The game gets harder and the enemies drop more loot the longer you survive
 - Use money in the shop to buy upgrades in order to survive further stages
+
+![images/lasers.png](images/lasers.png)
+![images/lasers.png](images/lasers.png)
+![images/lasers.png](images/lasers.png)
